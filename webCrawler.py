@@ -43,8 +43,8 @@ class UrlDisallowed(Exception): # For URLs disallowed by robots.txt
         logging.error(f'UrlDisallowed: {message}')
 
 class RobotsNotFound(Exception): # The site doesnt have robots.txt
-    def __init__(self, message):
-        super().__init__(message: str)
+    def __init__(self, message: str):
+        super().__init__(message)
         logging.warning(f'RobotsNotFound: {message}')
 
 def findRobots(site: str) -> str:
