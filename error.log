@@ -1,0 +1,172 @@
+When accessing site: http://www.bbcstudios.com/contact/faqs/, the following exception occured: 'href'
+RequestException: Site: http://www.bbc.co.uk/cbbc/topics/cbbc-help retuned a code of 404: Not Found
+When accessing site: https://www.bbc.com/arts/arts-in-motion, the following exception occured: 'href'
+When accessing site: https://wearehourglass.org/, the following exception occured: 'href'
+When accessing site: https://www.bbc.co.uk/usingthebbc/terms-of-use, the following exception occured: 'href'
+RequestException: Site: http://www.nspcc.org.uk retuned a code of 403: Forbidden
+When accessing site: http://www.ptsdresolution.org, the following exception occured: 'href'
+When accessing site: https://developers.google.com/youtube, the following exception occured: 'href'
+When accessing site: http://www.mentalhealth.org.uk, the following exception occured: 'href'
+RequestException: Site: https://www.nationalcrimeagency.gov.uk/missingpersons retuned a code of 403: Forbidden
+RequestException: Site: https://www.bbc.co.uk/contact/questions/programme-information/contributor-access retuned a code of 404: Not Found
+RequestException: Site: http://www.combatstress.org.uk retuned a code of 403: Forbidden
+RequestException: Site: https://www.smartsurvey.co.uk/s/gov-uk-banner/?c=no-js retuned a code of 403: Forbidden
+When accessing site: https://www.bbc.co.uk/sport, the following exception occured: 'href'
+RequestException: Site: https://bbcteach.edcowebsites.co.uk/ retuned a code of 403: Forbidden
+When accessing site: https://www.youtube.com/about/press/, the following exception occured: 'href'
+When accessing site: https://www.fundraisingregulator.org.uk, the following exception occured: 'href'
+RequestException: Site: https://ieeeusa.org/ retuned a code of 403: Forbidden
+When accessing site: https://asm.org/events/asm-global-research-symposium-china/abstract, the following exception occured: 'href'
+RequestException: Site: https://action.asthmaandlung.org.uk/page/156097/donate/1 retuned a code of 403: Forbidden
+When accessing site: https://www.thedailystar.net/news/bangladesh/news/i-resigned-without-any-pressure-shahabuddin-tells-star-4231721, the following exception occured: 'href'
+RequestException: Site: https://journals.asm.org/ retuned a code of 403: Forbidden
+RequestException: Site: http://www.sane.org.uk retuned a code of 403: Forbidden
+RequestException: Site: http://www.britishlivertrust.org.uk retuned a code of 403: Forbidden
+When accessing site: https://www.missingpeople.org.uk/help-us-find-someone/sightings-and-giving-information.html, the following exception occured: 'href'
+When accessing site: https://www.screen.scot/, the following exception occured: 'href'
+When accessing site: http://www.bbc.co.uk/news, the following exception occured: 'href'
+RequestException: Site: https://compassionincare.com/the-whistleblowing-review-scandal/ retuned a code of 403: Forbidden
+RequestException: Site: https://compassionincare.com/safeguarding-shambles-special/ retuned a code of 403: Forbidden
+When accessing site: https://www.nhsinform.scot/illnesses-and-conditions/infections-and-poisoning/coronavirus-covid-19/coronavirus-covid-19/, the following exception occured: 'href'
+RequestException: Site: https://compassionincare.com/category/news/ retuned a code of 403: Forbidden
+RequestException: Site: https://abrcms.org/register/hotel-accommodations-travel/ retuned a code of 403: Forbidden
+When accessing site: https://www.aau.edu/, the following exception occured: 'href'
+When accessing site: https://support.google.com/youtube/topic/9257889?en-GB&ref_topic=9257610&sjid=6696618074483827073-NA, the following exception occured: 'href'
+When accessing site: http://www.letsplayuno.com/, the following exception occured: 'href'
+When accessing site: https://www.nhsinform.scot/self-help-guides/self-help-guide-coronavirus-covid-19/, the following exception occured: 'href'
+RequestException: Site: https://compassionincare.com/gallery/ retuned a code of 403: Forbidden
+RequestException: Site: https://compassionincare.com/hall-of-shame/ retuned a code of 403: Forbidden
+RequestException: Site: https://apps.apple.com/gb/app/the-big-issue-uk/id1504499826 retuned a code of 429: Too Many Requests
+RequestException: Site: https://apps.apple.com/gb/app/slay-the-spire/id1491530147?platform=vision retuned a code of 429: Too Many Requests
+When accessing site: http://www.carersuk.org, the following exception occured: 'href'
+When accessing site: https://www.leukaemiacare.org.uk/support-and-information/, the following exception occured: 'href'
+RequestException: Site: https://www.aaas.org/privacy-policy retuned a code of 403: Forbidden
+RequestException: Site: https://compassionincare.com/contact/ retuned a code of 403: Forbidden
+RequestException: Site: https://apps.apple.com/gb/mac/discover retuned a code of 429: Too Many Requests
+When accessing site: http://www.metoffice.gov.uk, the following exception occured: 'href'
+When accessing site: https://bit.ly/4o2HjtW, the following exception occured: 'href'
+When accessing site: https://www.aidsmap.com/about-hiv/hiv-testing, the following exception occured: 'href'
+When accessing site: https://support.google.com/youtube/answer/141805, the following exception occured: 'href'
+When accessing site: https://www.dentalhealth.org/mouth-cancer, the following exception occured: 'href'
+RequestException: Site: https://compassionincare.com/who-we-are/ retuned a code of 403: Forbidden
+RequestException: Site: https://www.apple.com/privacy/privacy-policy/  retuned a code of 404: Not Found
+When accessing site: https://cnsf.us/, the following exception occured: 'href'
+When accessing site: https://support.google.com/youtube/answer/11895180?en-GB&sjid=6696618074483827073-NA, the following exception occured: 'href'
+RequestException: Site: https://apps.apple.com/gb/app/6758299437?see-all=customers-also-bought-apps&platform=iphone retuned a code of 429: Too Many Requests
+RequestException: Site: https://apps.apple.com/gb/app/procreate-pocket/id916366645 retuned a code of 429: Too Many Requests
+RequestException: Site: https://apps.apple.com/gb/app/dino-chaos-crazy-race/id6748894216?platform=vision retuned a code of 429: Too Many Requests
+RequestException: Site: https://apps.apple.com/gb/vision/editorial/6503710138 retuned a code of 429: Too Many Requests
+RequestException: Site: https://apps.apple.com/gb/app/1623318294?see-all=customers-also-bought-apps&platform=ipad retuned a code of 429: Too Many Requests
+RequestException: Site: https://apps.apple.com/gb/app/runestone-text-editor/id1548193893?platform=vision retuned a code of 429: Too Many Requests
+RequestException: Site: https://compassionincare.com/home-number-7-2/ retuned a code of 403: Forbidden
+RequestException: Site: https://compassionincare.com/cic/ retuned a code of 403: Forbidden
+When accessing site: https://www.fundraisingregulator.org.uk/validate?registrant=GYNAECOLOGY+CANCER+RESEARCH+FUND, the following exception occured: 'href'
+When accessing site: https://www.bbc.co.uk/sport/get-inspired, the following exception occured: 'href'
+RequestException: Site: https://uk.even-dating.com/pages/misc/privacy/?styled=1 retuned a code of 410: Gone
+RequestException: Site: http://www.bawso.org.uk retuned a code of 403: Forbidden
+When accessing site: http://www.childbereavementuk.org, the following exception occured: 'href'
+When accessing site: https://www.corteconstitucional.gov.co/relatoria/2024/t-248-24.htm, the following exception occured: 'href'
+When accessing site: https://support.google.com/youtube/answer/9890437, the following exception occured: 'href'
+RequestException: Site: https://www.bbc.com/editorialguidelines/commercial-services retuned a code of 404: Not Found
+When accessing site: https://thatgamecompany.helpshift.com/a/sky-children-of-the-light/?s=legal-code-of-conduct&f=privacy-policy&l=en&p=all, the following exception occured: 'href'
+RequestException: Site: https://shop.asthmaandlung.org.uk/collections/health-advice-resources retuned a code of 429: Too Many Requests
+RequestException: Site: https://apps.apple.com/gb/app/imax/id1537376352?platform=vision retuned a code of 429: Too Many Requests
+RequestException: Site: https://apps.apple.com/gb/app/lingvano-learn-sign-language/id1547252782 retuned a code of 429: Too Many Requests
+RequestException: Site: https://apps.apple.com/gb/developer/oversoul-ltd/id1723750728?platform=vision retuned a code of 429: Too Many Requests
+When accessing site: https://support.google.com/youtubetv/answer/7249585?hl=en&ref_topic=10319670, the following exception occured: 'href'
+RequestException: Site: https://www.tiktok.com/@bbcnewsazeri retuned a code of 403: Forbidden
+When accessing site: https://www.suzylamplugh.org/what-happens-when-i-contact-the-helpline, the following exception occured: 'href'
+When accessing site: http://downloads.bbc.co.uk/bbctrust/assets/files/pdf/our_work/world_service/2016/wsol.pdf, the following exception occured: 'href'
+When accessing site: https://asm.org/Cookie-Policy, the following exception occured: 'href'
+When accessing site: https://www.bluey.tv/, the following exception occured: 'href'
+When accessing site: https://www.linkedin.com/legal/copyright-policy/, the following exception occured: 'href'
+RequestException: Site: https://www.maggies.org/cancer-support/managing-practically/money-benefits-and-cancer/ retuned a code of 403: Forbidden
+RequestException: Site: https://www.linkedin.com/company/trc-media retuned a code of 999: <none>
+RequestException: Site: https://appleid.apple.com/ retuned a code of 403: Forbidden
+RequestException: Site: https://bit.ly/46BubGR retuned a code of 403: Forbidden
+When accessing site: https://www.fundraisingregulator.org.uk/, the following exception occured: 'href'
+When accessing site: https://support.google.com/youtubetv/answer/7129564?hl=en&ref_topic=7128555, the following exception occured: 'href'
+When accessing site: https://support.google.com/android/answer/9021432?hl=en, the following exception occured: 'href'
+When accessing site: https://support.google.com/chrome/answer/95647, the following exception occured: 'href'
+When accessing site: https://t.me/TCH_channel/225388, the following exception occured: 'href'
+When accessing site: https://docs.stripe.com/, the following exception occured: 'href'
+When accessing site: https://www.ableton.com/en/privacy/, the following exception occured: 'href'
+When accessing site: https://blog.youtube/news-and-events/disclosing-ai-generated-content/, the following exception occured: 'href'
+RequestException: Site: https://www.tiktok.com/@prettylittlething retuned a code of 403: Forbidden
+When accessing site: https://support.google.com/youtube/answer/72851?en-GB&sjid=6696618074483827073-NA, the following exception occured: 'href'
+When accessing site: https://support.google.com/youtubetv/answer/7251139?hl=en, the following exception occured: 'href'
+When accessing site: https://docs.stripe.com/projects, the following exception occured: 'href'
+When accessing site: https://abrcms.org/program/, the following exception occured: 'href'
+When accessing site: https://severeweather.wmo.int/index.html, the following exception occured: 'href'
+When accessing site: https://napac.org.uk/, the following exception occured: 'href'
+RequestException: Site: https://coverage.apple.com/os/acacPP1/ retuned a code of 403: Forbidden
+When accessing site: https://support.google.com/youtube/answer/9228389, the following exception occured: 'href'
+RequestException: Site: http://twitter.com/asmicrobiology retuned a code of 520: <none>
+When accessing site: https://www.bbc.com/arts/arts-in-motion?id=p0l88cwj, the following exception occured: 'href'
+When accessing site: https://www.jiosaavn.com/shows/सोपी-गोष्ट/1/kVtGnMWt4kE_, the following exception occured: 'href'
+When accessing site: https://www.bbc.co.uk/news, the following exception occured: 'href'
+When accessing site: https://support.google.com/youtubetv/answer/10057534, the following exception occured: 'href'
+When accessing site: https://www.waverleycare.org/news-and-stories/using-experience-to-create-change-lesleys-trustee-journey/, the following exception occured: 'href'
+RequestException: Site: https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=mi&u= retuned a code of 400: Bad Request
+RequestException: Site: https://www.linkedin.com/company/bbc-studios retuned a code of 999: <none>
+RequestException: Site: https://help.digitalconcerthall.com/hc/en-gb/sections/115000717353-Bestellung-Zahlung retuned a code of 403: Forbidden
+RequestException: Site: https://apps.apple.com/gb/app/disney-colouring-world/id1644114544 retuned a code of 429: Too Many Requests
+RequestException: Site: https://apps.apple.com/gb/app/protect-it-surround-the-thief/id1671924545?platform=vision retuned a code of 429: Too Many Requests
+RequestException: Site: http://vubtechtransfer.be/news/new-crosstalks-book-age-from-the-anatomy-of-life-to-the-architecture-of-living retuned a code of 404: Not Found
+When accessing site: https://t.me/kpszsu/69965, the following exception occured: 'href'
+RequestException: Site: https://apps.apple.com/gb/iphone/charts/6006?chart=top-paid retuned a code of 429: Too Many Requests
+RequestException: Site: https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=ps&u= retuned a code of 400: Bad Request
+RequestException: Site: https://www.appropriations.senate.gov/imo/media/doc/sechegsethwrittenstatement.pdf retuned a code of 403: Forbidden
+When accessing site: https://support.google.com/youtubetv/answer/13316318, the following exception occured: 'href'
+When accessing site: https://www.bluey.tv/play/play-the-impossible-quiz/, the following exception occured: 'href'
+When accessing site: https://www.rippling.com/, the following exception occured: 'href'
+When accessing site: https://support.google.com/youtube/answer/15534883?hl=en&ref_topic=15535488&sjid=145573320003275522-NC, the following exception occured: 'href'
+RequestException: Site: https://openknowledge.fao.org/server/api/core/bitstreams/c55b4bcf-d921-44da-8cdb-5e0a4cc2f92f/content retuned a code of 403: Forbidden
+When accessing site: http://www.alzscot.org, the following exception occured: 'href'
+When accessing site: https://grow.google/?utm_source=about&utm_medium=referral&utm_campaign=footer-link, the following exception occured: 'href'
+RequestException: Site: https://help.bbc.com/hc/ retuned a code of 403: Forbidden
+RequestException: Site: https://storytoys.com/privacy/ retuned a code of 403: Forbidden
+RequestException: Site: https://apps.apple.com/gb/app/shotshort-shorts-dramas/id6472757546 retuned a code of 429: Too Many Requests
+RequestException: Site: https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=be&u= retuned a code of 400: Bad Request
+RequestException: Site: https://www.parliament.uk/business/news/2026/july-2026/the-house-of-commons-rises-for-summer-recess/ retuned a code of 403: Forbidden
+When accessing site: https://slack.com/intl/en-gb/help/articles/22489899497235-Share-or-copy-a-workflow, the following exception occured: 'href'
+RequestException: Site: https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=pa&u= retuned a code of 400: Bad Request
+When accessing site: https://support.google.com/photos/answer/6128858?hl=en, the following exception occured: 'href'
+When accessing site: https://slack.com/intl/en-gb/help/articles/16669011170963-Build-a-workflow--Request-connector-steps, the following exception occured: 'href'
+When accessing site: https://support.google.com/analytics/answer/6004245, the following exception occured: 'href'
+RequestException: Site: https://www.cybersmile.org/ retuned a code of 403: Forbidden
+RequestException: Site: https://www.asmcareerconnections.org/ retuned a code of 403: Forbidden
+RequestException: Site: https://support.x.com/articles/20170514 retuned a code of 403: Forbidden
+RequestException: Site: http://childline.org.uk retuned a code of 403: Forbidden
+RequestException: Site: https://apps.apple.com/gb/app/signal-private-messenger/id874139669 retuned a code of 429: Too Many Requests
+RequestException: Site: https://apps.apple.com/gb/app/apple-podcasts/id525463029?platform=vision retuned a code of 429: Too Many Requests
+When accessing site: https://abc.xyz/investor/?utm_source=about&utm_medium=referral&utm_campaign=footer-link, the following exception occured: 'href'
+When accessing site: https://slack.com/intl/en-gb/help/articles/115003461503-Understand-app-permissions, the following exception occured: 'href'
+RequestException: Site: https://help.digitalconcerthall.com/hc/en-gb/sections/115000718313-Technik-und-Systemanforderungen retuned a code of 403: Forbidden
+When accessing site: https://www.waverleycare.org/find-a-service/hepatitis-services/, the following exception occured: 'href'
+RequestException: Site: https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=eu&u= retuned a code of 400: Bad Request
+When accessing site: https://slack.com/intl/en-gb/help/articles/115002263563-Microsoft-products-for-Slack, the following exception occured: 'href'
+When accessing site: https://support.google.com/analytics?p=privpol_data&hl=en_US, the following exception occured: 'href'
+When accessing site: https://support.google.com/accounts?p=signin_privatebrowsing&hl=en-GB, the following exception occured: 'href'
+When accessing site: https://www.encompassnetwork.info/, the following exception occured: 'href'
+When accessing site: https://support.google.com/chrome/answer/9845881?hl=en, the following exception occured: 'href'
+When accessing site: https://support.google.com/youtube/answer/9826490, the following exception occured: 'href'
+When accessing site: https://adssettings.google.com?ref=ps-tech, the following exception occured: 'href'
+RequestException: Site: https://prepsterarchive.info/tasp/ retuned a code of 500: Internal Server Error
+When accessing site: https://chromewebstore.google.com/?hl=en, the following exception occured: 'href'
+RequestException: Site: https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=ee&u= retuned a code of 400: Bad Request
+RequestException: Site: https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=nso&u= retuned a code of 400: Bad Request
+RequestException: Site: https://www.imdb.com/name/nm10966553/ retuned a code of 403: Forbidden
+RequestException: Site: https://www.alzheimersresearchuk.org/research/for-researchers/measuring-impact/ retuned a code of 403: Forbidden
+When accessing site: https://janiestamford.com, the following exception occured: 'href'
+When accessing site: http://www.missingpeople.org.uk, the following exception occured: 'href'
+RequestException: Site: https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=de&u= retuned a code of 400: Bad Request
+When accessing site: https://developers.google.com/natively-adaptive-interfaces, the following exception occured: 'href'
+RequestException: Site: https://apps.apple.com/gb/app/photoshop-express-photo-editor/id331975235 retuned a code of 429: Too Many Requests
+When accessing site: https://www.nhsinform.scot/illnesses-and-conditions/mental-health/mental-health-self-help-guides/problem-solving-self-help-guide/, the following exception occured: 'href'
+When accessing site: https://support.google.com/youtube/answer/12769543?sjid=5082629036510608231-NA, the following exception occured: 'href'
+RequestException: Site: https://www.linkedin.com/company/turn2us/ retuned a code of 999: <none>
+RequestException: Site: https://payla.de/en/privacypolicy/ retuned a code of 404: Not Found
+When accessing site: https://support.google.com/chrome/answer/95647?hl=pt-BR&sjid=4213333769152808200-NC, the following exception occured: 'href'
+RequestException: Site: https://www.tiktok.com/@thtorguk retuned a code of 403: Forbidden
+When accessing site: https://www.bbc.co.uk/news, the following exception occured: 'href'
