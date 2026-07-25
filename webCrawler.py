@@ -1,7 +1,7 @@
 import requests
 import sqlite3
 from bs4 import BeautifulSoup as bs
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 import logging
 from datetime import datetime
 
@@ -9,7 +9,9 @@ disallowed: set = set() # dione by robots.txt
 visited: set = set()
 robots_cache: dict[str, str | None] = {}
 
-seeds = ['https://bbc.co.uk']
+seeds = ['https://bbc.co.uk', 'https://en.wikipedia.org/wiki/Main_Page', 'https://github.com/explore', 'https://medium.com/explore-topics', 'https://www.theverge.com/',
+          'https://stackoverflow.com/questions', 'https://slashdot.org', 'https://arstechnica.com/', 'https://old.reddit.com/'
+          'https://www.reuters.com']
 
 visitable: set = set(seeds) # when i parse stuff, i put all urls in here, and try and got through the whole list until empty
 
@@ -173,7 +175,6 @@ def markCrawled(site: str) -> bool:
         global visited, visitable
         visitable.discard(site)
         visited.add(site)
-        logging.info(f'Crawled: Site: {site} was crawled')
         return True
     except Exception as e:
         logging.error(f'Site: {site} could not be marked as crawled: {e}')
@@ -251,8 +252,11 @@ while visitable:
             links = identifyIfDisallowed(disallowed, links)
             if links is not None:
                 for link in links:
-                    if not urlparse(link).fragment:
-                        visitable.add(link)
+                    resolved = urljoin(site, link)
+                    parsed = urlparse(resolved)
+                    if parsed.scheme in ('http', 'https') and not parsed.fragment:
+                        visitable.add(resolved)
+
                 removeVisited(visited, visitable)
             save_url(site, title)
             markCrawled(site)
