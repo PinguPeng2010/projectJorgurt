@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup as bs
 from urllib.parse import urlparse, urljoin
 import logging
 from datetime import datetime
+from requests.adapters import HTTPAdapter
+from collections import deque
 
 disallowed: set = set() # dione by robots.txt
 visited: set = set()
@@ -13,7 +15,7 @@ seeds = ['https://bbc.co.uk', 'https://en.wikipedia.org/wiki/Main_Page', 'https:
           'https://stackoverflow.com/questions', 'https://slashdot.org', 'https://arstechnica.com/', 'https://old.reddit.com/'
           'https://www.reuters.com']
 
-visitable: set = set(seeds) # when i parse stuff, i put all urls in here, and try and got through the whole list until empty
+visitable: deque[str] = deque(seeds) # when i parse stuff, i put all urls in here, and try and got through the whole list until empty
 
 
 # Visit seed 1. Find all links, then go through them all, until, no more. Then Seed 2
@@ -23,11 +25,34 @@ visitable: set = set(seeds) # when i parse stuff, i put all urls in here, and tr
 # If one of the seeds is disallowed, remove.
 # Then start visiting.
 
+#TODO tommorow bc i cba
+# TODO: get each crawler to spawn a 2 threads
+# TODO: get crawler 1 to access deque first, then set var to false and the other way for crawler 2
+# TODO: get each crawler to do their own thing!!!!
 
 # log time
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
+
+http_session = requests.Session()
+http_session.mount('http://', HTTPAdapter(pool_connections=100, pool_maxsize=100))
+http_session.mount('https://', HTTPAdapter(pool_connections=100, pool_maxsize=100))
+request_count = 0
+
+
+def get_http_session() -> requests.Session:
+    global http_session, request_count
+
+    request_count += 1
+    if request_count > 200:
+        http_session.close()
+        http_session = requests.Session()
+        http_session.mount('http://', HTTPAdapter(pool_connections=100, pool_maxsize=100))
+        http_session.mount('https://', HTTPAdapter(pool_connections=100, pool_maxsize=100))
+        request_count = 1
+
+    return http_session
 
 # info +warning log
 
@@ -44,7 +69,7 @@ infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s
 logger.addHandler(errorLog)
 
 
-def init_db() -> None:
+def initDb() -> None:
     conn = sqlite3.connect('crawler.db')
     conn.execute('''
         CREATE TABLE IF NOT EXISTS urls (
@@ -57,7 +82,7 @@ def init_db() -> None:
     conn.close()
 
 
-def save_url(url: str, title: str | None = None) -> None:
+def saveUrl(url: str, title: str | None = None) -> None:
     conn = sqlite3.connect('crawler.db')
     conn.execute('''
         INSERT INTO urls (url, timestamp, title)
@@ -70,7 +95,7 @@ def save_url(url: str, title: str | None = None) -> None:
     conn.close()
 
 
-def get_db_visited_urls() -> set[str]:
+def getDbVisitedUrls() -> set[str]:
     conn = sqlite3.connect('crawler.db')
     cursor = conn.execute('SELECT url FROM urls')
     urls = {row[0] for row in cursor.fetchall()}
@@ -102,16 +127,6 @@ class RobotsNotFound(Exception): # The site doesnt have robots.txt
 
 
 
-def removeVisited(visited, visitable) -> set[str]:
-    db_visited = get_db_visited_urls()
-    combined = set(visited) | db_visited
-
-    for visit in combined:
-        if visit in visitable:
-            visitable.discard(visit)
-
-    return visitable
-
 def findRobots(domain: str) -> str | None: # This is for the toplevel domain
     if not domain:
         return None
@@ -124,7 +139,8 @@ def findRobots(domain: str) -> str | None: # This is for the toplevel domain
 
     robotURL = host + '/robots.txt'
     try:
-        response = requests.get(robotURL, timeout=10)
+        session = get_http_session()
+        response = session.get(robotURL, timeout=10, allow_redirects=False)
         if response.status_code >= 400:
             raise RobotsNotFound(f'Site: {domain} has no robots.txt')
 
@@ -165,15 +181,10 @@ def getDisallowed(robots, domain) -> set:
     return set(disallowed)
 
 
-def getCode(site: str) -> tuple[str, str]:
-    response = requests.get(site, timeout=10)
-    return (str(response.status_code)[0], response.reason)
-
 
 def markCrawled(site: str) -> bool:
     try:
-        global visited, visitable
-        visitable.discard(site)
+        global visited
         visited.add(site)
         return True
     except Exception as e:
@@ -183,11 +194,12 @@ def markCrawled(site: str) -> bool:
 
 def visitSite(site: str) -> str | None:
     try:
-        response = requests.get(site, timeout=10)
+        session = get_http_session()
+        response = session.get(site, timeout=10)
         if response.status_code >= 400:
             raise RequestException(f'Site: {site} retuned a code of {response.status_code}: {response.reason}')
 
-        if response.status_code >= 300:
+        elif response.status_code >= 300:
             logging.warning(f'Redirect: Site: {site} ')
         return response.text
 
@@ -195,17 +207,40 @@ def visitSite(site: str) -> str | None:
         return None
 
 
-def getAllLinks(html: str) -> set[str]: 
-    parsedHtml = bs(html, 'html.parser')
+def getAllLinks(html: str, disallowed: set[str], site: str) -> tuple[bool, str] | None:
+    global visitable
+    parsedHtml = bs(html, 'lxml')
     aTags = parsedHtml.find_all('a')
-    links: set[str] = set()
 
     for tag in aTags:
-        href = tag['href']
-        links.add(str(href)) # Every link in the pagesssss
+        href = tag.get('href')
+        if not href:
+            continue
+        resolved = urljoin(site, str(href))
+        parsed = urlparse(resolved)
+        if not isDisallowed(disallowed, resolved):
+            if parsed.scheme in ('http', 'https') and not parsed.fragment:
+                visitable.append(resolved)
+    title_tag = parsedHtml.title
 
-    return links
+    if title_tag and title_tag.string:
+        title =  title_tag.string.strip()
 
+    if title: #type: ignore
+        return (True, title)
+    
+    else:
+        return None
+
+def isInDb(site: str) -> bool:
+    conn = sqlite3.connect('crawler.db')
+    cursor = conn.execute(
+        'SELECT 1 FROM urls WHERE url = ? LIMIT 1',
+        (site,)
+    )
+    result = cursor.fetchone()
+    conn.close()
+    return result is not None
 
 def getPageTitle(html: str) -> str | None:
     parsed_html = bs(html, 'html.parser')
@@ -215,53 +250,47 @@ def getPageTitle(html: str) -> str | None:
     return None
 
 
-def identifyIfDisallowed(disallowed: set[str], links: set[str]) -> set[str] | None:
+def isDisallowed(disallowed: set[str], link: str) -> bool:
     try:
-        tempLinks: set = set()
-        for link in disallowed:
-            if link.endswith('/'):
-                for l in links:
-                    if not l.startswith(link):
-                        tempLinks.add(l)
-                links = tempLinks
-                tempLinks: set = set()
-
-            else:
-                if link in links:
-                    links.discard(link)
-        return links
+        if link in disallowed:
+            return True
+        return False
 
     except Exception as e:
         logging.error(f'Something went wrong with identifyDisallowed: {e}')
+        return False
 
 
 
-init_db()
+initDb()
 
-while visitable:
-    
-    site = visitable.pop()
+while visitable:    
+    site = visitable.popleft()
+    if site in visited:
+        continue
+    if isInDb(site):
+        continue
     print(site)
     try:
         robots = findRobots(site)
         disallowed = getDisallowed(robots, site)
         text = visitSite(site)
-        title = getPageTitle(text) if text is not None else None
         if text is not None:
-            links = getAllLinks(text)
-            links = identifyIfDisallowed(disallowed, links)
-            if links is not None:
-                for link in links:
-                    resolved = urljoin(site, link)
-                    parsed = urlparse(resolved)
-                    if parsed.scheme in ('http', 'https') and not parsed.fragment:
-                        visitable.add(resolved)
+            pageData = getAllLinks(text, disallowed, site)
+            if pageData is None:
+                result = False
+                title = ''
+            else:
+                result = pageData[0]
+                title = pageData[1]
+            if not result:
+                raise EmptyResponse(f'Could not get all links for site: {site}')
 
-                removeVisited(visited, visitable)
-            save_url(site, title)
+            saveUrl(site, title)
             markCrawled(site)
         else:
-            save_url(site, title)
+            title = None
+            saveUrl(site, title)
             markCrawled(site)
             raise EmptyResponse(f'Site: {site} provided an empty response')
 
@@ -270,4 +299,5 @@ while visitable:
     except Exception as e:
         logging.error(f'When accessing site: {site}, the following exception occured: {e}')
         markCrawled(site)
+logging.info(f'Crawler finished at {datetime.now()}')
     
