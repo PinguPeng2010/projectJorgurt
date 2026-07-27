@@ -3,7 +3,7 @@
 - ***`gurt`*** is a frontier based web crawler built in python
 - It uses a depth first approach to crawling, and uses multiprocessing, and threading.
 - Each process has 2 threaded crawlers, with one seed set.
-> For the most efficiency, it is recommended to only run 2 crawlers per core.
+> For the most efficiency, it is recommended to only run 2 crawlers per process.
 
 - At a rate of 1 crawler, ***`gurt`*** can access upwards of 30k urls in 9 hours.
 
