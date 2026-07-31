@@ -8,9 +8,15 @@ from os import listdir, path
 parser = argparse.ArgumentParser()
 
 parser.add_argument(
-    "proc",
+    "procs",
     type=int,
     help='Number of processes to run'
+)
+
+parser.add_argument(
+    "asyncs",
+    type=int,
+    help="Number of async operations"
 )
 
 parser.add_argument(
@@ -18,7 +24,8 @@ parser.add_argument(
     "--seeds",
     type=str,
     metavar='FOLDER',
-    help='Folder where seeds are stored. Defaults to /seeds/'
+    default='seeds',
+    help='Folder where seeds are stored. Defaults to seeds/'
 
 )
 
@@ -27,16 +34,11 @@ parser.add_argument(
     "--crawlers",
     type=int,
     metavar='NUM',
-    help='Number of crawlers. Defaults to 1'
+    default=2,
+    help='Number of crawlers. Defaults to 2'
 )
 
-parser.add_argument(
-    "-v",
-    "--verbose",
-    action='count',
-    default=0,
-    help='Provide outputs to console of sites visited (-v, -vv, -vvv)'
-)
+
 
 class SeedException(Exception):
     def __init__(self, message) -> None:
@@ -62,43 +64,69 @@ def dbWriter(queue: Queue):
     conn.execute("PRAGMA journal_mode=WAL;")
     cur = conn.cursor()
 
+    batch = []
+    BATCH_SIZE = 100
+
     while True:
-        msg: tuple[str, str] | str = queue.get()
+        msg = queue.get()
 
         if msg == "STOP":
             break
 
-        url, title = msg
+        batch.append((
+            msg[0],
+            datetime.now(timezone.utc).isoformat(),
+            msg[1]
+        ))
 
-        cur.execute('''
+        if len(batch) >= BATCH_SIZE:
+            cur.executemany('''
+                INSERT INTO urls (url, timestamp, title)
+                VALUES (?, ?, ?)
+                ON CONFLICT(url) DO UPDATE SET
+                    timestamp = excluded.timestamp,
+                    title = excluded.title
+            ''', batch)
+
+            conn.commit()
+            batch.clear()
+
+    # Write anything left over
+    if batch:
+        cur.executemany('''
             INSERT INTO urls (url, timestamp, title)
             VALUES (?, ?, ?)
             ON CONFLICT(url) DO UPDATE SET
                 timestamp = excluded.timestamp,
                 title = excluded.title
-        ''', (url, datetime.now(timezone.utc).isoformat(), title))
+        ''', batch)
 
         conn.commit()
 
     conn.close()
-
-def launch(procs, crawlers, seedloc, verbose):
+def launch(procs, crawlers, seedloc, asyncs):
 
     # get seeds
-    if seedloc is not None:
-        if not path.exists(seedloc):
-            raise SeedException(f'The folder: {seedloc} was not found')
+    try:
+        if seedloc is not None:
+            if not path.exists(seedloc):
+                raise SeedException(f'The folder: {seedloc} was not found')
 
-        else:
-            seedPacks: list[str] = listdir(seedloc)
-            if not len(seedPacks) == procs:
-                raise SeedException(f'The number of seed packs is different to the number of processes: packs: {len(seeds)}, procs: {procs}')
+            else:
+                seedPacks: list[str] = listdir(seedloc)
+                if not len(seedPacks) == procs:
+                    raise SeedException(f'The number of seed packs is different to the number of processes: packs: {len(seedPacks)}, procs: {procs}')
 
-    else:
-        seedPacks: list[str] = listdir(seedloc)
-        if not len(seedPacks) == procs:
-            raise SeedException(f'The number of seed packs is different to the number of processes: packs: {len(seeds)}, procs: {procs}')
-        
+
+    except OSError:
+        raise OSError(f'The seed location: {seedloc}, wasnt found')
+
+    seeds = []
+    for pack in seedPacks: # type: ignore
+        with open(f'{seedloc}/{pack}' ,'r') as p:
+            seed = [line.strip() for line in p]
+            seeds.append(seed)
+
 
     queue = Queue()
 
@@ -107,7 +135,7 @@ def launch(procs, crawlers, seedloc, verbose):
     
     processes = []
     for i in range(procs):
-        proc = Process(target=startThreads, args=(crawlers, queue, i, seeds[i]))
+        proc = Process(target=startThreads, args=(crawlers, queue, i, seeds[i], asyncs))
 
         proc.start()
         processes.append(proc)
@@ -121,5 +149,10 @@ def launch(procs, crawlers, seedloc, verbose):
 
 initDb()
 
-# with open(f'seeds/{args.seeds}', 'r') as s:
-#     seeds = [line.strip() for line in s]
+launch(
+    args.procs,
+    args.crawlers,
+    args.seeds,
+    args.asyncs
+)
+
