@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DB="crawler.db"
+DB="../crawler.db"
 LAST=0
 
 while true; do
