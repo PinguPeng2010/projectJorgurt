@@ -202,7 +202,7 @@ def launch(procs, crawlers, seedloc, asyncs):
 
     statsQueue = Queue()
     logQueue = Queue()
-    queue = Queue()
+    queue = Queue(maxsize=10000)
 
     monitor = Process(target=statsMonitor, args=(statsQueue, logQueue,))
     monitor.start()
