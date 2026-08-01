@@ -1,8 +1,10 @@
-from multiprocessing import Process, Queue
+from multiprocessing import Process, Queue, freeze_support
 from crawl import startThreads
 import sqlite3
 from datetime import datetime, timezone
 import argparse
+import curses
+from collections import deque
 from os import listdir, path
 
 parser = argparse.ArgumentParser()
@@ -45,6 +47,76 @@ class SeedException(Exception):
         super().__init__(message)
 
 args = parser.parse_args()
+
+
+STATS_KEYS = (
+    'requests',
+    'notFound',
+    'rateLimited',
+    'forbidden',
+    'badResponses',
+    'errors',
+    'success',
+)
+
+
+def renderMonitor(stdscr, log_lines, totals):
+    stdscr.erase()
+    height, width = stdscr.getmaxyx()
+    log_area = max(1, height - 2)
+
+    for idx, line in enumerate(list(log_lines)[-log_area:]):
+        try:
+            stdscr.addnstr(idx, 0, line, max(0, width - 1))
+        except curses.error:
+            pass
+
+    footer = ' | '.join(f'{key}={totals.get(key, 0)}' for key in STATS_KEYS)
+    stdscr.addnstr(height - 1, 0, footer, max(0, width - 1))
+    stdscr.refresh()
+
+
+def statsMonitor(statsQueue: Queue, logQueue: Queue):
+    totals = {key: 0 for key in STATS_KEYS}
+    lastSeen = {}
+    log_lines = deque(maxlen=500)
+
+    def run(stdscr):
+        stdscr.nodelay(True)
+        stdscr.keypad(True)
+
+        while True:
+            try:
+                msg = statsQueue.get(timeout=0.1)
+                if msg == 'STOP':
+                    break
+                if isinstance(msg, dict):
+                    process_id = msg.get('crawler_id')
+                    current = msg.get('stats', {})
+                    previous = lastSeen.setdefault(process_id, {})
+                    for key in STATS_KEYS:
+                        current_value = current.get(key, 0)
+                        previous_value = previous.get(key, 0)
+                        delta = current_value - previous_value
+                        if delta:
+                            totals[key] += delta
+                        previous[key] = current_value
+            except Exception:
+                pass
+
+            try:
+                log_msg = logQueue.get(timeout=0.05)
+                if log_msg == 'STOP':
+                    break
+                if isinstance(log_msg, str):
+                    log_lines.append(log_msg)
+            except Exception:
+                pass
+
+            renderMonitor(stdscr, log_lines, totals)
+
+    curses.wrapper(run)
+
 
 def initDb() -> None:
     conn = sqlite3.connect('crawler.db')
@@ -105,6 +177,7 @@ def dbWriter(queue: Queue):
 
     conn.close()
 def launch(procs, crawlers, seedloc, asyncs):
+    initDb()
 
     # get seeds
     try:
@@ -127,15 +200,19 @@ def launch(procs, crawlers, seedloc, asyncs):
             seed = [line.strip() for line in p]
             seeds.append(seed)
 
-
+    statsQueue = Queue()
+    logQueue = Queue()
     queue = Queue()
+
+    monitor = Process(target=statsMonitor, args=(statsQueue, logQueue,))
+    monitor.start()
 
     writer = Process(target=dbWriter, args=(queue,))
     writer.start()
-    
+
     processes = []
     for i in range(procs):
-        proc = Process(target=startThreads, args=(crawlers, queue, i, seeds[i], asyncs))
+        proc = Process(target=startThreads, args=(crawlers, queue, statsQueue, logQueue, i, seeds[i], asyncs,))
 
         proc.start()
         processes.append(proc)
@@ -144,15 +221,20 @@ def launch(procs, crawlers, seedloc, asyncs):
         proc.join()
 
     queue.put('STOP')
+    statsQueue.put('STOP')
+    logQueue.put('STOP')
     writer.join()
+    monitor.join()
     print(f'All processes finished')
 
-initDb()
+if __name__ == "__main__":
 
-launch(
-    args.procs,
-    args.crawlers,
-    args.seeds,
-    args.asyncs
-)
+    freeze_support()
+
+    launch(
+        args.procs,
+        args.crawlers,
+        args.seeds,
+        args.asyncs
+    )
 

@@ -7,9 +7,50 @@ import asyncio
 import httpx
 from threading import Thread
 from multiprocessing import Queue
+from time import monotonic
 
 
+requests = 0
+notFound = 0
+rateLimited = 0
+forbidden = 0
+badResponses = 0
+errors = 0
+success = 0
 
+STATS_INTERVAL_SECONDS = 2.0
+
+
+def getStatsSnapshot() -> dict[str, int]:
+    return {
+        'requests': requests,
+        'notFound': notFound,
+        'rateLimited': rateLimited,
+        'forbidden': forbidden,
+        'badResponses': badResponses,
+        'errors': errors,
+        'success': success,
+    }
+
+
+def emitStats(stats_queue: Queue | None, crawler_id: int | None = None) -> None:
+    if stats_queue is None:
+        return
+
+    stats_queue.put({
+        'crawler_id': crawler_id,
+        'stats': getStatsSnapshot(),
+    })
+
+
+def maybeEmitStats(stats_queue: Queue | None, crawler_id: int | None, last_emit: dict[int, float], interval: float = STATS_INTERVAL_SECONDS) -> float:
+    now = monotonic()
+    previous = last_emit.get(crawler_id if crawler_id is not None else -1, 0.0)
+    if now - previous >= interval:
+        emitStats(stats_queue, crawler_id)
+        last_emit[crawler_id if crawler_id is not None else -1] = now
+        return now
+    return previous
 
 
 
@@ -41,70 +82,29 @@ errorLog.setLevel(logging.ERROR)
 infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
 logger.addHandler(errorLog)
 
+
 # custom exceptions
 
 class RequestException(Exception): # Site returned an error code
     def __init__(self, message: str):
+        global errors
         super().__init__(message)
         logging.error(f'RequestException: {message}')
+        errors += 1
 
 class EmptyResponse(Exception):
     def __init__(self, message: str):
+        global errors
         super().__init__(message)
         logging.warning(f'EmptyResponse: {message}')
+        errors += 1
 
-
-class UrlDisallowed(Exception): # For URLs disallowed by robots.txt
-    def __init__(self, message: str):
-        super().__init__(message)
-        logging.error(f'UrlDisallowed: {message}')
 
 
 class RobotsNotFound(Exception): # The site doesnt have robots.txt
-    def __init__(self, message: str):
+    def __init__(self, message: str, status: int):
         super().__init__(message)
-        logging.warning(f'RobotsNotFound: {message}')
-
-
-# http sessions
-
-http_session = httpx.AsyncClient(
-    limits=httpx.Limits(
-        max_connections=100,
-        max_keepalive_connections=100
-    ),
-    timeout=10,
-    follow_redirects=True
-)
-
-request_count = 0
-
-
-async def get_http_session() -> httpx.AsyncClient:
-    global http_session, request_count
-
-    request_count += 1
-
-    if request_count > 200:
-        await http_session.aclose()
-
-        http_session = httpx.AsyncClient(
-            limits=httpx.Limits(
-                max_connections=100,
-                max_keepalive_connections=100
-            ),
-            timeout=10,
-            follow_redirects=True
-        )
-
-        request_count = 1
-
-    return http_session
-
-
-
-
-
+        logging.warning(f'RobotsNotFound: {message}, code: {status}')
 
 
 
@@ -128,44 +128,50 @@ def getDbVisitedUrls() -> set[str]:
     conn.close()
     return urls
 
-async def findRobots(domain: str, crawlerID) -> str | None:# This is for the toplevel domain
+async def findRobots(domain: str, crawlerID, session) -> str | None:
     if not domain:
         return None
 
     parsed = urlparse(domain)
-    host = f'{parsed.scheme}://{parsed.netloc}' if parsed.scheme and parsed.netloc else domain
+    host = (
+        f'{parsed.scheme}://{parsed.netloc}'
+        if parsed.scheme and parsed.netloc
+        else domain
+    )
 
     if host in robots_cache:
         return robots_cache[host]
 
     robotURL = host + '/robots.txt'
+
     try:
-        session = await get_http_session()
         response = await session.get(
             robotURL,
             timeout=10,
             follow_redirects=True
-        )       
+        )
 
         if response.status_code >= 400:
-            raise RobotsNotFound(f'Site: {domain} has no robots.txt, , crawler: {crawlerID}')
+            logging.warning(
+                f'No usable robots.txt for {host} '
+                f'(HTTP {response.status_code}), crawler: {crawlerID}'
+            )
+            robots_cache[host] = None
+            return None
 
-        robots = response.text
-        robots_cache[host] = robots
-        return robots
-    
+        robots_cache[host] = response.text
+        return response.text
+
     except asyncio.CancelledError:
         raise
 
-    except Exception as e:
-        logging.error(
-            f'Error getting robots.txt for {domain}: {e}, '
+    except Exception:
+        logging.exception(
+            f'Error getting robots.txt for {domain}, '
             f'crawler: {crawlerID}'
         )
-
         robots_cache[host] = None
         return None
-
 
 def getDisallowed(robots, domain) -> set:
     if not robots:
@@ -207,25 +213,47 @@ def markCrawled(site: str) -> bool:
         return False
 
 
-async def visitSite(site: str, crawlerID) -> str | None:
-    try:
-        session = await get_http_session()
-        response = await session.get(site, timeout=10)
-        if response.status_code >= 400:
-            raise RequestException(f'Site: {site} retuned a code of {response.status_code}: {response.reason_phrase}, , crawler: {crawlerID}')
+async def visitSite(site: str, crawlerID, session) -> tuple[str | None, int | None]:
+    global requests, notFound, rateLimited, forbidden, badResponses, success
 
-        elif response.status_code >= 300:
-            logging.warning(f'Redirect: Site: {site} ')
-        return response.text
+    try:
+        response = await session.get(site, timeout=10)
+        requests += 1
+
+        if response.status_code == 404:
+            notFound += 1
+        elif response.status_code == 429:
+            rateLimited += 1
+        elif response.status_code == 403:
+            forbidden += 1
+        elif response.status_code >= 400:
+            badResponses += 1
+
+        if response.status_code >= 400:
+            logging.warning(
+                f'Site: {site} returned HTTP {response.status_code}, '
+                f'crawler: {crawlerID}'
+            )
+            return None, response.status_code
+
+        if not response.text:
+            logging.warning(
+                f'Site: {site} returned an actually empty body, '
+                f'crawler: {crawlerID}'
+            )
+            return None, response.status_code
+
+        success += 1
+        return response.text, response.status_code
 
     except asyncio.CancelledError:
         raise
 
-    except Exception as e:
-        logging.error(
-            f'Error requesting {site}: {e}, crawler: {crawlerID}'
+    except Exception:
+        logging.exception(
+            f'Error requesting {site}, crawler: {crawlerID}'
         )
-        return None
+        return None, None
 
 
 def getAllLinks(html: str, disallowed: set[str], site: str, visitable) -> tuple[bool, str] | None:
@@ -287,22 +315,30 @@ def isDisallowed(disallowed: set[str], link: str) -> bool:
 
 
 
-async def worker(crawlerID: int, queue: Queue, visitable):
+async def worker(crawlerID: int, queue: Queue, stats_queue: Queue | None, log_queue: Queue | None, visitable, session):
+    global success
+    last_emit = {}
     while True:
 
         site: str = await visitable.get()
-        
-        if site in visited:
-            continue
-        if isInDb(site):
-            continue
-        print(site, crawlerID)
         try:
-            robots = await findRobots(site, crawlerID)            
+            if site in visited:
+                continue
+            if isInDb(site):
+                continue
+            if log_queue is not None:
+                log_queue.put(f'{crawlerID}: {site}')
+            else:
+                print(site, crawlerID)
+
+            robots = await findRobots(site, crawlerID, session)
             disallowed = getDisallowed(robots, site)
-            text = await visitSite(site, crawlerID)
+            text, status = await visitSite(site, crawlerID, session)
             if text is not None:
+                if status is None:
+                    raise RequestException(f'There was a request error with site: {site}')
                 pageData = getAllLinks(text, disallowed, site, visitable)
+
                 if pageData is None:
                     result = False
                     title = ''
@@ -311,6 +347,7 @@ async def worker(crawlerID: int, queue: Queue, visitable):
                     title = pageData[1]
 
                 if not result:
+                    success = False
                     raise EmptyResponse(f'Could not get all links for site: {site}, crawler: {crawlerID}')
 
                 queue.put((site, title))
@@ -319,6 +356,8 @@ async def worker(crawlerID: int, queue: Queue, visitable):
                 title = None
                 queue.put((site, title))
                 markCrawled(site)
+                success = True
+
                 raise EmptyResponse(f'Site: {site} provided an empty response, , crawler: {crawlerID}')
 
         except EmptyResponse:
@@ -329,9 +368,12 @@ async def worker(crawlerID: int, queue: Queue, visitable):
             markCrawled(site)
 
         finally:
+            if stats_queue is not None:
+                maybeEmitStats(stats_queue, crawlerID, last_emit)
             visitable.task_done()
 
-async def crawl(crawlerID: int, queue: Queue, asyncs: int, seeds: list[str]):
+
+async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue | None, log_queue: Queue | None, asyncs: int, seeds: list[str]):
 
     global visitableSet
     visitableSet = set(seeds)
@@ -339,33 +381,46 @@ async def crawl(crawlerID: int, queue: Queue, asyncs: int, seeds: list[str]):
     for seed in seeds:
         visitable.put_nowait(seed)
 
-    tasks = [
-        asyncio.create_task(worker(crawlerID, queue, visitable))
-        for _ in range(asyncs)
-    ]
-    await visitable.join()
+    async with httpx.AsyncClient(
+        limits=httpx.Limits(
+            max_connections=100,
+            max_keepalive_connections=100
+        ),
+        timeout=10,
+        follow_redirects=True
+    ) as session:
+        tasks = [
+            asyncio.create_task(worker(crawlerID, queue, stats_queue, log_queue, visitable, session,))
+            for _ in range(asyncs)
+        ]
+        await visitable.join()
 
-    for task in tasks:
-        task.cancel()
-    await asyncio.gather(*tasks, return_exceptions=True)
+        for task in tasks:
+            task.cancel()
+        await asyncio.gather(*tasks, return_exceptions=True)
 
 
-def startThreads(threadsNum: int, queue: Queue, process: int, seeds: list[str], asyncs: int):
-
+def startThreads(threadsNum: int, queue: Queue, stats_queue: Queue | None, log_queue: Queue | None, process: int, seeds: list[str], asyncs: int):
 
     threads = []
 
     for t in range(threadsNum):
-        print(f"STARTING THREAD {t}")
+        if log_queue is not None:
+            log_queue.put(f'STARTING THREAD {t}')
+        else:
+            print(f"STARTING THREAD {t}")
 
         thread = Thread(
             target=asyncio.run,
-            args=(crawl(t, queue, asyncs, seeds),),
+            args=(crawl(t, queue, stats_queue, log_queue, asyncs, seeds,),),
             name=f"CrawlerThread-{t}"
         )
 
         thread.start()
-        print(f"STARTED THREAD {t}")
+        if log_queue is not None:
+            log_queue.put(f'STARTED THREAD {t}')
+        else:
+            print(f"STARTED THREAD {t}")
 
         threads.append(thread)
 
