@@ -33,7 +33,7 @@ def getStatsSnapshot() -> dict[str, int]:
     }
 
 
-def emitStats(stats_queue: Queue | None, crawler_id: int | None = None) -> None:
+def emitStats(stats_queue: Queue, crawler_id: int | None = None) -> None:
     if stats_queue is None:
         return
 
@@ -43,7 +43,7 @@ def emitStats(stats_queue: Queue | None, crawler_id: int | None = None) -> None:
     })
 
 
-def maybeEmitStats(stats_queue: Queue | None, crawler_id: int | None, last_emit: dict[int, float], interval: float = STATS_INTERVAL_SECONDS) -> float:
+def maybeEmitStats(stats_queue: Queue, crawler_id: int | None, last_emit: dict[int, float], interval: float = STATS_INTERVAL_SECONDS) -> float:
     now = monotonic()
     previous = last_emit.get(crawler_id if crawler_id is not None else -1, 0.0)
     if now - previous >= interval:
@@ -315,7 +315,7 @@ def isDisallowed(disallowed: set[str], link: str) -> bool:
 
 
 
-async def worker(crawlerID: int, queue: Queue, stats_queue: Queue | None, log_queue: Queue | None, visitable, session):
+async def worker(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Queue, visitable, session):
     global success
     last_emit = {}
     while True:
@@ -373,11 +373,11 @@ async def worker(crawlerID: int, queue: Queue, stats_queue: Queue | None, log_qu
             visitable.task_done()
 
 
-async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue | None, log_queue: Queue | None, asyncs: int, seeds: list[str]):
+async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Queue, asyncs: int, seeds: list[str]):
 
     global visitableSet
     visitableSet = set(seeds)
-    visitable = asyncio.Queue()
+    visitable = asyncio.Queue(maxsize=50000)
     for seed in seeds:
         visitable.put_nowait(seed)
 
@@ -400,7 +400,7 @@ async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue | None, log_que
         await asyncio.gather(*tasks, return_exceptions=True)
 
 
-def startThreads(threadsNum: int, queue: Queue, stats_queue: Queue | None, log_queue: Queue | None, process: int, seeds: list[str], asyncs: int):
+def startThreads(threadsNum: int, queue: Queue, stats_queue: Queue, log_queue: Queue, process: int, seeds: list[str], asyncs: int):
 
     threads = []
 
