@@ -5,18 +5,28 @@ import logging
 from datetime import datetime, timezone
 import asyncio
 import httpx
-from threading import Thread
+from threading import Thread, Event
 from multiprocessing import Queue
-from time import monotonic
+from time import monotonic, sleep
+
+# Change the architecture
+
+# On startup, gurt adds seeds to db, with schema url, proc_id, status, time, title.
+
+# On process startup, each one starts a thread that checks if the url queue has a size less than 20.
+# If yes, then query the db, and add 200 urls to the queue, changing the url's status in the db to CLAIMED
+# This means that the workers do not add new urls to the queue.
+# The workers instead put the urls in the db queue, along with the crawled url, with status READY.
+# When urls are crawled, they are put into the db with the status FINISHED
 
 
-requests = 0
-notFound = 0
-rateLimited = 0
-forbidden = 0
-badResponses = 0
-errors = 0
-success = 0
+requests: int = 0
+notFound: int = 0
+rateLimited: int = 0
+forbidden: int = 0
+badResponses: int = 0
+errors: int = 0
+success: int = 0
 
 STATS_INTERVAL_SECONDS = 2.0
 
@@ -106,6 +116,51 @@ class RobotsNotFound(Exception): # The site doesnt have robots.txt
         super().__init__(message)
         logging.warning(f'RobotsNotFound: {message}, code: {status}')
 
+def getNewUrls(visitable: Queue, proc, finishedEvent: Event, fetch=200):
+    # queries the db, so needs the visitable queue
+    nullPulls = 0
+    while True:
+        if visitable.qsize() > 20:
+            sleep(0.05)
+            continue
+        conn = sqlite3.connect("crawler.db", timeout=30)
+
+        try:
+            conn.execute('BEGIN IMMEDIATE')
+            rows = conn.execute("""
+                SELECT url
+                FROM urls
+                WHERE state = ?
+                    AND proc = ?
+                LIMIT ?
+            """, ("READY", proc, fetch)).fetchall()
+
+            urls = [row[0] for row in rows] # type: ignore
+            if len(urls) == 0 and visitable.qsize() == 0:
+                nullPulls += 1
+                sleep(0.05)
+                if nullPulls >= 100:
+                    print('Proc:', proc, "finished.")
+                    finishedEvent.set()
+                    break
+            else:
+                nullPulls = 0
+            for url in urls:
+                conn.execute("""
+                    UPDATE urls
+                    SET state = ?
+                    WHERE url = ?
+                """, ("CLAIMED", url))
+            conn.commit()
+
+            for url in urls:
+                visitable.put_nowait(url)
+            
+        except:
+            conn.rollback()
+            raise
+        finally:
+            conn.close()
 
 
 def saveUrl(url: str, title: str | None = None) -> None:
@@ -200,7 +255,6 @@ def getDisallowed(robots, domain) -> set:
             else:
                 disallowed.append(domain)
     return set(disallowed)
-
 
 
 def markCrawled(site: str) -> bool:
@@ -315,12 +369,22 @@ def isDisallowed(disallowed: set[str], link: str) -> bool:
 
 
 
-async def worker(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Queue, visitable, session):
+async def worker(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Queue, visitable, session, finishedEvent: Event):
     global success
     last_emit = {}
     while True:
+        try:
+            if finishedEvent.is_set():
+                break
 
-        site: str = await visitable.get()
+            site: str = await asyncio.wait_for(
+            visitable.get(),
+            timeout=0.5
+            )
+        except asyncio.TimeoutError:
+            if finishedEvent.is_set:
+                break
+            continue
         try:
             if site in visited:
                 continue
@@ -373,7 +437,7 @@ async def worker(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Qu
             visitable.task_done()
 
 
-async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Queue, asyncs: int, seeds: list[str]):
+async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Queue, asyncs: int, seeds: list[str], finishedEvent):
 
     global visitableSet
     visitableSet = set(seeds)
@@ -390,7 +454,7 @@ async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Que
         follow_redirects=True
     ) as session:
         tasks = [
-            asyncio.create_task(worker(crawlerID, queue, stats_queue, log_queue, visitable, session,))
+            asyncio.create_task(worker(crawlerID, queue, stats_queue, log_queue, visitable, session, finishedEvent,))
             for _ in range(asyncs)
         ]
         await visitable.join()
@@ -400,9 +464,11 @@ async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Que
         await asyncio.gather(*tasks, return_exceptions=True)
 
 
-def startThreads(threadsNum: int, queue: Queue, stats_queue: Queue, log_queue: Queue, process: int, seeds: list[str], asyncs: int):
+def startThreads(threadsNum: int, queue: Queue, stats_queue: Queue, log_queue: Queue, process: int, seeds: list[str], asyncs: int, finishedEvent):
 
     threads = []
+
+    finishedEvent = Event()
 
     for t in range(threadsNum):
         if log_queue is not None:
@@ -412,7 +478,7 @@ def startThreads(threadsNum: int, queue: Queue, stats_queue: Queue, log_queue: Q
 
         thread = Thread(
             target=asyncio.run,
-            args=(crawl(t, queue, stats_queue, log_queue, asyncs, seeds,),),
+            args=(crawl(t, queue, stats_queue, log_queue, asyncs, seeds, finishedEvent,),),
             name=f"CrawlerThread-{t}"
         )
 

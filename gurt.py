@@ -123,6 +123,8 @@ def initDb() -> None:
     conn.execute('''
         CREATE TABLE IF NOT EXISTS urls (
             url TEXT PRIMARY KEY,
+            proc INTEGER NOT NULL,
+            status TEXT,
             timestamp TEXT NOT NULL,
             title TEXT
         )
@@ -130,6 +132,32 @@ def initDb() -> None:
 
     conn.commit()
     conn.close()    
+
+def seedInsert(seedPacks: list, seedloc: str) -> None:
+    conn = sqlite3.connect('crawler.db', timeout=30)
+    conn.execute("PRAGMA journal_mode=WAL;")
+    cur = conn.cursor()
+
+    batch = []
+    proc = 0
+    for pack in seedPacks:
+        with open(f'{seedloc}/{pack}' ,'r') as p:
+            seeds = [line.strip() for line in p]
+
+        for seed in seeds:
+            batch.append((
+                seed,
+                proc,
+                "READY",
+                datetime.now(timezone.utc).isoformat(),
+                'seed'
+            ))
+
+    cur.executemany("""
+        INSERT INTO urls (url, proc, status, timestamp, title)
+        VALUES (?, ?, ?, ?, ?)
+        ON CONFLICT(url) DO NOTHING
+    """, batch)
 
 def dbWriter(queue: Queue):
     conn = sqlite3.connect('crawler.db', timeout=30)
@@ -147,15 +175,19 @@ def dbWriter(queue: Queue):
 
         batch.append((
             msg[0],
+            msg[1],
+            msg[2],
             datetime.now(timezone.utc).isoformat(),
-            msg[1]
+            msg[3]
         ))
 
         if len(batch) >= BATCH_SIZE:
             cur.executemany('''
-                INSERT INTO urls (url, timestamp, title)
-                VALUES (?, ?, ?)
+                INSERT INTO urls (url, proc, status, timestamp, title)
+                VALUES (?, ?, ?, ?, ?)
                 ON CONFLICT(url) DO UPDATE SET
+                    proc = excluded.proc,
+                    status = excluded.status
                     timestamp = excluded.timestamp,
                     title = excluded.title
             ''', batch)
@@ -166,9 +198,11 @@ def dbWriter(queue: Queue):
     # Write anything left over
     if batch:
         cur.executemany('''
-            INSERT INTO urls (url, timestamp, title)
-            VALUES (?, ?, ?)
+            INSERT INTO urls (url, proc, status, timestamp, title)
+            VALUES (?, ?, ?, ?, ?)
             ON CONFLICT(url) DO UPDATE SET
+                proc = excluded.proc,
+                status = excluded.status
                 timestamp = excluded.timestamp,
                 title = excluded.title
         ''', batch)
@@ -194,6 +228,8 @@ def launch(procs, crawlers, seedloc, asyncs):
     except OSError:
         raise OSError(f'The seed location: {seedloc}, wasnt found')
 
+    seedInsert(seedPacks, seedloc) # type: ignore
+
     seeds = []
     for pack in seedPacks: # type: ignore
         with open(f'{seedloc}/{pack}' ,'r') as p:
@@ -202,17 +238,17 @@ def launch(procs, crawlers, seedloc, asyncs):
 
     statsQueue = Queue()
     logQueue = Queue()
-    queue = Queue(maxsize=10000)
+    dbQueue = Queue(maxsize=10000)
 
     monitor = Process(target=statsMonitor, args=(statsQueue, logQueue,))
     monitor.start()
 
-    writer = Process(target=dbWriter, args=(queue,))
+    writer = Process(target=dbWriter, args=(dbQueue,))
     writer.start()
 
     processes = []
     for i in range(procs):
-        proc = Process(target=startThreads, args=(crawlers, queue, statsQueue, logQueue, i, seeds[i], asyncs,))
+        proc = Process(target=startThreads, args=(crawlers, dbQueue, statsQueue, logQueue, i, asyncs,))
 
         proc.start()
         processes.append(proc)
@@ -220,7 +256,7 @@ def launch(procs, crawlers, seedloc, asyncs):
     for proc in processes:
         proc.join()
 
-    queue.put('STOP')
+    dbQueue.put('STOP')
     statsQueue.put('STOP')
     logQueue.put('STOP')
     writer.join()
