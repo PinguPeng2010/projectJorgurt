@@ -1,8 +1,8 @@
 # projectGurt
 
-- ***`gurt`*** is a frontier based web crawler built in python
+- ***`gurt`*** is a web crawler built in python, built with `nuitka`.
 - It uses a depth first approach to crawling, and uses multiprocessing, and threading.
-- Each process has 2 threaded crawlers, with one seed set.
+- 
 
 
 

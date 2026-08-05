@@ -1568,3 +1568,1278 @@
 2026-08-05 19:22:15,171 [WARNING]: EmptyResponse: Site: https://google.com provided an empty response, , crawler: 2
 2026-08-05 19:22:15,230 [WARNING]: No usable robots.txt for https://www.pigeonsandplanes.com (HTTP 404), crawler: 2
 2026-08-05 19:22:15,230 [WARNING]: No usable robots.txt for https://www.pigeonsandplanes.com (HTTP 404), crawler: 2
+2026-08-05 20:07:33,700 [INFO]: GRABBER STARTED: PROC: 1
+2026-08-05 20:07:33,700 [INFO]: GRABBER STARTED: PROC: 1
+2026-08-05 20:07:33,701 [INFO]: in run crawler
+2026-08-05 20:07:33,701 [INFO]: in run crawler
+2026-08-05 20:07:33,701 [INFO]: in run crawler
+2026-08-05 20:07:33,701 [INFO]: in run crawler
+2026-08-05 20:07:33,702 [INFO]: in run crawler
+2026-08-05 20:07:33,702 [INFO]: in run crawler
+2026-08-05 20:07:33,702 [INFO]: in run crawler
+2026-08-05 20:07:33,702 [INFO]: in run crawler
+2026-08-05 20:07:33,705 [INFO]: GRABBER STARTED: PROC: 0
+2026-08-05 20:07:33,705 [INFO]: GRABBER STARTED: PROC: 0
+2026-08-05 20:07:33,705 [INFO]: in run crawler
+2026-08-05 20:07:33,705 [INFO]: in run crawler
+2026-08-05 20:07:33,706 [INFO]: in run crawler
+2026-08-05 20:07:33,706 [INFO]: in run crawler
+2026-08-05 20:07:33,706 [INFO]: in run crawler
+2026-08-05 20:07:33,706 [INFO]: in run crawler
+2026-08-05 20:07:33,706 [INFO]: in run crawler
+2026-08-05 20:07:33,706 [INFO]: in run crawler
+2026-08-05 20:07:33,709 [INFO]: GRABBER STARTED: PROC: 2
+2026-08-05 20:07:33,709 [INFO]: GRABBER STARTED: PROC: 2
+2026-08-05 20:07:33,709 [INFO]: in run crawler
+2026-08-05 20:07:33,709 [INFO]: in run crawler
+2026-08-05 20:07:33,710 [INFO]: in run crawler
+2026-08-05 20:07:33,710 [INFO]: in run crawler
+2026-08-05 20:07:33,710 [INFO]: in run crawler
+2026-08-05 20:07:33,710 [INFO]: in run crawler
+2026-08-05 20:07:33,711 [INFO]: in run crawler
+2026-08-05 20:07:33,711 [INFO]: in run crawler
+2026-08-05 20:07:33,712 [INFO]: GRABBER STARTED: PROC: 3
+2026-08-05 20:07:33,712 [INFO]: GRABBER STARTED: PROC: 3
+2026-08-05 20:07:33,713 [INFO]: in run crawler
+2026-08-05 20:07:33,713 [INFO]: in run crawler
+2026-08-05 20:07:33,713 [INFO]: in run crawler
+2026-08-05 20:07:33,713 [INFO]: in run crawler
+2026-08-05 20:07:33,714 [INFO]: in run crawler
+2026-08-05 20:07:33,714 [INFO]: in run crawler
+2026-08-05 20:07:33,714 [INFO]: in run crawler
+2026-08-05 20:07:33,714 [INFO]: in run crawler
+2026-08-05 20:07:36,020 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:07:36,020 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:07:38,016 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:07:38,016 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:07:40,079 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 20:07:40,079 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 20:07:43,200 [WARNING]: Site: https://www.ap.org/about/our-role-in-elections returned HTTP 403, crawler: 3
+2026-08-05 20:07:43,200 [WARNING]: Site: https://www.ap.org/about/our-role-in-elections returned HTTP 403, crawler: 3
+2026-08-05 20:07:43,200 [WARNING]: EmptyResponse: Site: https://www.ap.org/about/our-role-in-elections provided an empty response, , crawler: 3
+2026-08-05 20:07:43,200 [WARNING]: EmptyResponse: Site: https://www.ap.org/about/our-role-in-elections provided an empty response, , crawler: 3
+2026-08-05 20:07:43,957 [WARNING]: Site: https://hackernoon.com/tagged/gptzero returned HTTP 403, crawler: 0
+2026-08-05 20:07:43,957 [WARNING]: Site: https://hackernoon.com/tagged/gptzero returned HTTP 403, crawler: 0
+2026-08-05 20:07:43,958 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/gptzero provided an empty response, , crawler: 0
+2026-08-05 20:07:43,958 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/gptzero provided an empty response, , crawler: 0
+2026-08-05 20:07:44,622 [WARNING]: Site: https://www.ap.org/ returned HTTP 403, crawler: 2
+2026-08-05 20:07:44,622 [WARNING]: Site: https://www.ap.org/ returned HTTP 403, crawler: 2
+2026-08-05 20:07:44,622 [WARNING]: EmptyResponse: Site: https://www.ap.org/ provided an empty response, , crawler: 2
+2026-08-05 20:07:44,622 [WARNING]: EmptyResponse: Site: https://www.ap.org/ provided an empty response, , crawler: 2
+2026-08-05 20:07:44,806 [WARNING]: Site: https://leads.ap.org returned HTTP 403, crawler: 0
+2026-08-05 20:07:44,806 [WARNING]: Site: https://leads.ap.org returned HTTP 403, crawler: 0
+2026-08-05 20:07:44,806 [WARNING]: EmptyResponse: Site: https://leads.ap.org provided an empty response, , crawler: 0
+2026-08-05 20:07:44,806 [WARNING]: EmptyResponse: Site: https://leads.ap.org provided an empty response, , crawler: 0
+2026-08-05 20:07:45,139 [WARNING]: Site: https://blog.ap.org/ returned HTTP 403, crawler: 2
+2026-08-05 20:07:45,139 [WARNING]: Site: https://blog.ap.org/ returned HTTP 403, crawler: 2
+2026-08-05 20:07:45,139 [WARNING]: EmptyResponse: Site: https://blog.ap.org/ provided an empty response, , crawler: 2
+2026-08-05 20:07:45,139 [WARNING]: EmptyResponse: Site: https://blog.ap.org/ provided an empty response, , crawler: 2
+2026-08-05 20:07:46,071 [WARNING]: Site: https://www.ap.org/about/news-values-and-principles returned HTTP 403, crawler: 1
+2026-08-05 20:07:46,071 [WARNING]: Site: https://www.ap.org/about/news-values-and-principles returned HTTP 403, crawler: 1
+2026-08-05 20:07:46,071 [WARNING]: EmptyResponse: Site: https://www.ap.org/about/news-values-and-principles provided an empty response, , crawler: 1
+2026-08-05 20:07:46,071 [WARNING]: EmptyResponse: Site: https://www.ap.org/about/news-values-and-principles provided an empty response, , crawler: 1
+2026-08-05 20:07:48,124 [WARNING]: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx returned HTTP 403, crawler: 0
+2026-08-05 20:07:48,124 [WARNING]: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx returned HTTP 403, crawler: 0
+2026-08-05 20:07:48,125 [WARNING]: EmptyResponse: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx provided an empty response, , crawler: 0
+2026-08-05 20:07:48,125 [WARNING]: EmptyResponse: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx provided an empty response, , crawler: 0
+2026-08-05 20:07:49,233 [WARNING]: EmptyResponse: Site: https://watch.dropout.tv/the-don-hertzfeldt-collection provided an empty response, , crawler: 3
+2026-08-05 20:07:49,233 [WARNING]: EmptyResponse: Site: https://watch.dropout.tv/the-don-hertzfeldt-collection provided an empty response, , crawler: 3
+2026-08-05 20:07:49,288 [WARNING]: No usable robots.txt for https://www.gigabyte.com (HTTP 403), crawler: 2
+2026-08-05 20:07:49,288 [WARNING]: No usable robots.txt for https://www.gigabyte.com (HTTP 403), crawler: 2
+2026-08-05 20:07:49,304 [WARNING]: Site: https://bit.ly/3hkwRl2 returned HTTP 429, crawler: 2
+2026-08-05 20:07:49,304 [WARNING]: Site: https://bit.ly/3hkwRl2 returned HTTP 429, crawler: 2
+2026-08-05 20:07:49,304 [WARNING]: EmptyResponse: Site: https://bit.ly/3hkwRl2 provided an empty response, , crawler: 2
+2026-08-05 20:07:49,304 [WARNING]: EmptyResponse: Site: https://bit.ly/3hkwRl2 provided an empty response, , crawler: 2
+2026-08-05 20:07:49,315 [WARNING]: No usable robots.txt for https://www.politico.com (HTTP 403), crawler: 3
+2026-08-05 20:07:49,315 [WARNING]: No usable robots.txt for https://www.politico.com (HTTP 403), crawler: 3
+2026-08-05 20:07:49,326 [WARNING]: No usable robots.txt for https://www.bcso.com (HTTP 403), crawler: 0
+2026-08-05 20:07:49,326 [WARNING]: No usable robots.txt for https://www.bcso.com (HTTP 403), crawler: 0
+2026-08-05 20:07:49,383 [WARNING]: Site: https://www.gigabyte.com/press/news/2440 returned HTTP 403, crawler: 2
+2026-08-05 20:07:49,383 [WARNING]: Site: https://www.gigabyte.com/press/news/2440 returned HTTP 403, crawler: 2
+2026-08-05 20:07:49,384 [WARNING]: EmptyResponse: Site: https://www.gigabyte.com/press/news/2440 provided an empty response, , crawler: 2
+2026-08-05 20:07:49,384 [WARNING]: EmptyResponse: Site: https://www.gigabyte.com/press/news/2440 provided an empty response, , crawler: 2
+2026-08-05 20:07:49,475 [WARNING]: Site: https://www.axios.com/2026/08/04/white-house-ai-framework-under-wraps returned HTTP 403, crawler: 2
+2026-08-05 20:07:49,475 [WARNING]: Site: https://www.axios.com/2026/08/04/white-house-ai-framework-under-wraps returned HTTP 403, crawler: 2
+2026-08-05 20:07:49,476 [WARNING]: EmptyResponse: Site: https://www.axios.com/2026/08/04/white-house-ai-framework-under-wraps provided an empty response, , crawler: 2
+2026-08-05 20:07:49,476 [WARNING]: EmptyResponse: Site: https://www.axios.com/2026/08/04/white-house-ai-framework-under-wraps provided an empty response, , crawler: 2
+2026-08-05 20:07:49,489 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 20:07:49,489 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 20:07:49,496 [WARNING]: Site: https://www.bcso.com/joint-investigation-leads-to-arrest-of-lenoir-city-man/ returned HTTP 403, crawler: 0
+2026-08-05 20:07:49,496 [WARNING]: Site: https://www.bcso.com/joint-investigation-leads-to-arrest-of-lenoir-city-man/ returned HTTP 403, crawler: 0
+2026-08-05 20:07:49,496 [WARNING]: EmptyResponse: Site: https://www.bcso.com/joint-investigation-leads-to-arrest-of-lenoir-city-man/ provided an empty response, , crawler: 0
+2026-08-05 20:07:49,496 [WARNING]: EmptyResponse: Site: https://www.bcso.com/joint-investigation-leads-to-arrest-of-lenoir-city-man/ provided an empty response, , crawler: 0
+2026-08-05 20:07:49,525 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 3
+2026-08-05 20:07:49,525 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 3
+2026-08-05 20:07:49,543 [WARNING]: Site: https://www.reuters.com/world/trump-administration-drafting-ban-chinese-data-center-devices-sources-say-2026-08-04/ returned HTTP 401, crawler: 2
+2026-08-05 20:07:49,543 [WARNING]: Site: https://www.reuters.com/world/trump-administration-drafting-ban-chinese-data-center-devices-sources-say-2026-08-04/ returned HTTP 401, crawler: 2
+2026-08-05 20:07:49,544 [WARNING]: EmptyResponse: Site: https://www.reuters.com/world/trump-administration-drafting-ban-chinese-data-center-devices-sources-say-2026-08-04/ provided an empty response, , crawler: 2
+2026-08-05 20:07:49,544 [WARNING]: EmptyResponse: Site: https://www.reuters.com/world/trump-administration-drafting-ban-chinese-data-center-devices-sources-say-2026-08-04/ provided an empty response, , crawler: 2
+2026-08-05 20:07:49,568 [WARNING]: No usable robots.txt for http://www.bom.gov.au (HTTP 403), crawler: 3
+2026-08-05 20:07:49,568 [WARNING]: No usable robots.txt for http://www.bom.gov.au (HTTP 403), crawler: 3
+2026-08-05 20:07:49,598 [WARNING]: Site: http://www.bom.gov.au/nsw/forecasts/sydney.shtml returned HTTP 403, crawler: 3
+2026-08-05 20:07:49,598 [WARNING]: Site: http://www.bom.gov.au/nsw/forecasts/sydney.shtml returned HTTP 403, crawler: 3
+2026-08-05 20:07:49,598 [WARNING]: EmptyResponse: Site: http://www.bom.gov.au/nsw/forecasts/sydney.shtml provided an empty response, , crawler: 3
+2026-08-05 20:07:49,598 [WARNING]: EmptyResponse: Site: http://www.bom.gov.au/nsw/forecasts/sydney.shtml provided an empty response, , crawler: 3
+2026-08-05 20:07:49,740 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:07:49,740 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:07:49,948 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 3
+2026-08-05 20:07:49,948 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 3
+2026-08-05 20:07:50,487 [WARNING]: No usable robots.txt for https://www.domain.com.au (HTTP 403), crawler: 0
+2026-08-05 20:07:50,487 [WARNING]: No usable robots.txt for https://www.domain.com.au (HTTP 403), crawler: 0
+2026-08-05 20:07:50,513 [WARNING]: No usable robots.txt for https://www.domain.com.au (HTTP 403), crawler: 0
+2026-08-05 20:07:50,513 [WARNING]: No usable robots.txt for https://www.domain.com.au (HTTP 403), crawler: 0
+2026-08-05 20:07:50,590 [WARNING]: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 returned HTTP 403, crawler: 3
+2026-08-05 20:07:50,590 [WARNING]: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 returned HTTP 403, crawler: 3
+2026-08-05 20:07:50,590 [WARNING]: EmptyResponse: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 provided an empty response, , crawler: 3
+2026-08-05 20:07:50,590 [WARNING]: EmptyResponse: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 provided an empty response, , crawler: 3
+2026-08-05 20:07:50,778 [WARNING]: Site: https://www.domain.com.au/news/australia-property-price-surprises-sa3-regions-home-values-jumped-200000-in-90-days-1539186/?utm_campaign=featured-masthead&utm_source=smh&utm_medium=link returned HTTP 403, crawler: 0
+2026-08-05 20:07:50,778 [WARNING]: Site: https://www.domain.com.au/news/australia-property-price-surprises-sa3-regions-home-values-jumped-200000-in-90-days-1539186/?utm_campaign=featured-masthead&utm_source=smh&utm_medium=link returned HTTP 403, crawler: 0
+2026-08-05 20:07:50,779 [WARNING]: EmptyResponse: Site: https://www.domain.com.au/news/australia-property-price-surprises-sa3-regions-home-values-jumped-200000-in-90-days-1539186/?utm_campaign=featured-masthead&utm_source=smh&utm_medium=link provided an empty response, , crawler: 0
+2026-08-05 20:07:50,779 [WARNING]: EmptyResponse: Site: https://www.domain.com.au/news/australia-property-price-surprises-sa3-regions-home-values-jumped-200000-in-90-days-1539186/?utm_campaign=featured-masthead&utm_source=smh&utm_medium=link provided an empty response, , crawler: 0
+2026-08-05 20:07:50,894 [WARNING]: Site: https://www.domain.com.au/news/brisbane-australias-most-profitable-property-market-profit-report-2026-1540548/?utm_campaign=featured-masthead&utm_source=smh&utm_medium=link returned HTTP 403, crawler: 0
+2026-08-05 20:07:50,894 [WARNING]: Site: https://www.domain.com.au/news/brisbane-australias-most-profitable-property-market-profit-report-2026-1540548/?utm_campaign=featured-masthead&utm_source=smh&utm_medium=link returned HTTP 403, crawler: 0
+2026-08-05 20:07:50,894 [WARNING]: EmptyResponse: Site: https://www.domain.com.au/news/brisbane-australias-most-profitable-property-market-profit-report-2026-1540548/?utm_campaign=featured-masthead&utm_source=smh&utm_medium=link provided an empty response, , crawler: 0
+2026-08-05 20:07:50,894 [WARNING]: EmptyResponse: Site: https://www.domain.com.au/news/brisbane-australias-most-profitable-property-market-profit-report-2026-1540548/?utm_campaign=featured-masthead&utm_source=smh&utm_medium=link provided an empty response, , crawler: 0
+2026-08-05 20:07:51,058 [WARNING]: No usable robots.txt for https://www.drive.com.au (HTTP 403), crawler: 0
+2026-08-05 20:07:51,058 [WARNING]: No usable robots.txt for https://www.drive.com.au (HTTP 403), crawler: 0
+2026-08-05 20:07:51,509 [WARNING]: Site: https://www.drive.com.au/news/major-toll-road-misses-out-on-new-price-drop-in-sydney/?utm_campaign=syndication&utm_source=smh.com.au&utm_content=article_1&utm_medium=partner returned HTTP 403, crawler: 0
+2026-08-05 20:07:51,509 [WARNING]: Site: https://www.drive.com.au/news/major-toll-road-misses-out-on-new-price-drop-in-sydney/?utm_campaign=syndication&utm_source=smh.com.au&utm_content=article_1&utm_medium=partner returned HTTP 403, crawler: 0
+2026-08-05 20:07:51,509 [WARNING]: EmptyResponse: Site: https://www.drive.com.au/news/major-toll-road-misses-out-on-new-price-drop-in-sydney/?utm_campaign=syndication&utm_source=smh.com.au&utm_content=article_1&utm_medium=partner provided an empty response, , crawler: 0
+2026-08-05 20:07:51,509 [WARNING]: EmptyResponse: Site: https://www.drive.com.au/news/major-toll-road-misses-out-on-new-price-drop-in-sydney/?utm_campaign=syndication&utm_source=smh.com.au&utm_content=article_1&utm_medium=partner provided an empty response, , crawler: 0
+2026-08-05 20:07:51,609 [WARNING]: No usable robots.txt for https://www.domain.com.au (HTTP 403), crawler: 2
+2026-08-05 20:07:51,609 [WARNING]: No usable robots.txt for https://www.domain.com.au (HTTP 403), crawler: 2
+2026-08-05 20:07:51,760 [WARNING]: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ returned HTTP 403, crawler: 1
+2026-08-05 20:07:51,760 [WARNING]: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ returned HTTP 403, crawler: 1
+2026-08-05 20:07:51,760 [WARNING]: EmptyResponse: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ provided an empty response, , crawler: 1
+2026-08-05 20:07:51,760 [WARNING]: EmptyResponse: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ provided an empty response, , crawler: 1
+2026-08-05 20:07:51,869 [WARNING]: No usable robots.txt for https://www.armaangomes.com (HTTP 404), crawler: 1
+2026-08-05 20:07:51,869 [WARNING]: No usable robots.txt for https://www.armaangomes.com (HTTP 404), crawler: 1
+2026-08-05 20:07:52,862 [WARNING]: No usable robots.txt for https://en.wikipedia.org (HTTP 403), crawler: 3
+2026-08-05 20:07:52,862 [WARNING]: No usable robots.txt for https://en.wikipedia.org (HTTP 403), crawler: 3
+2026-08-05 20:07:52,924 [WARNING]: Site: https://en.wikipedia.org/wiki/There_Will_Come_Soft_Rains_(short_story) returned HTTP 403, crawler: 3
+2026-08-05 20:07:52,924 [WARNING]: Site: https://en.wikipedia.org/wiki/There_Will_Come_Soft_Rains_(short_story) returned HTTP 403, crawler: 3
+2026-08-05 20:07:52,925 [WARNING]: EmptyResponse: Site: https://en.wikipedia.org/wiki/There_Will_Come_Soft_Rains_(short_story) provided an empty response, , crawler: 3
+2026-08-05 20:07:52,925 [WARNING]: EmptyResponse: Site: https://en.wikipedia.org/wiki/There_Will_Come_Soft_Rains_(short_story) provided an empty response, , crawler: 3
+2026-08-05 20:07:53,454 [WARNING]: Site: https://www.domain.com.au returned HTTP 403, crawler: 2
+2026-08-05 20:07:53,454 [WARNING]: Site: https://www.domain.com.au returned HTTP 403, crawler: 2
+2026-08-05 20:07:53,455 [WARNING]: EmptyResponse: Site: https://www.domain.com.au provided an empty response, , crawler: 2
+2026-08-05 20:07:53,455 [WARNING]: EmptyResponse: Site: https://www.domain.com.au provided an empty response, , crawler: 2
+2026-08-05 20:07:53,478 [WARNING]: No usable robots.txt for https://edition.smh.com.au (HTTP 404), crawler: 2
+2026-08-05 20:07:53,478 [WARNING]: No usable robots.txt for https://edition.smh.com.au (HTTP 404), crawler: 2
+2026-08-05 20:07:53,506 [WARNING]: No usable robots.txt for https://e360.yale.edu (HTTP 404), crawler: 3
+2026-08-05 20:07:53,506 [WARNING]: No usable robots.txt for https://e360.yale.edu (HTTP 404), crawler: 3
+2026-08-05 20:07:55,177 [WARNING]: No usable robots.txt for https://subscribe.smh.com.au (HTTP 404), crawler: 3
+2026-08-05 20:07:55,177 [WARNING]: No usable robots.txt for https://subscribe.smh.com.au (HTTP 404), crawler: 3
+2026-08-05 20:07:55,340 [WARNING]: Site: https://hackernoon.com/c/business returned HTTP 403, crawler: 2
+2026-08-05 20:07:55,340 [WARNING]: Site: https://hackernoon.com/c/business returned HTTP 403, crawler: 2
+2026-08-05 20:07:55,341 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/business provided an empty response, , crawler: 2
+2026-08-05 20:07:55,341 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/business provided an empty response, , crawler: 2
+2026-08-05 20:07:55,602 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 2
+2026-08-05 20:07:55,602 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 2
+2026-08-05 20:07:55,629 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 1
+2026-08-05 20:07:55,629 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 1
+2026-08-05 20:07:55,703 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 1
+2026-08-05 20:07:55,703 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 1
+2026-08-05 20:07:55,796 [WARNING]: Site: https://hackernoon.com/c/web3 returned HTTP 403, crawler: 0
+2026-08-05 20:07:55,796 [WARNING]: Site: https://hackernoon.com/c/web3 returned HTTP 403, crawler: 0
+2026-08-05 20:07:55,797 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/web3 provided an empty response, , crawler: 0
+2026-08-05 20:07:55,797 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/web3 provided an empty response, , crawler: 0
+2026-08-05 20:07:55,804 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 2
+2026-08-05 20:07:55,804 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 2
+2026-08-05 20:07:55,845 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 20:07:55,845 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 20:07:56,071 [WARNING]: Site: https://hackernoon.com/c/ai returned HTTP 403, crawler: 3
+2026-08-05 20:07:56,071 [WARNING]: Site: https://hackernoon.com/c/ai returned HTTP 403, crawler: 3
+2026-08-05 20:07:56,071 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/ai provided an empty response, , crawler: 3
+2026-08-05 20:07:56,071 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/ai provided an empty response, , crawler: 3
+2026-08-05 20:07:56,221 [WARNING]: No usable robots.txt for https://www.datacamp.com (HTTP 403), crawler: 0
+2026-08-05 20:07:56,221 [WARNING]: No usable robots.txt for https://www.datacamp.com (HTTP 403), crawler: 0
+2026-08-05 20:07:56,294 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 20:07:56,294 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 20:07:56,309 [WARNING]: Site: https://labex.io returned HTTP 403, crawler: 3
+2026-08-05 20:07:56,309 [WARNING]: Site: https://labex.io returned HTTP 403, crawler: 3
+2026-08-05 20:07:56,309 [WARNING]: EmptyResponse: Site: https://labex.io provided an empty response, , crawler: 3
+2026-08-05 20:07:56,309 [WARNING]: EmptyResponse: Site: https://labex.io provided an empty response, , crawler: 3
+2026-08-05 20:07:56,313 [WARNING]: No usable robots.txt for http://thonny.org (HTTP 404), crawler: 3
+2026-08-05 20:07:56,313 [WARNING]: No usable robots.txt for http://thonny.org (HTTP 404), crawler: 3
+2026-08-05 20:07:56,343 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 1
+2026-08-05 20:07:56,343 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 1
+2026-08-05 20:07:56,478 [WARNING]: No usable robots.txt for https://genepy.org (HTTP 404), crawler: 1
+2026-08-05 20:07:56,478 [WARNING]: No usable robots.txt for https://genepy.org (HTTP 404), crawler: 1
+2026-08-05 20:07:56,540 [WARNING]: Site: https://hackernoon.com/tagged/seo returned HTTP 403, crawler: 3
+2026-08-05 20:07:56,540 [WARNING]: Site: https://hackernoon.com/tagged/seo returned HTTP 403, crawler: 3
+2026-08-05 20:07:56,541 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/seo provided an empty response, , crawler: 3
+2026-08-05 20:07:56,541 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/seo provided an empty response, , crawler: 3
+2026-08-05 20:07:56,596 [WARNING]: Site: https://go.skimresources.com/?id=1025X1701640&xs=1&url=https%3A%2F%2Fbookshop.org%2Fp%2Fbooks%2Fthe-martian-chronicles-ray-bradbury%2F7225eae91a5fef0b%3Fean%3D9781668094853%26bkshp-astro%3Dt returned HTTP 403, crawler: 0
+2026-08-05 20:07:56,596 [WARNING]: Site: https://go.skimresources.com/?id=1025X1701640&xs=1&url=https%3A%2F%2Fbookshop.org%2Fp%2Fbooks%2Fthe-martian-chronicles-ray-bradbury%2F7225eae91a5fef0b%3Fean%3D9781668094853%26bkshp-astro%3Dt returned HTTP 403, crawler: 0
+2026-08-05 20:07:56,597 [WARNING]: EmptyResponse: Site: https://go.skimresources.com/?id=1025X1701640&xs=1&url=https%3A%2F%2Fbookshop.org%2Fp%2Fbooks%2Fthe-martian-chronicles-ray-bradbury%2F7225eae91a5fef0b%3Fean%3D9781668094853%26bkshp-astro%3Dt provided an empty response, , crawler: 0
+2026-08-05 20:07:56,597 [WARNING]: EmptyResponse: Site: https://go.skimresources.com/?id=1025X1701640&xs=1&url=https%3A%2F%2Fbookshop.org%2Fp%2Fbooks%2Fthe-martian-chronicles-ray-bradbury%2F7225eae91a5fef0b%3Fean%3D9781668094853%26bkshp-astro%3Dt provided an empty response, , crawler: 0
+2026-08-05 20:07:56,632 [WARNING]: No usable robots.txt for https://aqemery.github.io (HTTP 404), crawler: 2
+2026-08-05 20:07:56,632 [WARNING]: No usable robots.txt for https://aqemery.github.io (HTTP 404), crawler: 2
+2026-08-05 20:07:56,673 [WARNING]: Site: https://hackernoon.com/u/awwsamu returned HTTP 403, crawler: 1
+2026-08-05 20:07:56,673 [WARNING]: Site: https://hackernoon.com/u/awwsamu returned HTTP 403, crawler: 1
+2026-08-05 20:07:56,673 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/awwsamu provided an empty response, , crawler: 1
+2026-08-05 20:07:56,673 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/awwsamu provided an empty response, , crawler: 1
+2026-08-05 20:07:56,729 [WARNING]: No usable robots.txt for https://python.land (HTTP 403), crawler: 0
+2026-08-05 20:07:56,729 [WARNING]: No usable robots.txt for https://python.land (HTTP 403), crawler: 0
+2026-08-05 20:07:56,798 [WARNING]: No usable robots.txt for https://githubuniverse.com (HTTP 404), crawler: 3
+2026-08-05 20:07:56,798 [WARNING]: No usable robots.txt for https://githubuniverse.com (HTTP 404), crawler: 3
+2026-08-05 20:07:57,018 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:07:57,018 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:07:57,045 [WARNING]: Site: https://www.datacamp.com returned HTTP 403, crawler: 0
+2026-08-05 20:07:57,045 [WARNING]: Site: https://www.datacamp.com returned HTTP 403, crawler: 0
+2026-08-05 20:07:57,045 [WARNING]: EmptyResponse: Site: https://www.datacamp.com provided an empty response, , crawler: 0
+2026-08-05 20:07:57,045 [WARNING]: EmptyResponse: Site: https://www.datacamp.com provided an empty response, , crawler: 0
+2026-08-05 20:07:57,087 [WARNING]: Site: https://python.land/python-tutorial returned HTTP 403, crawler: 0
+2026-08-05 20:07:57,087 [WARNING]: Site: https://python.land/python-tutorial returned HTTP 403, crawler: 0
+2026-08-05 20:07:57,087 [WARNING]: EmptyResponse: Site: https://python.land/python-tutorial provided an empty response, , crawler: 0
+2026-08-05 20:07:57,087 [WARNING]: EmptyResponse: Site: https://python.land/python-tutorial provided an empty response, , crawler: 0
+2026-08-05 20:07:57,179 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:07:57,179 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:07:57,238 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:07:57,238 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:07:57,860 [WARNING]: EmptyResponse: Site: https://www.myhsts.org provided an empty response, , crawler: 2
+2026-08-05 20:07:57,860 [WARNING]: EmptyResponse: Site: https://www.myhsts.org provided an empty response, , crawler: 2
+2026-08-05 20:07:57,914 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 1
+2026-08-05 20:07:57,914 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 1
+2026-08-05 20:07:57,916 [WARNING]: EmptyResponse: Site: https://www.theverge.com/phone-review provided an empty response, , crawler: 1
+2026-08-05 20:07:57,916 [WARNING]: EmptyResponse: Site: https://www.theverge.com/phone-review provided an empty response, , crawler: 1
+2026-08-05 20:07:57,982 [WARNING]: No usable robots.txt for https://overcast.fm (HTTP 404), crawler: 3
+2026-08-05 20:07:57,982 [WARNING]: No usable robots.txt for https://overcast.fm (HTTP 404), crawler: 3
+2026-08-05 20:08:06,562 [INFO]: GRABBER STARTED: PROC: 0
+2026-08-05 20:08:06,562 [INFO]: GRABBER STARTED: PROC: 0
+2026-08-05 20:08:06,563 [INFO]: in run crawler
+2026-08-05 20:08:06,563 [INFO]: in run crawler
+2026-08-05 20:08:06,563 [INFO]: in run crawler
+2026-08-05 20:08:06,563 [INFO]: in run crawler
+2026-08-05 20:08:06,563 [INFO]: in run crawler
+2026-08-05 20:08:06,563 [INFO]: in run crawler
+2026-08-05 20:08:06,564 [INFO]: in run crawler
+2026-08-05 20:08:06,564 [INFO]: in run crawler
+2026-08-05 20:08:06,564 [INFO]: in run crawler
+2026-08-05 20:08:06,564 [INFO]: in run crawler
+2026-08-05 20:08:06,572 [INFO]: GRABBER STARTED: PROC: 2
+2026-08-05 20:08:06,572 [INFO]: GRABBER STARTED: PROC: 2
+2026-08-05 20:08:06,573 [INFO]: in run crawler
+2026-08-05 20:08:06,573 [INFO]: in run crawler
+2026-08-05 20:08:06,573 [INFO]: GRABBER STARTED: PROC: 1
+2026-08-05 20:08:06,573 [INFO]: GRABBER STARTED: PROC: 1
+2026-08-05 20:08:06,573 [INFO]: in run crawler
+2026-08-05 20:08:06,573 [INFO]: in run crawler
+2026-08-05 20:08:06,573 [INFO]: in run crawler
+2026-08-05 20:08:06,573 [INFO]: in run crawler
+2026-08-05 20:08:06,573 [INFO]: in run crawler
+2026-08-05 20:08:06,574 [INFO]: in run crawler
+2026-08-05 20:08:06,573 [INFO]: in run crawler
+2026-08-05 20:08:06,574 [INFO]: in run crawler
+2026-08-05 20:08:06,574 [INFO]: in run crawler
+2026-08-05 20:08:06,573 [INFO]: in run crawler
+2026-08-05 20:08:06,574 [INFO]: in run crawler
+2026-08-05 20:08:06,574 [INFO]: in run crawler
+2026-08-05 20:08:06,574 [INFO]: in run crawler
+2026-08-05 20:08:06,574 [INFO]: in run crawler
+2026-08-05 20:08:06,574 [INFO]: in run crawler
+2026-08-05 20:08:06,574 [INFO]: in run crawler
+2026-08-05 20:08:06,574 [INFO]: in run crawler
+2026-08-05 20:08:06,581 [INFO]: GRABBER STARTED: PROC: 3
+2026-08-05 20:08:06,581 [INFO]: GRABBER STARTED: PROC: 3
+2026-08-05 20:08:06,582 [INFO]: in run crawler
+2026-08-05 20:08:06,582 [INFO]: in run crawler
+2026-08-05 20:08:06,582 [INFO]: in run crawler
+2026-08-05 20:08:06,582 [INFO]: in run crawler
+2026-08-05 20:08:06,582 [INFO]: in run crawler
+2026-08-05 20:08:06,582 [INFO]: in run crawler
+2026-08-05 20:08:06,583 [INFO]: in run crawler
+2026-08-05 20:08:06,583 [INFO]: in run crawler
+2026-08-05 20:08:06,583 [INFO]: in run crawler
+2026-08-05 20:08:06,583 [INFO]: in run crawler
+2026-08-05 20:08:09,057 [WARNING]: Site: https://hackernoon.com/u/awwsamu returned HTTP 403, crawler: 3
+2026-08-05 20:08:09,057 [WARNING]: Site: https://hackernoon.com/u/awwsamu returned HTTP 403, crawler: 3
+2026-08-05 20:08:09,057 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/awwsamu provided an empty response, , crawler: 3
+2026-08-05 20:08:09,057 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/awwsamu provided an empty response, , crawler: 3
+2026-08-05 20:08:09,262 [WARNING]: Site: https://hackernoon.com/u/zbruceli returned HTTP 403, crawler: 3
+2026-08-05 20:08:09,262 [WARNING]: Site: https://hackernoon.com/u/zbruceli returned HTTP 403, crawler: 3
+2026-08-05 20:08:09,262 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/zbruceli provided an empty response, , crawler: 3
+2026-08-05 20:08:09,262 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/zbruceli provided an empty response, , crawler: 3
+2026-08-05 20:08:09,284 [WARNING]: Site: https://hackernoon.com/tagged/programming returned HTTP 403, crawler: 3
+2026-08-05 20:08:09,284 [WARNING]: Site: https://hackernoon.com/tagged/programming returned HTTP 403, crawler: 3
+2026-08-05 20:08:09,284 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/programming provided an empty response, , crawler: 3
+2026-08-05 20:08:09,284 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/programming provided an empty response, , crawler: 3
+2026-08-05 20:08:09,289 [WARNING]: Site: https://hackernoon.com/u/ethcarv returned HTTP 403, crawler: 3
+2026-08-05 20:08:09,289 [WARNING]: Site: https://hackernoon.com/u/ethcarv returned HTTP 403, crawler: 3
+2026-08-05 20:08:09,289 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/ethcarv provided an empty response, , crawler: 3
+2026-08-05 20:08:09,289 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/ethcarv provided an empty response, , crawler: 3
+2026-08-05 20:08:09,457 [WARNING]: Site: https://hackernoon.com/tagged/gptzero returned HTTP 403, crawler: 0
+2026-08-05 20:08:09,457 [WARNING]: Site: https://hackernoon.com/tagged/gptzero returned HTTP 403, crawler: 0
+2026-08-05 20:08:09,457 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/gptzero provided an empty response, , crawler: 0
+2026-08-05 20:08:09,457 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/gptzero provided an empty response, , crawler: 0
+2026-08-05 20:08:09,509 [WARNING]: Site: https://hackernoon.com/tagged/seo returned HTTP 403, crawler: 3
+2026-08-05 20:08:09,509 [WARNING]: Site: https://hackernoon.com/tagged/seo returned HTTP 403, crawler: 3
+2026-08-05 20:08:09,509 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/seo provided an empty response, , crawler: 3
+2026-08-05 20:08:09,509 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/seo provided an empty response, , crawler: 3
+2026-08-05 20:08:10,381 [WARNING]: Site: https://dash.cloudflare.com/sign-up returned HTTP 403, crawler: 3
+2026-08-05 20:08:10,381 [WARNING]: Site: https://dash.cloudflare.com/sign-up returned HTTP 403, crawler: 3
+2026-08-05 20:08:10,381 [WARNING]: EmptyResponse: Site: https://dash.cloudflare.com/sign-up provided an empty response, , crawler: 3
+2026-08-05 20:08:10,381 [WARNING]: EmptyResponse: Site: https://dash.cloudflare.com/sign-up provided an empty response, , crawler: 3
+2026-08-05 20:08:10,392 [WARNING]: Site: https://hackernoon.com/u/katul1512 returned HTTP 403, crawler: 4
+2026-08-05 20:08:10,392 [WARNING]: Site: https://hackernoon.com/u/katul1512 returned HTTP 403, crawler: 4
+2026-08-05 20:08:10,392 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/katul1512 provided an empty response, , crawler: 4
+2026-08-05 20:08:10,392 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/katul1512 provided an empty response, , crawler: 4
+2026-08-05 20:08:10,723 [WARNING]: No usable robots.txt for https://about.hackernoon.com (HTTP 403), crawler: 4
+2026-08-05 20:08:10,723 [WARNING]: No usable robots.txt for https://about.hackernoon.com (HTTP 403), crawler: 4
+2026-08-05 20:08:10,727 [WARNING]: Site: https://hackernoon.com/tagged/varonis-atlas-agent returned HTTP 403, crawler: 4
+2026-08-05 20:08:10,727 [WARNING]: Site: https://hackernoon.com/tagged/varonis-atlas-agent returned HTTP 403, crawler: 4
+2026-08-05 20:08:10,727 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/varonis-atlas-agent provided an empty response, , crawler: 4
+2026-08-05 20:08:10,727 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/varonis-atlas-agent provided an empty response, , crawler: 4
+2026-08-05 20:08:10,730 [WARNING]: No usable robots.txt for https://smh.myfairfax.com.au (HTTP 404), crawler: 3
+2026-08-05 20:08:10,730 [WARNING]: No usable robots.txt for https://smh.myfairfax.com.au (HTTP 404), crawler: 3
+2026-08-05 20:08:10,793 [WARNING]: Site: https://about.hackernoon.com returned HTTP 403, crawler: 4
+2026-08-05 20:08:10,793 [WARNING]: Site: https://about.hackernoon.com returned HTTP 403, crawler: 4
+2026-08-05 20:08:10,794 [WARNING]: EmptyResponse: Site: https://about.hackernoon.com provided an empty response, , crawler: 4
+2026-08-05 20:08:10,794 [WARNING]: EmptyResponse: Site: https://about.hackernoon.com provided an empty response, , crawler: 4
+2026-08-05 20:08:10,863 [WARNING]: No usable robots.txt for https://www.casio.com.cn (HTTP 404), crawler: 0
+2026-08-05 20:08:10,863 [WARNING]: No usable robots.txt for https://www.casio.com.cn (HTTP 404), crawler: 0
+2026-08-05 20:08:10,878 [WARNING]: Site: https://www.linkedin.com/company/cloudflare-inc- returned HTTP 999, crawler: 3
+2026-08-05 20:08:10,878 [WARNING]: Site: https://www.linkedin.com/company/cloudflare-inc- returned HTTP 999, crawler: 3
+2026-08-05 20:08:10,878 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/cloudflare-inc- provided an empty response, , crawler: 3
+2026-08-05 20:08:10,878 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/cloudflare-inc- provided an empty response, , crawler: 3
+2026-08-05 20:08:10,988 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:10,988 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:11,106 [WARNING]: Site: https://cloudflare.com/contact/ returned HTTP 403, crawler: 3
+2026-08-05 20:08:11,106 [WARNING]: Site: https://cloudflare.com/contact/ returned HTTP 403, crawler: 3
+2026-08-05 20:08:11,106 [WARNING]: EmptyResponse: Site: https://cloudflare.com/contact/ provided an empty response, , crawler: 3
+2026-08-05 20:08:11,106 [WARNING]: EmptyResponse: Site: https://cloudflare.com/contact/ provided an empty response, , crawler: 3
+2026-08-05 20:08:11,119 [WARNING]: No usable robots.txt for https://login.nine.com.au (HTTP 403), crawler: 2
+2026-08-05 20:08:11,119 [WARNING]: No usable robots.txt for https://login.nine.com.au (HTTP 403), crawler: 2
+2026-08-05 20:08:11,191 [WARNING]: No usable robots.txt for http://sphinx.pocoo.org (HTTP 400), crawler: 2
+2026-08-05 20:08:11,191 [WARNING]: No usable robots.txt for http://sphinx.pocoo.org (HTTP 400), crawler: 2
+2026-08-05 20:08:11,228 [WARNING]: No usable robots.txt for https://subscribe.smh.com.au (HTTP 404), crawler: 1
+2026-08-05 20:08:11,228 [WARNING]: No usable robots.txt for https://subscribe.smh.com.au (HTTP 404), crawler: 1
+2026-08-05 20:08:11,258 [WARNING]: No usable robots.txt for https://podcasts.smh.com.au (HTTP 404), crawler: 0
+2026-08-05 20:08:11,258 [WARNING]: No usable robots.txt for https://podcasts.smh.com.au (HTTP 404), crawler: 0
+2026-08-05 20:08:11,325 [WARNING]: Site: https://hackernoon.com/p/services/story-boost returned HTTP 403, crawler: 4
+2026-08-05 20:08:11,325 [WARNING]: Site: https://hackernoon.com/p/services/story-boost returned HTTP 403, crawler: 4
+2026-08-05 20:08:11,326 [WARNING]: EmptyResponse: Site: https://hackernoon.com/p/services/story-boost provided an empty response, , crawler: 4
+2026-08-05 20:08:11,326 [WARNING]: EmptyResponse: Site: https://hackernoon.com/p/services/story-boost provided an empty response, , crawler: 4
+2026-08-05 20:08:11,583 [WARNING]: Site: http://sphinx.pocoo.org/ returned HTTP 400, crawler: 2
+2026-08-05 20:08:11,583 [WARNING]: Site: http://sphinx.pocoo.org/ returned HTTP 400, crawler: 2
+2026-08-05 20:08:11,584 [WARNING]: EmptyResponse: Site: http://sphinx.pocoo.org/ provided an empty response, , crawler: 2
+2026-08-05 20:08:11,584 [WARNING]: EmptyResponse: Site: http://sphinx.pocoo.org/ provided an empty response, , crawler: 2
+2026-08-05 20:08:12,285 [WARNING]: Site: https://support.cloudflare.com/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:12,285 [WARNING]: Site: https://support.cloudflare.com/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:12,285 [WARNING]: EmptyResponse: Site: https://support.cloudflare.com/ provided an empty response, , crawler: 4
+2026-08-05 20:08:12,285 [WARNING]: EmptyResponse: Site: https://support.cloudflare.com/ provided an empty response, , crawler: 4
+2026-08-05 20:08:12,498 [WARNING]: Site: https://www.njoag.gov/ag-davenport-sues-amazon-over-anticompetitive-practices-affecting-dsp-delivery-drivers/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:12,498 [WARNING]: Site: https://www.njoag.gov/ag-davenport-sues-amazon-over-anticompetitive-practices-affecting-dsp-delivery-drivers/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:12,498 [WARNING]: EmptyResponse: Site: https://www.njoag.gov/ag-davenport-sues-amazon-over-anticompetitive-practices-affecting-dsp-delivery-drivers/ provided an empty response, , crawler: 4
+2026-08-05 20:08:12,498 [WARNING]: EmptyResponse: Site: https://www.njoag.gov/ag-davenport-sues-amazon-over-anticompetitive-practices-affecting-dsp-delivery-drivers/ provided an empty response, , crawler: 4
+2026-08-05 20:08:12,772 [WARNING]: Site: http://tributes.smh.com.au/obituaries/smh-au/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:12,772 [WARNING]: Site: http://tributes.smh.com.au/obituaries/smh-au/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:12,773 [WARNING]: EmptyResponse: Site: http://tributes.smh.com.au/obituaries/smh-au/ provided an empty response, , crawler: 4
+2026-08-05 20:08:12,773 [WARNING]: EmptyResponse: Site: http://tributes.smh.com.au/obituaries/smh-au/ provided an empty response, , crawler: 4
+2026-08-05 20:08:12,850 [WARNING]: Site: https://www.cloudflare.com/learning/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:12,850 [WARNING]: Site: https://www.cloudflare.com/learning/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:12,850 [WARNING]: EmptyResponse: Site: https://www.cloudflare.com/learning/ provided an empty response, , crawler: 4
+2026-08-05 20:08:12,850 [WARNING]: EmptyResponse: Site: https://www.cloudflare.com/learning/ provided an empty response, , crawler: 4
+2026-08-05 20:08:12,974 [WARNING]: No usable robots.txt for https://radar.cloudflare.com (HTTP 403), crawler: 2
+2026-08-05 20:08:12,974 [WARNING]: No usable robots.txt for https://radar.cloudflare.com (HTTP 403), crawler: 2
+2026-08-05 20:08:13,247 [WARNING]: Site: https://www.njoag.gov/wp-content/uploads/2026/08/2026-0804_Complaint_NJ-v-Amazon.pdf returned HTTP 403, crawler: 2
+2026-08-05 20:08:13,247 [WARNING]: Site: https://www.njoag.gov/wp-content/uploads/2026/08/2026-0804_Complaint_NJ-v-Amazon.pdf returned HTTP 403, crawler: 2
+2026-08-05 20:08:13,248 [WARNING]: EmptyResponse: Site: https://www.njoag.gov/wp-content/uploads/2026/08/2026-0804_Complaint_NJ-v-Amazon.pdf provided an empty response, , crawler: 2
+2026-08-05 20:08:13,248 [WARNING]: EmptyResponse: Site: https://www.njoag.gov/wp-content/uploads/2026/08/2026-0804_Complaint_NJ-v-Amazon.pdf provided an empty response, , crawler: 2
+2026-08-05 20:08:13,357 [WARNING]: No usable robots.txt for https://www.drive.com.au (HTTP 403), crawler: 2
+2026-08-05 20:08:13,357 [WARNING]: No usable robots.txt for https://www.drive.com.au (HTTP 403), crawler: 2
+2026-08-05 20:08:14,156 [WARNING]: Site: https://ninecareers.com.au/ returned HTTP 403, crawler: 2
+2026-08-05 20:08:14,156 [WARNING]: Site: https://ninecareers.com.au/ returned HTTP 403, crawler: 2
+2026-08-05 20:08:14,156 [WARNING]: EmptyResponse: Site: https://ninecareers.com.au/ provided an empty response, , crawler: 2
+2026-08-05 20:08:14,156 [WARNING]: EmptyResponse: Site: https://ninecareers.com.au/ provided an empty response, , crawler: 2
+2026-08-05 20:08:14,897 [WARNING]: No usable robots.txt for https://peps.python.org (HTTP 404), crawler: 1
+2026-08-05 20:08:14,897 [WARNING]: No usable robots.txt for https://peps.python.org (HTTP 404), crawler: 1
+2026-08-05 20:08:16,242 [WARNING]: No usable robots.txt for https://login.nine.com.au (HTTP 403), crawler: 2
+2026-08-05 20:08:16,242 [WARNING]: No usable robots.txt for https://login.nine.com.au (HTTP 403), crawler: 2
+2026-08-05 20:08:16,274 [WARNING]: No usable robots.txt for https://community.cloudflare.com (HTTP 403), crawler: 2
+2026-08-05 20:08:16,274 [WARNING]: No usable robots.txt for https://community.cloudflare.com (HTTP 403), crawler: 2
+2026-08-05 20:08:16,920 [WARNING]: Site: https://partnerlocator.cloudflare.com/dashboard returned HTTP 403, crawler: 3
+2026-08-05 20:08:16,920 [WARNING]: Site: https://partnerlocator.cloudflare.com/dashboard returned HTTP 403, crawler: 3
+2026-08-05 20:08:16,920 [WARNING]: EmptyResponse: Site: https://partnerlocator.cloudflare.com/dashboard provided an empty response, , crawler: 3
+2026-08-05 20:08:16,920 [WARNING]: EmptyResponse: Site: https://partnerlocator.cloudflare.com/dashboard provided an empty response, , crawler: 3
+2026-08-05 20:08:16,964 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:16,964 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:16,980 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/11/02/sig-architecture-production-readiness-spotlight-2023/ provided an empty response, , crawler: 1
+2026-08-05 20:08:16,980 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/11/02/sig-architecture-production-readiness-spotlight-2023/ provided an empty response, , crawler: 1
+2026-08-05 20:08:17,917 [WARNING]: No usable robots.txt for https://www.gigabyte.com (HTTP 403), crawler: 3
+2026-08-05 20:08:17,917 [WARNING]: No usable robots.txt for https://www.gigabyte.com (HTTP 403), crawler: 3
+2026-08-05 20:08:17,936 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:17,936 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:17,958 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:17,958 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:18,018 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:18,018 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:18,045 [WARNING]: Site: https://hackernoon.com/u/gptzero returned HTTP 403, crawler: 0
+2026-08-05 20:08:18,045 [WARNING]: Site: https://hackernoon.com/u/gptzero returned HTTP 403, crawler: 0
+2026-08-05 20:08:18,046 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/gptzero provided an empty response, , crawler: 0
+2026-08-05 20:08:18,046 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/gptzero provided an empty response, , crawler: 0
+2026-08-05 20:08:18,461 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:18,461 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:18,521 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:18,521 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:18,599 [WARNING]: Site: https://www.nineforbrands.com.au/advertising-enquiries/ returned HTTP 403, crawler: 2
+2026-08-05 20:08:18,599 [WARNING]: Site: https://www.nineforbrands.com.au/advertising-enquiries/ returned HTTP 403, crawler: 2
+2026-08-05 20:08:18,600 [WARNING]: EmptyResponse: Site: https://www.nineforbrands.com.au/advertising-enquiries/ provided an empty response, , crawler: 2
+2026-08-05 20:08:18,600 [WARNING]: EmptyResponse: Site: https://www.nineforbrands.com.au/advertising-enquiries/ provided an empty response, , crawler: 2
+2026-08-05 20:08:19,233 [WARNING]: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx returned HTTP 403, crawler: 4
+2026-08-05 20:08:19,233 [WARNING]: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx returned HTTP 403, crawler: 4
+2026-08-05 20:08:19,233 [WARNING]: EmptyResponse: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx provided an empty response, , crawler: 4
+2026-08-05 20:08:19,233 [WARNING]: EmptyResponse: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx provided an empty response, , crawler: 4
+2026-08-05 20:08:19,350 [WARNING]: EmptyResponse: Site: https://docs.python.org/3/contents.html provided an empty response, , crawler: 4
+2026-08-05 20:08:19,350 [WARNING]: EmptyResponse: Site: https://docs.python.org/3/contents.html provided an empty response, , crawler: 4
+2026-08-05 20:08:20,119 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 20:08:20,119 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 20:08:20,399 [WARNING]: Site: https://www.drive.com.au returned HTTP 403, crawler: 2
+2026-08-05 20:08:20,399 [WARNING]: Site: https://www.drive.com.au returned HTTP 403, crawler: 2
+2026-08-05 20:08:20,399 [WARNING]: EmptyResponse: Site: https://www.drive.com.au provided an empty response, , crawler: 2
+2026-08-05 20:08:20,399 [WARNING]: EmptyResponse: Site: https://www.drive.com.au provided an empty response, , crawler: 2
+2026-08-05 20:08:20,992 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:20,992 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:21,126 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/08/15/kubernetes-v1-28-release/ provided an empty response, , crawler: 4
+2026-08-05 20:08:21,126 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/08/15/kubernetes-v1-28-release/ provided an empty response, , crawler: 4
+2026-08-05 20:08:21,148 [WARNING]: Site: https://radar.cloudflare.com/ returned HTTP 403, crawler: 2
+2026-08-05 20:08:21,148 [WARNING]: Site: https://radar.cloudflare.com/ returned HTTP 403, crawler: 2
+2026-08-05 20:08:21,149 [WARNING]: EmptyResponse: Site: https://radar.cloudflare.com/ provided an empty response, , crawler: 2
+2026-08-05 20:08:21,149 [WARNING]: EmptyResponse: Site: https://radar.cloudflare.com/ provided an empty response, , crawler: 2
+2026-08-05 20:08:21,285 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/03/10/image-registry-redirect/ provided an empty response, , crawler: 4
+2026-08-05 20:08:21,285 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/03/10/image-registry-redirect/ provided an empty response, , crawler: 4
+2026-08-05 20:08:21,297 [WARNING]: Site: https://cloudflare.net/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:21,297 [WARNING]: Site: https://cloudflare.net/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:21,297 [WARNING]: EmptyResponse: Site: https://cloudflare.net/ provided an empty response, , crawler: 4
+2026-08-05 20:08:21,297 [WARNING]: EmptyResponse: Site: https://cloudflare.net/ provided an empty response, , crawler: 4
+2026-08-05 20:08:21,749 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/01/20/security-behavior-analysis/ provided an empty response, , crawler: 0
+2026-08-05 20:08:21,749 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/01/20/security-behavior-analysis/ provided an empty response, , crawler: 0
+2026-08-05 20:08:22,045 [WARNING]: Site: https://hackernoon.com/u/varonis returned HTTP 403, crawler: 4
+2026-08-05 20:08:22,045 [WARNING]: Site: https://hackernoon.com/u/varonis returned HTTP 403, crawler: 4
+2026-08-05 20:08:22,046 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/varonis provided an empty response, , crawler: 4
+2026-08-05 20:08:22,046 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/varonis provided an empty response, , crawler: 4
+2026-08-05 20:08:22,056 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/08/15/meet-our-contributors-china-ep-03/ provided an empty response, , crawler: 2
+2026-08-05 20:08:22,056 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/08/15/meet-our-contributors-china-ep-03/ provided an empty response, , crawler: 2
+2026-08-05 20:08:22,060 [WARNING]: Site: https://community.cloudflare.com/ returned HTTP 403, crawler: 2
+2026-08-05 20:08:22,060 [WARNING]: Site: https://community.cloudflare.com/ returned HTTP 403, crawler: 2
+2026-08-05 20:08:22,060 [WARNING]: EmptyResponse: Site: https://community.cloudflare.com/ provided an empty response, , crawler: 2
+2026-08-05 20:08:22,060 [WARNING]: EmptyResponse: Site: https://community.cloudflare.com/ provided an empty response, , crawler: 2
+2026-08-05 20:08:22,069 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 20:08:22,069 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 20:08:22,089 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/07/13/gateway-api-graduates-to-beta/ provided an empty response, , crawler: 0
+2026-08-05 20:08:22,089 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/07/13/gateway-api-graduates-to-beta/ provided an empty response, , crawler: 0
+2026-08-05 20:08:22,094 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/05/16/kms-v2-moves-to-beta/ provided an empty response, , crawler: 2
+2026-08-05 20:08:22,094 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/05/16/kms-v2-moves-to-beta/ provided an empty response, , crawler: 2
+2026-08-05 20:08:22,513 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:22,513 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:22,534 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/23/service-ip-dynamic-and-static-allocation/ provided an empty response, , crawler: 0
+2026-08-05 20:08:22,534 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/23/service-ip-dynamic-and-static-allocation/ provided an empty response, , crawler: 0
+2026-08-05 20:08:22,545 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/29/enforce-immutability-using-cel/ provided an empty response, , crawler: 0
+2026-08-05 20:08:22,545 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/29/enforce-immutability-using-cel/ provided an empty response, , crawler: 0
+2026-08-05 20:08:22,576 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/04/20/read-write-once-pod-access-mode-beta/ provided an empty response, , crawler: 0
+2026-08-05 20:08:22,576 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/04/20/read-write-once-pod-access-mode-beta/ provided an empty response, , crawler: 0
+2026-08-05 20:08:22,586 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/09/kubernetes-v1-26-release/ provided an empty response, , crawler: 0
+2026-08-05 20:08:22,586 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/09/kubernetes-v1-26-release/ provided an empty response, , crawler: 0
+2026-08-05 20:08:22,688 [WARNING]: Site: https://hackernoon.com/tagged/artificial-intelligence returned HTTP 403, crawler: 4
+2026-08-05 20:08:22,688 [WARNING]: Site: https://hackernoon.com/tagged/artificial-intelligence returned HTTP 403, crawler: 4
+2026-08-05 20:08:22,688 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/artificial-intelligence provided an empty response, , crawler: 4
+2026-08-05 20:08:22,688 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/artificial-intelligence provided an empty response, , crawler: 4
+2026-08-05 20:08:22,711 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/01/02/cross-namespace-data-sources-alpha/ provided an empty response, , crawler: 4
+2026-08-05 20:08:22,711 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/01/02/cross-namespace-data-sources-alpha/ provided an empty response, , crawler: 4
+2026-08-05 20:08:23,196 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:23,196 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:23,230 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/21/kubernetes-1-25-use-secrets-while-expanding-csi-volumes-on-node-alpha/ provided an empty response, , crawler: 1
+2026-08-05 20:08:23,230 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/21/kubernetes-1-25-use-secrets-while-expanding-csi-volumes-on-node-alpha/ provided an empty response, , crawler: 1
+2026-08-05 20:08:23,357 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:23,357 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:23,374 [WARNING]: No usable robots.txt for https://www.politico.com (HTTP 403), crawler: 0
+2026-08-05 20:08:23,374 [WARNING]: No usable robots.txt for https://www.politico.com (HTTP 403), crawler: 0
+2026-08-05 20:08:23,524 [WARNING]: No usable robots.txt for https://goo.gl (HTTP 400), crawler: 4
+2026-08-05 20:08:23,524 [WARNING]: No usable robots.txt for https://goo.gl (HTTP 400), crawler: 4
+2026-08-05 20:08:23,547 [WARNING]: Site: https://help.smh.com.au/hc/en-au returned HTTP 403, crawler: 1
+2026-08-05 20:08:23,547 [WARNING]: Site: https://help.smh.com.au/hc/en-au returned HTTP 403, crawler: 1
+2026-08-05 20:08:23,547 [WARNING]: EmptyResponse: Site: https://help.smh.com.au/hc/en-au provided an empty response, , crawler: 1
+2026-08-05 20:08:23,547 [WARNING]: EmptyResponse: Site: https://help.smh.com.au/hc/en-au provided an empty response, , crawler: 1
+2026-08-05 20:08:23,556 [WARNING]: Site: https://hackernoon.com/tagged/futurism returned HTTP 403, crawler: 3
+2026-08-05 20:08:23,556 [WARNING]: Site: https://hackernoon.com/tagged/futurism returned HTTP 403, crawler: 3
+2026-08-05 20:08:23,556 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/futurism provided an empty response, , crawler: 3
+2026-08-05 20:08:23,556 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/futurism provided an empty response, , crawler: 3
+2026-08-05 20:08:23,703 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/11/04/live-and-let-live-with-kluctl-and-ssa/ provided an empty response, , crawler: 2
+2026-08-05 20:08:23,703 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/11/04/live-and-let-live-with-kluctl-and-ssa/ provided an empty response, , crawler: 2
+2026-08-05 20:08:23,713 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/30/advancements-in-kubernetes-traffic-engineering/ provided an empty response, , crawler: 2
+2026-08-05 20:08:23,713 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/30/advancements-in-kubernetes-traffic-engineering/ provided an empty response, , crawler: 2
+2026-08-05 20:08:23,716 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/04/24/openapi-v3-field-validation-ga/ provided an empty response, , crawler: 2
+2026-08-05 20:08:23,716 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/04/24/openapi-v3-field-validation-ga/ provided an empty response, , crawler: 2
+2026-08-05 20:08:23,729 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/05/09/introducing-kubectl-applyset-pruning/ provided an empty response, , crawler: 2
+2026-08-05 20:08:23,729 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/05/09/introducing-kubectl-applyset-pruning/ provided an empty response, , crawler: 2
+2026-08-05 20:08:23,731 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/29/scalable-job-tracking-ga/ provided an empty response, , crawler: 2
+2026-08-05 20:08:23,731 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/29/scalable-job-tracking-ga/ provided an empty response, , crawler: 2
+2026-08-05 20:08:23,917 [WARNING]: Site: https://hackernoon.com/u/mcsee returned HTTP 403, crawler: 4
+2026-08-05 20:08:23,917 [WARNING]: Site: https://hackernoon.com/u/mcsee returned HTTP 403, crawler: 4
+2026-08-05 20:08:23,917 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/mcsee provided an empty response, , crawler: 4
+2026-08-05 20:08:23,917 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/mcsee provided an empty response, , crawler: 4
+2026-08-05 20:08:24,250 [WARNING]: Site: https://www.gigabyte.com/press/news/2440 returned HTTP 403, crawler: 3
+2026-08-05 20:08:24,250 [WARNING]: Site: https://www.gigabyte.com/press/news/2440 returned HTTP 403, crawler: 3
+2026-08-05 20:08:24,250 [WARNING]: EmptyResponse: Site: https://www.gigabyte.com/press/news/2440 provided an empty response, , crawler: 3
+2026-08-05 20:08:24,250 [WARNING]: EmptyResponse: Site: https://www.gigabyte.com/press/news/2440 provided an empty response, , crawler: 3
+2026-08-05 20:08:25,035 [WARNING]: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ returned HTTP 403, crawler: 3
+2026-08-05 20:08:25,035 [WARNING]: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ returned HTTP 403, crawler: 3
+2026-08-05 20:08:25,035 [WARNING]: EmptyResponse: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ provided an empty response, , crawler: 3
+2026-08-05 20:08:25,035 [WARNING]: EmptyResponse: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ provided an empty response, , crawler: 3
+2026-08-05 20:08:25,117 [WARNING]: No usable robots.txt for https://www.caretoday.in (HTTP 404), crawler: 4
+2026-08-05 20:08:25,117 [WARNING]: No usable robots.txt for https://www.caretoday.in (HTTP 404), crawler: 4
+2026-08-05 20:08:25,125 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/04/17/fine-grained-pod-topology-spread-features-beta/ provided an empty response, , crawler: 1
+2026-08-05 20:08:25,125 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/04/17/fine-grained-pod-topology-spread-features-beta/ provided an empty response, , crawler: 1
+2026-08-05 20:08:25,295 [WARNING]: Site: https://www.axios.com/2026/08/04/white-house-ai-framework-under-wraps returned HTTP 403, crawler: 2
+2026-08-05 20:08:25,295 [WARNING]: Site: https://www.axios.com/2026/08/04/white-house-ai-framework-under-wraps returned HTTP 403, crawler: 2
+2026-08-05 20:08:25,295 [WARNING]: EmptyResponse: Site: https://www.axios.com/2026/08/04/white-house-ai-framework-under-wraps provided an empty response, , crawler: 2
+2026-08-05 20:08:25,295 [WARNING]: EmptyResponse: Site: https://www.axios.com/2026/08/04/white-house-ai-framework-under-wraps provided an empty response, , crawler: 2
+2026-08-05 20:08:26,216 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 2
+2026-08-05 20:08:26,216 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 2
+2026-08-05 20:08:26,338 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/05/15/speed-up-pod-startup/ provided an empty response, , crawler: 0
+2026-08-05 20:08:26,338 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/05/15/speed-up-pod-startup/ provided an empty response, , crawler: 0
+2026-08-05 20:08:26,400 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 4
+2026-08-05 20:08:26,400 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 4
+2026-08-05 20:08:26,631 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:26,631 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:26,639 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:08:26,639 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 0
+2026-08-05 20:08:26,976 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:26,976 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:26,978 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:26,978 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 20:08:27,295 [WARNING]: No usable robots.txt for https://goo.gl (HTTP 400), crawler: 1
+2026-08-05 20:08:27,295 [WARNING]: No usable robots.txt for https://goo.gl (HTTP 400), crawler: 1
+2026-08-05 20:08:27,323 [WARNING]: Site: https://hackernoon.com/tagged/gptzero returned HTTP 403, crawler: 1
+2026-08-05 20:08:27,323 [WARNING]: Site: https://hackernoon.com/tagged/gptzero returned HTTP 403, crawler: 1
+2026-08-05 20:08:27,324 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/gptzero provided an empty response, , crawler: 1
+2026-08-05 20:08:27,324 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/gptzero provided an empty response, , crawler: 1
+2026-08-05 20:08:27,470 [WARNING]: No usable robots.txt for https://www.indiatodaygroup.com (HTTP 404), crawler: 4
+2026-08-05 20:08:27,470 [WARNING]: No usable robots.txt for https://www.indiatodaygroup.com (HTTP 404), crawler: 4
+2026-08-05 20:08:27,617 [WARNING]: Site: https://www.indiatoday.in/fuel-price/petrol-price-in-mumbai-today?utm_source=hp_bottom_trending&utm_medium=it_web returned HTTP 403, crawler: 4
+2026-08-05 20:08:27,617 [WARNING]: Site: https://www.indiatoday.in/fuel-price/petrol-price-in-mumbai-today?utm_source=hp_bottom_trending&utm_medium=it_web returned HTTP 403, crawler: 4
+2026-08-05 20:08:27,617 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/fuel-price/petrol-price-in-mumbai-today?utm_source=hp_bottom_trending&utm_medium=it_web provided an empty response, , crawler: 4
+2026-08-05 20:08:27,617 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/fuel-price/petrol-price-in-mumbai-today?utm_source=hp_bottom_trending&utm_medium=it_web provided an empty response, , crawler: 4
+2026-08-05 20:08:27,664 [WARNING]: Site: https://www.indiatoday.in/history-of-it returned HTTP 403, crawler: 4
+2026-08-05 20:08:27,664 [WARNING]: Site: https://www.indiatoday.in/history-of-it returned HTTP 403, crawler: 4
+2026-08-05 20:08:27,664 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/history-of-it provided an empty response, , crawler: 4
+2026-08-05 20:08:27,664 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/history-of-it provided an empty response, , crawler: 4
+2026-08-05 20:08:27,738 [WARNING]: Site: https://www.indiatoday.in/best-universities returned HTTP 403, crawler: 4
+2026-08-05 20:08:27,738 [WARNING]: Site: https://www.indiatoday.in/best-universities returned HTTP 403, crawler: 4
+2026-08-05 20:08:27,738 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/best-universities provided an empty response, , crawler: 4
+2026-08-05 20:08:27,738 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/best-universities provided an empty response, , crawler: 4
+2026-08-05 20:08:27,822 [WARNING]: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 returned HTTP 403, crawler: 0
+2026-08-05 20:08:27,822 [WARNING]: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 returned HTTP 403, crawler: 0
+2026-08-05 20:08:27,822 [WARNING]: EmptyResponse: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 provided an empty response, , crawler: 0
+2026-08-05 20:08:27,822 [WARNING]: EmptyResponse: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 provided an empty response, , crawler: 0
+2026-08-05 20:08:27,884 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/12/kubernetes-release-artifact-signing/ provided an empty response, , crawler: 1
+2026-08-05 20:08:27,884 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/12/kubernetes-release-artifact-signing/ provided an empty response, , crawler: 1
+2026-08-05 20:08:27,912 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/08/14/sig-contribex-spotlight-2023/ provided an empty response, , crawler: 1
+2026-08-05 20:08:27,912 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/08/14/sig-contribex-spotlight-2023/ provided an empty response, , crawler: 1
+2026-08-05 20:08:28,063 [WARNING]: No usable robots.txt for https://www.indiatodaygroup.com (HTTP 404), crawler: 0
+2026-08-05 20:08:28,063 [WARNING]: No usable robots.txt for https://www.indiatodaygroup.com (HTTP 404), crawler: 0
+2026-08-05 20:08:28,228 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/08/15/pkgs-k8s-io-introduction/ provided an empty response, , crawler: 0
+2026-08-05 20:08:28,228 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/08/15/pkgs-k8s-io-introduction/ provided an empty response, , crawler: 0
+2026-08-05 20:08:28,229 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/05/04/kubernetes-1-27-statefulset-pvc-auto-deletion-beta/ provided an empty response, , crawler: 0
+2026-08-05 20:08:28,229 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/05/04/kubernetes-1-27-statefulset-pvc-auto-deletion-beta/ provided an empty response, , crawler: 0
+2026-08-05 20:08:28,254 [WARNING]: EmptyResponse: Site: https://www.cloudflare.com/under-attack-hotline/ provided an empty response, , crawler: 0
+2026-08-05 20:08:28,254 [WARNING]: EmptyResponse: Site: https://www.cloudflare.com/under-attack-hotline/ provided an empty response, , crawler: 0
+2026-08-05 20:08:28,431 [WARNING]: No usable robots.txt for https://www.indiatodaygroup.com (HTTP 404), crawler: 3
+2026-08-05 20:08:28,431 [WARNING]: No usable robots.txt for https://www.indiatodaygroup.com (HTTP 404), crawler: 3
+2026-08-05 20:08:28,455 [WARNING]: Site: https://www.indiatoday.in/trending-news returned HTTP 403, crawler: 3
+2026-08-05 20:08:28,455 [WARNING]: Site: https://www.indiatoday.in/trending-news returned HTTP 403, crawler: 3
+2026-08-05 20:08:28,455 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/trending-news provided an empty response, , crawler: 3
+2026-08-05 20:08:28,455 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/trending-news provided an empty response, , crawler: 3
+2026-08-05 20:08:28,501 [WARNING]: No usable robots.txt for https://www.indiatoday.in (HTTP 403), crawler: 3
+2026-08-05 20:08:28,501 [WARNING]: No usable robots.txt for https://www.indiatoday.in (HTTP 403), crawler: 3
+2026-08-05 20:08:28,597 [WARNING]: Site: https://www.indiatoday.in/business/market returned HTTP 403, crawler: 2
+2026-08-05 20:08:28,597 [WARNING]: Site: https://www.indiatoday.in/business/market returned HTTP 403, crawler: 2
+2026-08-05 20:08:28,598 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/business/market provided an empty response, , crawler: 2
+2026-08-05 20:08:28,598 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/business/market provided an empty response, , crawler: 2
+2026-08-05 20:08:28,955 [WARNING]: Site: https://www.indiatoday.in/india/story/saurav-das-security-threat-claim-youtubers-enter-house-crowd-outside-residence-2964219-2026-08-05?utm_source=hp_lead&utm_medium=it_web returned HTTP 403, crawler: 3
+2026-08-05 20:08:28,955 [WARNING]: Site: https://www.indiatoday.in/india/story/saurav-das-security-threat-claim-youtubers-enter-house-crowd-outside-residence-2964219-2026-08-05?utm_source=hp_lead&utm_medium=it_web returned HTTP 403, crawler: 3
+2026-08-05 20:08:28,955 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india/story/saurav-das-security-threat-claim-youtubers-enter-house-crowd-outside-residence-2964219-2026-08-05?utm_source=hp_lead&utm_medium=it_web provided an empty response, , crawler: 3
+2026-08-05 20:08:28,955 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india/story/saurav-das-security-threat-claim-youtubers-enter-house-crowd-outside-residence-2964219-2026-08-05?utm_source=hp_lead&utm_medium=it_web provided an empty response, , crawler: 3
+2026-08-05 20:08:28,998 [WARNING]: No usable robots.txt for https://subscribe.smh.com.au (HTTP 404), crawler: 1
+2026-08-05 20:08:28,998 [WARNING]: No usable robots.txt for https://subscribe.smh.com.au (HTTP 404), crawler: 1
+2026-08-05 20:08:29,260 [WARNING]: No usable robots.txt for https://en.wikipedia.org (HTTP 403), crawler: 3
+2026-08-05 20:08:29,260 [WARNING]: No usable robots.txt for https://en.wikipedia.org (HTTP 403), crawler: 3
+2026-08-05 20:08:29,311 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/08/04/upcoming-changes-in-kubernetes-1-25/ provided an empty response, , crawler: 1
+2026-08-05 20:08:29,311 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/08/04/upcoming-changes-in-kubernetes-1-25/ provided an empty response, , crawler: 1
+2026-08-05 20:08:29,313 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/26/storage-in-tree-to-csi-migration-status-update-1.25/ provided an empty response, , crawler: 1
+2026-08-05 20:08:29,313 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/26/storage-in-tree-to-csi-migration-status-update-1.25/ provided an empty response, , crawler: 1
+2026-08-05 20:08:29,331 [WARNING]: Site: https://www.indiatoday.in/india-today-magazine-insight returned HTTP 403, crawler: 3
+2026-08-05 20:08:29,331 [WARNING]: Site: https://www.indiatoday.in/india-today-magazine-insight returned HTTP 403, crawler: 3
+2026-08-05 20:08:29,331 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india-today-magazine-insight provided an empty response, , crawler: 3
+2026-08-05 20:08:29,331 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india-today-magazine-insight provided an empty response, , crawler: 3
+2026-08-05 20:08:29,544 [WARNING]: Site: https://domains.cloudflare.com/ returned HTTP 403, crawler: 0
+2026-08-05 20:08:29,544 [WARNING]: Site: https://domains.cloudflare.com/ returned HTTP 403, crawler: 0
+2026-08-05 20:08:29,544 [WARNING]: EmptyResponse: Site: https://domains.cloudflare.com/ provided an empty response, , crawler: 0
+2026-08-05 20:08:29,544 [WARNING]: EmptyResponse: Site: https://domains.cloudflare.com/ provided an empty response, , crawler: 0
+2026-08-05 20:08:29,879 [WARNING]: Site: https://www.indiatoday.in/newspresso?utm_source=Newspresso&utm_medium=home_page&utm_campaign=tracking returned HTTP 403, crawler: 2
+2026-08-05 20:08:29,879 [WARNING]: Site: https://www.indiatoday.in/newspresso?utm_source=Newspresso&utm_medium=home_page&utm_campaign=tracking returned HTTP 403, crawler: 2
+2026-08-05 20:08:29,879 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/newspresso?utm_source=Newspresso&utm_medium=home_page&utm_campaign=tracking provided an empty response, , crawler: 2
+2026-08-05 20:08:29,879 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/newspresso?utm_source=Newspresso&utm_medium=home_page&utm_campaign=tracking provided an empty response, , crawler: 2
+2026-08-05 20:08:30,336 [WARNING]: No usable robots.txt for https://www.caretoday.in (HTTP 404), crawler: 2
+2026-08-05 20:08:30,336 [WARNING]: No usable robots.txt for https://www.caretoday.in (HTTP 404), crawler: 2
+2026-08-05 20:08:30,359 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/19/local-storage-capacity-isolation-ga/ provided an empty response, , crawler: 1
+2026-08-05 20:08:30,359 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/19/local-storage-capacity-isolation-ga/ provided an empty response, , crawler: 1
+2026-08-05 20:08:30,407 [WARNING]: Site: https://www.indiatoday.in/best-universities returned HTTP 403, crawler: 0
+2026-08-05 20:08:30,407 [WARNING]: Site: https://www.indiatoday.in/best-universities returned HTTP 403, crawler: 0
+2026-08-05 20:08:30,407 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/best-universities provided an empty response, , crawler: 0
+2026-08-05 20:08:30,407 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/best-universities provided an empty response, , crawler: 0
+2026-08-05 20:08:30,461 [WARNING]: No usable robots.txt for https://www.indiatoday.in (HTTP 403), crawler: 1
+2026-08-05 20:08:30,461 [WARNING]: No usable robots.txt for https://www.indiatoday.in (HTTP 403), crawler: 1
+2026-08-05 20:08:30,753 [WARNING]: Site: https://www.indiatoday.in/fuel-price/diesel-price-in-delhi-today returned HTTP 403, crawler: 1
+2026-08-05 20:08:30,753 [WARNING]: Site: https://www.indiatoday.in/fuel-price/diesel-price-in-delhi-today returned HTTP 403, crawler: 1
+2026-08-05 20:08:30,753 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/fuel-price/diesel-price-in-delhi-today provided an empty response, , crawler: 1
+2026-08-05 20:08:30,753 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/fuel-price/diesel-price-in-delhi-today provided an empty response, , crawler: 1
+2026-08-05 20:08:30,895 [WARNING]: Site: https://www.indiatoday.in/health returned HTTP 403, crawler: 1
+2026-08-05 20:08:30,895 [WARNING]: Site: https://www.indiatoday.in/health returned HTTP 403, crawler: 1
+2026-08-05 20:08:30,895 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/health provided an empty response, , crawler: 1
+2026-08-05 20:08:30,895 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/health provided an empty response, , crawler: 1
+2026-08-05 20:08:30,902 [WARNING]: No usable robots.txt for https://githubuniverse.com (HTTP 404), crawler: 3
+2026-08-05 20:08:30,902 [WARNING]: No usable robots.txt for https://githubuniverse.com (HTTP 404), crawler: 3
+2026-08-05 20:08:30,959 [WARNING]: EmptyResponse: Site: https://github.blog/author/griffinashe/ provided an empty response, , crawler: 2
+2026-08-05 20:08:30,959 [WARNING]: EmptyResponse: Site: https://github.blog/author/griffinashe/ provided an empty response, , crawler: 2
+2026-08-05 20:08:31,114 [WARNING]: Site: https://www.indiatoday.in/visualstories/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:31,114 [WARNING]: Site: https://www.indiatoday.in/visualstories/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:31,114 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/visualstories/ provided an empty response, , crawler: 4
+2026-08-05 20:08:31,114 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/visualstories/ provided an empty response, , crawler: 4
+2026-08-05 20:08:31,256 [WARNING]: Site: https://www.indiatoday.in/world/story/sheikh-hasina-bangladesh-return-awami-league-comeback-india-delhi-address-2963826-2026-08-05 returned HTTP 403, crawler: 1
+2026-08-05 20:08:31,256 [WARNING]: Site: https://www.indiatoday.in/world/story/sheikh-hasina-bangladesh-return-awami-league-comeback-india-delhi-address-2963826-2026-08-05 returned HTTP 403, crawler: 1
+2026-08-05 20:08:31,257 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/world/story/sheikh-hasina-bangladesh-return-awami-league-comeback-india-delhi-address-2963826-2026-08-05 provided an empty response, , crawler: 1
+2026-08-05 20:08:31,257 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/world/story/sheikh-hasina-bangladesh-return-awami-league-comeback-india-delhi-address-2963826-2026-08-05 provided an empty response, , crawler: 1
+2026-08-05 20:08:31,477 [WARNING]: Site: https://www.indiatoday.in/puzzles returned HTTP 403, crawler: 1
+2026-08-05 20:08:31,477 [WARNING]: Site: https://www.indiatoday.in/puzzles returned HTTP 403, crawler: 1
+2026-08-05 20:08:31,477 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/puzzles provided an empty response, , crawler: 1
+2026-08-05 20:08:31,477 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/puzzles provided an empty response, , crawler: 1
+2026-08-05 20:08:31,478 [WARNING]: Site: https://www.indiatoday.in/sports returned HTTP 403, crawler: 1
+2026-08-05 20:08:31,478 [WARNING]: Site: https://www.indiatoday.in/sports returned HTTP 403, crawler: 1
+2026-08-05 20:08:31,478 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/sports provided an empty response, , crawler: 1
+2026-08-05 20:08:31,478 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/sports provided an empty response, , crawler: 1
+2026-08-05 20:08:31,590 [WARNING]: No usable robots.txt for https://www.indiatoday.in (HTTP 403), crawler: 1
+2026-08-05 20:08:31,590 [WARNING]: No usable robots.txt for https://www.indiatoday.in (HTTP 403), crawler: 1
+2026-08-05 20:08:31,614 [WARNING]: Site: https://hackernoon.com/tagged/varonis-atlas-agent returned HTTP 403, crawler: 2
+2026-08-05 20:08:31,614 [WARNING]: Site: https://hackernoon.com/tagged/varonis-atlas-agent returned HTTP 403, crawler: 2
+2026-08-05 20:08:31,614 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/varonis-atlas-agent provided an empty response, , crawler: 2
+2026-08-05 20:08:31,614 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/varonis-atlas-agent provided an empty response, , crawler: 2
+2026-08-05 20:08:31,617 [WARNING]: No usable robots.txt for https://www.indiatoday.in (HTTP 403), crawler: 2
+2026-08-05 20:08:31,617 [WARNING]: No usable robots.txt for https://www.indiatoday.in (HTTP 403), crawler: 2
+2026-08-05 20:08:31,630 [WARNING]: EmptyResponse: Site: https://github.blog/changelog/2026-08-03-trigger-copilot-automations-with-comments provided an empty response, , crawler: 2
+2026-08-05 20:08:31,630 [WARNING]: EmptyResponse: Site: https://github.blog/changelog/2026-08-03-trigger-copilot-automations-with-comments provided an empty response, , crawler: 2
+2026-08-05 20:08:31,966 [WARNING]: Site: https://www.indiatoday.in/ returned HTTP 403, crawler: 0
+2026-08-05 20:08:31,966 [WARNING]: Site: https://www.indiatoday.in/ returned HTTP 403, crawler: 0
+2026-08-05 20:08:31,966 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/ provided an empty response, , crawler: 0
+2026-08-05 20:08:31,966 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/ provided an empty response, , crawler: 0
+2026-08-05 20:08:32,044 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/generative-ai/measuring-what-matters-how-offline-evaluation-of-github-mcp-server-works/?utm_source=blog-homepage&utm_medium=blog&utm_campaign=universe25post provided an empty response, , crawler: 1
+2026-08-05 20:08:32,044 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/generative-ai/measuring-what-matters-how-offline-evaluation-of-github-mcp-server-works/?utm_source=blog-homepage&utm_medium=blog&utm_campaign=universe25post provided an empty response, , crawler: 1
+2026-08-05 20:08:32,062 [WARNING]: No usable robots.txt for https://policies.stackoverflow.co (HTTP 500), crawler: 4
+2026-08-05 20:08:32,062 [WARNING]: No usable robots.txt for https://policies.stackoverflow.co (HTTP 500), crawler: 4
+2026-08-05 20:08:32,422 [WARNING]: No usable robots.txt for https://survey.stackoverflow.co (HTTP 404), crawler: 4
+2026-08-05 20:08:32,422 [WARNING]: No usable robots.txt for https://survey.stackoverflow.co (HTTP 404), crawler: 4
+2026-08-05 20:08:32,458 [WARNING]: EmptyResponse: Site: https://docs.python.org/3/library/index.html provided an empty response, , crawler: 0
+2026-08-05 20:08:32,458 [WARNING]: EmptyResponse: Site: https://docs.python.org/3/library/index.html provided an empty response, , crawler: 0
+2026-08-05 20:08:32,979 [WARNING]: Site: https://www.indiatoday.in/newsmo returned HTTP 403, crawler: 2
+2026-08-05 20:08:32,979 [WARNING]: Site: https://www.indiatoday.in/newsmo returned HTTP 403, crawler: 2
+2026-08-05 20:08:32,980 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/newsmo provided an empty response, , crawler: 2
+2026-08-05 20:08:32,980 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/newsmo provided an empty response, , crawler: 2
+2026-08-05 20:08:32,982 [WARNING]: Site: https://www.indiatoday.in/anchor/rajdeep-sardesai returned HTTP 403, crawler: 2
+2026-08-05 20:08:32,982 [WARNING]: Site: https://www.indiatoday.in/anchor/rajdeep-sardesai returned HTTP 403, crawler: 2
+2026-08-05 20:08:32,983 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/anchor/rajdeep-sardesai provided an empty response, , crawler: 2
+2026-08-05 20:08:32,983 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/anchor/rajdeep-sardesai provided an empty response, , crawler: 2
+2026-08-05 20:08:33,033 [WARNING]: Site: https://www.indiatoday.in/sports/commonwealth-games returned HTTP 403, crawler: 1
+2026-08-05 20:08:33,033 [WARNING]: Site: https://www.indiatoday.in/sports/commonwealth-games returned HTTP 403, crawler: 1
+2026-08-05 20:08:33,033 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/sports/commonwealth-games provided an empty response, , crawler: 1
+2026-08-05 20:08:33,033 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/sports/commonwealth-games provided an empty response, , crawler: 1
+2026-08-05 20:08:33,099 [WARNING]: Site: https://www.indiatoday.in/sports/football returned HTTP 403, crawler: 1
+2026-08-05 20:08:33,099 [WARNING]: Site: https://www.indiatoday.in/sports/football returned HTTP 403, crawler: 1
+2026-08-05 20:08:33,100 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/sports/football provided an empty response, , crawler: 1
+2026-08-05 20:08:33,100 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/sports/football provided an empty response, , crawler: 1
+2026-08-05 20:08:33,810 [WARNING]: Site: https://en.wikipedia.org/wiki/There_Will_Come_Soft_Rains_(short_story) returned HTTP 403, crawler: 3
+2026-08-05 20:08:33,810 [WARNING]: Site: https://en.wikipedia.org/wiki/There_Will_Come_Soft_Rains_(short_story) returned HTTP 403, crawler: 3
+2026-08-05 20:08:33,811 [WARNING]: EmptyResponse: Site: https://en.wikipedia.org/wiki/There_Will_Come_Soft_Rains_(short_story) provided an empty response, , crawler: 3
+2026-08-05 20:08:33,811 [WARNING]: EmptyResponse: Site: https://en.wikipedia.org/wiki/There_Will_Come_Soft_Rains_(short_story) provided an empty response, , crawler: 3
+2026-08-05 20:08:33,981 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/10/05/current-state-2019-third-party-audit/ provided an empty response, , crawler: 0
+2026-08-05 20:08:33,981 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/10/05/current-state-2019-third-party-audit/ provided an empty response, , crawler: 0
+2026-08-05 20:08:34,366 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/25/contextual-logging/ provided an empty response, , crawler: 1
+2026-08-05 20:08:34,366 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/25/contextual-logging/ provided an empty response, , crawler: 1
+2026-08-05 20:08:34,559 [WARNING]: No usable robots.txt for https://goo.gl (HTTP 400), crawler: 1
+2026-08-05 20:08:34,559 [WARNING]: No usable robots.txt for https://goo.gl (HTTP 400), crawler: 1
+2026-08-05 20:08:34,953 [WARNING]: Site: https://bit.ly/3hkwRl2 returned HTTP 429, crawler: 0
+2026-08-05 20:08:34,953 [WARNING]: Site: https://bit.ly/3hkwRl2 returned HTTP 429, crawler: 0
+2026-08-05 20:08:34,954 [WARNING]: EmptyResponse: Site: https://bit.ly/3hkwRl2 provided an empty response, , crawler: 0
+2026-08-05 20:08:34,954 [WARNING]: EmptyResponse: Site: https://bit.ly/3hkwRl2 provided an empty response, , crawler: 0
+2026-08-05 20:08:34,993 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/cc-by-sa/ provided an empty response, , crawler: 2
+2026-08-05 20:08:34,993 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/cc-by-sa/ provided an empty response, , crawler: 2
+2026-08-05 20:08:34,995 [WARNING]: No usable robots.txt for https://www.indiatodaygroup.com (HTTP 404), crawler: 2
+2026-08-05 20:08:34,995 [WARNING]: No usable robots.txt for https://www.indiatodaygroup.com (HTTP 404), crawler: 2
+2026-08-05 20:08:35,055 [WARNING]: No usable robots.txt for https://overcast.fm (HTTP 404), crawler: 4
+2026-08-05 20:08:35,055 [WARNING]: No usable robots.txt for https://overcast.fm (HTTP 404), crawler: 4
+2026-08-05 20:08:35,088 [WARNING]: No usable robots.txt for https://www.electronjs.org (HTTP 404), crawler: 3
+2026-08-05 20:08:35,088 [WARNING]: No usable robots.txt for https://www.electronjs.org (HTTP 404), crawler: 3
+2026-08-05 20:08:35,119 [WARNING]: Site: https://www.indiatoday.in/world returned HTTP 403, crawler: 4
+2026-08-05 20:08:35,119 [WARNING]: Site: https://www.indiatoday.in/world returned HTTP 403, crawler: 4
+2026-08-05 20:08:35,119 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/world provided an empty response, , crawler: 4
+2026-08-05 20:08:35,119 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/world provided an empty response, , crawler: 4
+2026-08-05 20:08:35,202 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 0
+2026-08-05 20:08:35,202 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 0
+2026-08-05 20:08:35,532 [WARNING]: Site: https://www.indiatoday.in/education-today/gk-current-affairs/story/when-sheikh-hasinas-father-mujibur-rahman-paused-his-arrest-for-a-pipe-and-tobacco-2964093-2026-08-05 returned HTTP 403, crawler: 1
+2026-08-05 20:08:35,532 [WARNING]: Site: https://www.indiatoday.in/education-today/gk-current-affairs/story/when-sheikh-hasinas-father-mujibur-rahman-paused-his-arrest-for-a-pipe-and-tobacco-2964093-2026-08-05 returned HTTP 403, crawler: 1
+2026-08-05 20:08:35,532 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/education-today/gk-current-affairs/story/when-sheikh-hasinas-father-mujibur-rahman-paused-his-arrest-for-a-pipe-and-tobacco-2964093-2026-08-05 provided an empty response, , crawler: 1
+2026-08-05 20:08:35,532 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/education-today/gk-current-affairs/story/when-sheikh-hasinas-father-mujibur-rahman-paused-his-arrest-for-a-pipe-and-tobacco-2964093-2026-08-05 provided an empty response, , crawler: 1
+2026-08-05 20:08:35,610 [WARNING]: Site: https://www.indiatoday.in/commodity/gold-rate-in-delhi-today returned HTTP 403, crawler: 1
+2026-08-05 20:08:35,610 [WARNING]: Site: https://www.indiatoday.in/commodity/gold-rate-in-delhi-today returned HTTP 403, crawler: 1
+2026-08-05 20:08:35,611 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/commodity/gold-rate-in-delhi-today provided an empty response, , crawler: 1
+2026-08-05 20:08:35,611 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/commodity/gold-rate-in-delhi-today provided an empty response, , crawler: 1
+2026-08-05 20:08:35,613 [WARNING]: Site: https://www.indiatoday.in/india-today-insight/story/how-a-monsoon-of-miseries-caught-kerala-underprepared-yet-again-2964347-2026-08-05 returned HTTP 403, crawler: 1
+2026-08-05 20:08:35,613 [WARNING]: Site: https://www.indiatoday.in/india-today-insight/story/how-a-monsoon-of-miseries-caught-kerala-underprepared-yet-again-2964347-2026-08-05 returned HTTP 403, crawler: 1
+2026-08-05 20:08:35,613 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india-today-insight/story/how-a-monsoon-of-miseries-caught-kerala-underprepared-yet-again-2964347-2026-08-05 provided an empty response, , crawler: 1
+2026-08-05 20:08:35,613 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india-today-insight/story/how-a-monsoon-of-miseries-caught-kerala-underprepared-yet-again-2964347-2026-08-05 provided an empty response, , crawler: 1
+2026-08-05 20:08:35,698 [WARNING]: EmptyResponse: Site: https://blog.cloudflare.com/billable-usage-api/ provided an empty response, , crawler: 4
+2026-08-05 20:08:35,698 [WARNING]: EmptyResponse: Site: https://blog.cloudflare.com/billable-usage-api/ provided an empty response, , crawler: 4
+2026-08-05 20:08:35,712 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 4
+2026-08-05 20:08:35,712 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 4
+2026-08-05 20:08:35,746 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/data/ provided an empty response, , crawler: 3
+2026-08-05 20:08:35,746 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/data/ provided an empty response, , crawler: 3
+2026-08-05 20:08:35,834 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/business provided an empty response, , crawler: 3
+2026-08-05 20:08:35,834 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/business provided an empty response, , crawler: 3
+2026-08-05 20:08:35,868 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 3
+2026-08-05 20:08:35,868 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 3
+2026-08-05 20:08:35,967 [WARNING]: EmptyResponse: Site: https://www.facebook.com/IndiaToday/ provided an empty response, , crawler: 2
+2026-08-05 20:08:35,967 [WARNING]: EmptyResponse: Site: https://www.facebook.com/IndiaToday/ provided an empty response, , crawler: 2
+2026-08-05 20:08:36,012 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 4
+2026-08-05 20:08:36,012 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 4
+2026-08-05 20:08:36,160 [WARNING]: EmptyResponse: Site: https://github.blog/changelog/2026-07-31-gemini-2-5-pro-and-gemini-3-flash-deprecated provided an empty response, , crawler: 1
+2026-08-05 20:08:36,160 [WARNING]: EmptyResponse: Site: https://github.blog/changelog/2026-07-31-gemini-2-5-pro-and-gemini-3-flash-deprecated provided an empty response, , crawler: 1
+2026-08-05 20:08:36,442 [WARNING]: No usable robots.txt for https://policies.google.com (HTTP 404), crawler: 2
+2026-08-05 20:08:36,442 [WARNING]: No usable robots.txt for https://policies.google.com (HTTP 404), crawler: 2
+2026-08-05 20:08:36,708 [WARNING]: Site: https://www.indiatoday.in/india/story/parliament-monsoon-session-2026-live-updates-rajya-sabha-lok-sabha-2963749-2026-08-05?utm_source=hp_bottom_latest&utm_medium=it_web returned HTTP 403, crawler: 1
+2026-08-05 20:08:36,708 [WARNING]: Site: https://www.indiatoday.in/india/story/parliament-monsoon-session-2026-live-updates-rajya-sabha-lok-sabha-2963749-2026-08-05?utm_source=hp_bottom_latest&utm_medium=it_web returned HTTP 403, crawler: 1
+2026-08-05 20:08:36,708 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india/story/parliament-monsoon-session-2026-live-updates-rajya-sabha-lok-sabha-2963749-2026-08-05?utm_source=hp_bottom_latest&utm_medium=it_web provided an empty response, , crawler: 1
+2026-08-05 20:08:36,708 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india/story/parliament-monsoon-session-2026-live-updates-rajya-sabha-lok-sabha-2963749-2026-08-05?utm_source=hp_bottom_latest&utm_medium=it_web provided an empty response, , crawler: 1
+2026-08-05 20:08:36,744 [WARNING]: Site: https://www.pvrcinemas.com/m.movie-details/38242/ns?utm_source=leaderboard  returned HTTP 403, crawler: 0
+2026-08-05 20:08:36,744 [WARNING]: Site: https://www.pvrcinemas.com/m.movie-details/38242/ns?utm_source=leaderboard  returned HTTP 403, crawler: 0
+2026-08-05 20:08:36,744 [WARNING]: EmptyResponse: Site: https://www.pvrcinemas.com/m.movie-details/38242/ns?utm_source=leaderboard  provided an empty response, , crawler: 0
+2026-08-05 20:08:36,744 [WARNING]: EmptyResponse: Site: https://www.pvrcinemas.com/m.movie-details/38242/ns?utm_source=leaderboard  provided an empty response, , crawler: 0
+2026-08-05 20:08:36,930 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/fact-check provided an empty response, , crawler: 1
+2026-08-05 20:08:36,930 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/fact-check provided an empty response, , crawler: 1
+2026-08-05 20:08:36,935 [WARNING]: EmptyResponse: Site: https://www.smh.com.au/myaccount provided an empty response, , crawler: 1
+2026-08-05 20:08:36,935 [WARNING]: EmptyResponse: Site: https://www.smh.com.au/myaccount provided an empty response, , crawler: 1
+2026-08-05 20:08:36,992 [WARNING]: No usable robots.txt for https://shop.theverge.com (HTTP 403), crawler: 1
+2026-08-05 20:08:36,992 [WARNING]: No usable robots.txt for https://shop.theverge.com (HTTP 403), crawler: 1
+2026-08-05 20:08:36,998 [WARNING]: EmptyResponse: Site: https://www.theverge.com/rss/index.xml provided an empty response, , crawler: 3
+2026-08-05 20:08:36,998 [WARNING]: EmptyResponse: Site: https://www.theverge.com/rss/index.xml provided an empty response, , crawler: 3
+2026-08-05 20:08:37,140 [WARNING]: No usable robots.txt for https://desktop.github.com (HTTP 404), crawler: 3
+2026-08-05 20:08:37,140 [WARNING]: No usable robots.txt for https://desktop.github.com (HTTP 404), crawler: 3
+2026-08-05 20:08:37,255 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/productivity/ provided an empty response, , crawler: 4
+2026-08-05 20:08:37,255 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/productivity/ provided an empty response, , crawler: 4
+2026-08-05 20:08:37,312 [WARNING]: EmptyResponse: Site: https://blog.cloudflare.com/pl-pl/ provided an empty response, , crawler: 2
+2026-08-05 20:08:37,312 [WARNING]: EmptyResponse: Site: https://blog.cloudflare.com/pl-pl/ provided an empty response, , crawler: 2
+2026-08-05 20:08:37,313 [WARNING]: EmptyResponse: Site: https://github.blog/author/jakuboleksy/ provided an empty response, , crawler: 4
+2026-08-05 20:08:37,313 [WARNING]: EmptyResponse: Site: https://github.blog/author/jakuboleksy/ provided an empty response, , crawler: 4
+2026-08-05 20:08:37,490 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 1
+2026-08-05 20:08:37,490 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 1
+2026-08-05 20:08:37,832 [WARNING]: Site: https://shop.theverge.com/ returned HTTP 403, crawler: 1
+2026-08-05 20:08:37,832 [WARNING]: Site: https://shop.theverge.com/ returned HTTP 403, crawler: 1
+2026-08-05 20:08:37,834 [WARNING]: EmptyResponse: Site: https://shop.theverge.com/ provided an empty response, , crawler: 1
+2026-08-05 20:08:37,834 [WARNING]: EmptyResponse: Site: https://shop.theverge.com/ provided an empty response, , crawler: 1
+2026-08-05 20:08:38,546 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 0
+2026-08-05 20:08:38,546 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 0
+2026-08-05 20:08:38,626 [WARNING]: EmptyResponse: Site: https://docs.python.org/3.3/c-api/index.html provided an empty response, , crawler: 0
+2026-08-05 20:08:38,626 [WARNING]: EmptyResponse: Site: https://docs.python.org/3.3/c-api/index.html provided an empty response, , crawler: 0
+2026-08-05 20:08:39,067 [WARNING]: Site: https://cloudflare.com/contact/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:39,067 [WARNING]: Site: https://cloudflare.com/contact/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:39,067 [WARNING]: EmptyResponse: Site: https://cloudflare.com/contact/ provided an empty response, , crawler: 4
+2026-08-05 20:08:39,067 [WARNING]: EmptyResponse: Site: https://cloudflare.com/contact/ provided an empty response, , crawler: 4
+2026-08-05 20:08:39,261 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 4
+2026-08-05 20:08:39,261 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 4
+2026-08-05 20:08:39,278 [WARNING]: EmptyResponse: Site: https://docs.python.org/3.3/install/index.html provided an empty response, , crawler: 4
+2026-08-05 20:08:39,278 [WARNING]: EmptyResponse: Site: https://docs.python.org/3.3/install/index.html provided an empty response, , crawler: 4
+2026-08-05 20:08:39,288 [WARNING]: Site: https://www.linkedin.com/company/cloudflare-inc- returned HTTP 999, crawler: 4
+2026-08-05 20:08:39,288 [WARNING]: Site: https://www.linkedin.com/company/cloudflare-inc- returned HTTP 999, crawler: 4
+2026-08-05 20:08:39,288 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/cloudflare-inc- provided an empty response, , crawler: 4
+2026-08-05 20:08:39,288 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/cloudflare-inc- provided an empty response, , crawler: 4
+2026-08-05 20:08:39,991 [WARNING]: EmptyResponse: Site: https://www.theverge.com/microsoft provided an empty response, , crawler: 1
+2026-08-05 20:08:39,991 [WARNING]: EmptyResponse: Site: https://www.theverge.com/microsoft provided an empty response, , crawler: 1
+2026-08-05 20:08:40,043 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/ provided an empty response, , crawler: 1
+2026-08-05 20:08:40,043 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/ provided an empty response, , crawler: 1
+2026-08-05 20:08:40,198 [WARNING]: EmptyResponse: Site: https://kubernetes.io/docs/home/ provided an empty response, , crawler: 1
+2026-08-05 20:08:40,198 [WARNING]: EmptyResponse: Site: https://kubernetes.io/docs/home/ provided an empty response, , crawler: 1
+2026-08-05 20:08:40,264 [WARNING]: Site: https://stackoverflow.com/legal/privacy-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 4
+2026-08-05 20:08:40,264 [WARNING]: Site: https://stackoverflow.com/legal/privacy-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 4
+2026-08-05 20:08:40,265 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/legal/privacy-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 4
+2026-08-05 20:08:40,265 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/legal/privacy-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 4
+2026-08-05 20:08:40,625 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/06/25/visual-context-volcano-headlamp-plugin/ provided an empty response, , crawler: 1
+2026-08-05 20:08:40,625 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/06/25/visual-context-volcano-headlamp-plugin/ provided an empty response, , crawler: 1
+2026-08-05 20:08:40,936 [WARNING]: EmptyResponse: Site: https://github.blog/developer-skills/github-education/ provided an empty response, , crawler: 0
+2026-08-05 20:08:40,936 [WARNING]: EmptyResponse: Site: https://github.blog/developer-skills/github-education/ provided an empty response, , crawler: 0
+2026-08-05 20:08:40,949 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/ provided an empty response, , crawler: 0
+2026-08-05 20:08:40,949 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/ provided an empty response, , crawler: 0
+2026-08-05 20:08:40,968 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/company-news/ provided an empty response, , crawler: 0
+2026-08-05 20:08:40,968 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/company-news/ provided an empty response, , crawler: 0
+2026-08-05 20:08:41,015 [WARNING]: Site: https://stackoverflow.com/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 0
+2026-08-05 20:08:41,015 [WARNING]: Site: https://stackoverflow.com/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 0
+2026-08-05 20:08:41,016 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 0
+2026-08-05 20:08:41,016 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 0
+2026-08-05 20:08:41,022 [WARNING]: No usable robots.txt for https://partner.github.com (HTTP 404), crawler: 3
+2026-08-05 20:08:41,022 [WARNING]: No usable robots.txt for https://partner.github.com (HTTP 404), crawler: 3
+2026-08-05 20:08:41,292 [WARNING]: EmptyResponse: Site: https://github.blog/security/web-application-security/ provided an empty response, , crawler: 4
+2026-08-05 20:08:41,292 [WARNING]: EmptyResponse: Site: https://github.blog/security/web-application-security/ provided an empty response, , crawler: 4
+2026-08-05 20:08:41,441 [WARNING]: EmptyResponse: Site: https://www.theverge.com/about-the-verge provided an empty response, , crawler: 3
+2026-08-05 20:08:41,441 [WARNING]: EmptyResponse: Site: https://www.theverge.com/about-the-verge provided an empty response, , crawler: 3
+2026-08-05 20:08:41,735 [WARNING]: EmptyResponse: Site: http://theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face provided an empty response, , crawler: 3
+2026-08-05 20:08:41,735 [WARNING]: EmptyResponse: Site: http://theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face provided an empty response, , crawler: 3
+2026-08-05 20:08:41,916 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/llms/unlocking-the-power-of-unstructured-data-with-rag/ provided an empty response, , crawler: 2
+2026-08-05 20:08:41,916 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/llms/unlocking-the-power-of-unstructured-data-with-rag/ provided an empty response, , crawler: 2
+2026-08-05 20:08:41,918 [WARNING]: EmptyResponse: Site: https://github.blog/open-source/ provided an empty response, , crawler: 2
+2026-08-05 20:08:41,918 [WARNING]: EmptyResponse: Site: https://github.blog/open-source/ provided an empty response, , crawler: 2
+2026-08-05 20:08:41,923 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 2
+2026-08-05 20:08:41,923 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 2
+2026-08-05 20:08:41,944 [WARNING]: EmptyResponse: Site: https://www.itg.gg/ provided an empty response, , crawler: 3
+2026-08-05 20:08:41,944 [WARNING]: EmptyResponse: Site: https://www.itg.gg/ provided an empty response, , crawler: 3
+2026-08-05 20:08:41,947 [WARNING]: EmptyResponse: Site: https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/Asus-Googlebook-leak-full-4.jpg?quality=90&strip=all&crop=0,0,100,100 provided an empty response, , crawler: 3
+2026-08-05 20:08:41,947 [WARNING]: EmptyResponse: Site: https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/Asus-Googlebook-leak-full-4.jpg?quality=90&strip=all&crop=0,0,100,100 provided an empty response, , crawler: 3
+2026-08-05 20:08:42,371 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/ provided an empty response, , crawler: 2
+2026-08-05 20:08:42,371 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/ provided an empty response, , crawler: 2
+2026-08-05 20:08:42,381 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 3
+2026-08-05 20:08:42,381 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 3
+2026-08-05 20:08:42,462 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 1
+2026-08-05 20:08:42,462 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 1
+2026-08-05 20:08:42,607 [WARNING]: Site: https://www.indiatoday.in/company-profile returned HTTP 403, crawler: 2
+2026-08-05 20:08:42,607 [WARNING]: Site: https://www.indiatoday.in/company-profile returned HTTP 403, crawler: 2
+2026-08-05 20:08:42,607 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/company-profile provided an empty response, , crawler: 2
+2026-08-05 20:08:42,607 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/company-profile provided an empty response, , crawler: 2
+2026-08-05 20:08:42,664 [WARNING]: Site: https://stackoverflow.com/help/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 3
+2026-08-05 20:08:42,664 [WARNING]: Site: https://stackoverflow.com/help/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 3
+2026-08-05 20:08:42,665 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/help/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 3
+2026-08-05 20:08:42,665 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/help/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 3
+2026-08-05 20:08:42,847 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/ provided an empty response, , crawler: 3
+2026-08-05 20:08:42,847 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/ provided an empty response, , crawler: 3
+2026-08-05 20:08:42,921 [WARNING]: Site: https://stackoverflow.com/questions/tagged/go?tab=Newest returned HTTP 403, crawler: 0
+2026-08-05 20:08:42,921 [WARNING]: Site: https://stackoverflow.com/questions/tagged/go?tab=Newest returned HTTP 403, crawler: 0
+2026-08-05 20:08:42,922 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/questions/tagged/go?tab=Newest provided an empty response, , crawler: 0
+2026-08-05 20:08:42,922 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/questions/tagged/go?tab=Newest provided an empty response, , crawler: 0
+2026-08-05 20:08:43,088 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/01/28/experimenting-gateway-api-with-kind/ provided an empty response, , crawler: 4
+2026-08-05 20:08:43,088 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/01/28/experimenting-gateway-api-with-kind/ provided an empty response, , crawler: 4
+2026-08-05 20:08:43,357 [WARNING]: EmptyResponse: Site: https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/ provided an empty response, , crawler: 3
+2026-08-05 20:08:43,357 [WARNING]: EmptyResponse: Site: https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/ provided an empty response, , crawler: 3
+2026-08-05 20:08:43,530 [WARNING]: Site: https://hackernoon.com/tagged/artificial-intelligence returned HTTP 403, crawler: 4
+2026-08-05 20:08:43,530 [WARNING]: Site: https://hackernoon.com/tagged/artificial-intelligence returned HTTP 403, crawler: 4
+2026-08-05 20:08:43,530 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/artificial-intelligence provided an empty response, , crawler: 4
+2026-08-05 20:08:43,530 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/artificial-intelligence provided an empty response, , crawler: 4
+2026-08-05 20:08:43,612 [WARNING]: Site: https://domains.cloudflare.com/ returned HTTP 403, crawler: 1
+2026-08-05 20:08:43,612 [WARNING]: Site: https://domains.cloudflare.com/ returned HTTP 403, crawler: 1
+2026-08-05 20:08:43,612 [WARNING]: EmptyResponse: Site: https://domains.cloudflare.com/ provided an empty response, , crawler: 1
+2026-08-05 20:08:43,612 [WARNING]: EmptyResponse: Site: https://domains.cloudflare.com/ provided an empty response, , crawler: 1
+2026-08-05 20:08:43,717 [WARNING]: EmptyResponse: Site: https://www.threads.net/@thestackoverflow provided an empty response, , crawler: 1
+2026-08-05 20:08:43,717 [WARNING]: EmptyResponse: Site: https://www.threads.net/@thestackoverflow provided an empty response, , crawler: 1
+2026-08-05 20:08:43,801 [WARNING]: Site: https://www.linkedin.com/company/github returned HTTP 999, crawler: 2
+2026-08-05 20:08:43,801 [WARNING]: Site: https://www.linkedin.com/company/github returned HTTP 999, crawler: 2
+2026-08-05 20:08:43,801 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/github provided an empty response, , crawler: 2
+2026-08-05 20:08:43,801 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/github provided an empty response, , crawler: 2
+2026-08-05 20:08:43,884 [WARNING]: Site: https://stackoverflow.com returned HTTP 403, crawler: 1
+2026-08-05 20:08:43,884 [WARNING]: Site: https://stackoverflow.com returned HTTP 403, crawler: 1
+2026-08-05 20:08:43,885 [WARNING]: EmptyResponse: Site: https://stackoverflow.com provided an empty response, , crawler: 1
+2026-08-05 20:08:43,885 [WARNING]: EmptyResponse: Site: https://stackoverflow.com provided an empty response, , crawler: 1
+2026-08-05 20:08:44,000 [WARNING]: Site: https://stackoverflow.com/contact/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 3
+2026-08-05 20:08:44,000 [WARNING]: Site: https://stackoverflow.com/contact/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 3
+2026-08-05 20:08:44,000 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/contact/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 3
+2026-08-05 20:08:44,000 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/contact/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 3
+2026-08-05 20:08:44,011 [WARNING]: EmptyResponse: Site: https://www.voxmedia.com/pages/licensing provided an empty response, , crawler: 3
+2026-08-05 20:08:44,011 [WARNING]: EmptyResponse: Site: https://www.voxmedia.com/pages/licensing provided an empty response, , crawler: 3
+2026-08-05 20:08:44,111 [WARNING]: EmptyResponse: Site: https://github.blog/author/lawrencegripper/ provided an empty response, , crawler: 1
+2026-08-05 20:08:44,111 [WARNING]: EmptyResponse: Site: https://github.blog/author/lawrencegripper/ provided an empty response, , crawler: 1
+2026-08-05 20:08:44,153 [WARNING]: Site: https://stackoverflow.com/tags/go returned HTTP 403, crawler: 1
+2026-08-05 20:08:44,153 [WARNING]: Site: https://stackoverflow.com/tags/go returned HTTP 403, crawler: 1
+2026-08-05 20:08:44,153 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/tags/go provided an empty response, , crawler: 1
+2026-08-05 20:08:44,153 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/tags/go provided an empty response, , crawler: 1
+2026-08-05 20:08:44,235 [WARNING]: EmptyResponse: Site: https://github.blog/security/vulnerability-research/ provided an empty response, , crawler: 2
+2026-08-05 20:08:44,235 [WARNING]: EmptyResponse: Site: https://github.blog/security/vulnerability-research/ provided an empty response, , crawler: 2
+2026-08-05 20:08:44,276 [WARNING]: Site: https://www.linkedin.com/company/africanews?trk=biz-companies-cym returned HTTP 999, crawler: 1
+2026-08-05 20:08:44,276 [WARNING]: Site: https://www.linkedin.com/company/africanews?trk=biz-companies-cym returned HTTP 999, crawler: 1
+2026-08-05 20:08:44,277 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/africanews?trk=biz-companies-cym provided an empty response, , crawler: 1
+2026-08-05 20:08:44,277 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/africanews?trk=biz-companies-cym provided an empty response, , crawler: 1
+2026-08-05 20:08:44,321 [WARNING]: EmptyResponse: Site: https://www.theverge.com/bulletin/795051/verge-podcast-ad-free-set-up-how-to provided an empty response, , crawler: 4
+2026-08-05 20:08:44,321 [WARNING]: EmptyResponse: Site: https://www.theverge.com/bulletin/795051/verge-podcast-ad-free-set-up-how-to provided an empty response, , crawler: 4
+2026-08-05 20:08:44,323 [WARNING]: EmptyResponse: Site: https://github.blog/enterprise-software/automation/ provided an empty response, , crawler: 4
+2026-08-05 20:08:44,323 [WARNING]: EmptyResponse: Site: https://github.blog/enterprise-software/automation/ provided an empty response, , crawler: 4
+2026-08-05 20:08:44,586 [WARNING]: EmptyResponse: Site: https://github.blog/author/arielkanter/ provided an empty response, , crawler: 1
+2026-08-05 20:08:44,586 [WARNING]: EmptyResponse: Site: https://github.blog/author/arielkanter/ provided an empty response, , crawler: 1
+2026-08-05 20:08:45,146 [WARNING]: Site: https://hackernoon.com/u/varonis returned HTTP 403, crawler: 1
+2026-08-05 20:08:45,146 [WARNING]: Site: https://hackernoon.com/u/varonis returned HTTP 403, crawler: 1
+2026-08-05 20:08:45,146 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/varonis provided an empty response, , crawler: 1
+2026-08-05 20:08:45,146 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/varonis provided an empty response, , crawler: 1
+2026-08-05 20:08:45,212 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/autonomous-agents/ provided an empty response, , crawler: 3
+2026-08-05 20:08:45,212 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/autonomous-agents/ provided an empty response, , crawler: 3
+2026-08-05 20:08:45,222 [WARNING]: Site: https://hackernoon.com/p/services/story-boost returned HTTP 403, crawler: 0
+2026-08-05 20:08:45,222 [WARNING]: Site: https://hackernoon.com/p/services/story-boost returned HTTP 403, crawler: 0
+2026-08-05 20:08:45,223 [WARNING]: EmptyResponse: Site: https://hackernoon.com/p/services/story-boost provided an empty response, , crawler: 0
+2026-08-05 20:08:45,223 [WARNING]: EmptyResponse: Site: https://hackernoon.com/p/services/story-boost provided an empty response, , crawler: 0
+2026-08-05 20:08:45,749 [WARNING]: Site: https://stackoverflow.com/users/email/settings/current returned HTTP 403, crawler: 0
+2026-08-05 20:08:45,749 [WARNING]: Site: https://stackoverflow.com/users/email/settings/current returned HTTP 403, crawler: 0
+2026-08-05 20:08:45,750 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/users/email/settings/current provided an empty response, , crawler: 0
+2026-08-05 20:08:45,750 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/users/email/settings/current provided an empty response, , crawler: 0
+2026-08-05 20:08:45,791 [WARNING]: EmptyResponse: Site: https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/casio3.jpg?quality=90&strip=all provided an empty response, , crawler: 0
+2026-08-05 20:08:45,791 [WARNING]: EmptyResponse: Site: https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/casio3.jpg?quality=90&strip=all provided an empty response, , crawler: 0
+2026-08-05 20:08:45,964 [WARNING]: EmptyResponse: Site: https://github.blog/author/geektrainer/ provided an empty response, , crawler: 2
+2026-08-05 20:08:45,964 [WARNING]: EmptyResponse: Site: https://github.blog/author/geektrainer/ provided an empty response, , crawler: 2
+2026-08-05 20:08:46,174 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/ provided an empty response, , crawler: 2
+2026-08-05 20:08:46,174 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/ provided an empty response, , crawler: 2
+2026-08-05 20:08:46,211 [WARNING]: No usable robots.txt for https://www.casio.com.cn (HTTP 404), crawler: 1
+2026-08-05 20:08:46,211 [WARNING]: No usable robots.txt for https://www.casio.com.cn (HTTP 404), crawler: 1
+2026-08-05 20:08:46,259 [WARNING]: EmptyResponse: Site: https://watch.dropout.tv/the-don-hertzfeldt-collection provided an empty response, , crawler: 4
+2026-08-05 20:08:46,259 [WARNING]: EmptyResponse: Site: https://watch.dropout.tv/the-don-hertzfeldt-collection provided an empty response, , crawler: 4
+2026-08-05 20:08:46,354 [WARNING]: No usable robots.txt for https://services.github.com (HTTP 404), crawler: 3
+2026-08-05 20:08:46,354 [WARNING]: No usable robots.txt for https://services.github.com (HTTP 404), crawler: 3
+2026-08-05 20:08:46,373 [WARNING]: No usable robots.txt for https://githubuniverse.com (HTTP 404), crawler: 3
+2026-08-05 20:08:46,373 [WARNING]: No usable robots.txt for https://githubuniverse.com (HTTP 404), crawler: 3
+2026-08-05 20:08:46,417 [WARNING]: No usable robots.txt for https://gruhn.me (HTTP 404), crawler: 1
+2026-08-05 20:08:46,417 [WARNING]: No usable robots.txt for https://gruhn.me (HTTP 404), crawler: 1
+2026-08-05 20:08:46,644 [WARNING]: Site: https://www.indiatoday.in/india/story/air-india-phuket-delhi-flight-turbulence-injures-passengers-seven-admitted-delhi-2963773-2026-08-05 returned HTTP 403, crawler: 1
+2026-08-05 20:08:46,644 [WARNING]: Site: https://www.indiatoday.in/india/story/air-india-phuket-delhi-flight-turbulence-injures-passengers-seven-admitted-delhi-2963773-2026-08-05 returned HTTP 403, crawler: 1
+2026-08-05 20:08:46,645 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india/story/air-india-phuket-delhi-flight-turbulence-injures-passengers-seven-admitted-delhi-2963773-2026-08-05 provided an empty response, , crawler: 1
+2026-08-05 20:08:46,645 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india/story/air-india-phuket-delhi-flight-turbulence-injures-passengers-seven-admitted-delhi-2963773-2026-08-05 provided an empty response, , crawler: 1
+2026-08-05 20:08:46,743 [WARNING]: Site: https://www.indiatoday.in/cities/mumbai/story/mumbai-mira-bhayandar-ghodbunder-road-potholes-traffic-jams-shiv-sena-48-hour-repair-deadline-2964101-2026-08-05 returned HTTP 403, crawler: 1
+2026-08-05 20:08:46,743 [WARNING]: Site: https://www.indiatoday.in/cities/mumbai/story/mumbai-mira-bhayandar-ghodbunder-road-potholes-traffic-jams-shiv-sena-48-hour-repair-deadline-2964101-2026-08-05 returned HTTP 403, crawler: 1
+2026-08-05 20:08:46,743 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/cities/mumbai/story/mumbai-mira-bhayandar-ghodbunder-road-potholes-traffic-jams-shiv-sena-48-hour-repair-deadline-2964101-2026-08-05 provided an empty response, , crawler: 1
+2026-08-05 20:08:46,743 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/cities/mumbai/story/mumbai-mira-bhayandar-ghodbunder-road-potholes-traffic-jams-shiv-sena-48-hour-repair-deadline-2964101-2026-08-05 provided an empty response, , crawler: 1
+2026-08-05 20:08:46,882 [WARNING]: No usable robots.txt for https://www.bcso.com (HTTP 403), crawler: 4
+2026-08-05 20:08:46,882 [WARNING]: No usable robots.txt for https://www.bcso.com (HTTP 403), crawler: 4
+2026-08-05 20:08:46,892 [WARNING]: No usable robots.txt for https://www.domain.com.au (HTTP 403), crawler: 4
+2026-08-05 20:08:46,892 [WARNING]: No usable robots.txt for https://www.domain.com.au (HTTP 403), crawler: 4
+2026-08-05 20:08:47,096 [WARNING]: Site: https://www.bcso.com/joint-investigation-leads-to-arrest-of-lenoir-city-man/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:47,096 [WARNING]: Site: https://www.bcso.com/joint-investigation-leads-to-arrest-of-lenoir-city-man/ returned HTTP 403, crawler: 4
+2026-08-05 20:08:47,096 [WARNING]: EmptyResponse: Site: https://www.bcso.com/joint-investigation-leads-to-arrest-of-lenoir-city-man/ provided an empty response, , crawler: 4
+2026-08-05 20:08:47,096 [WARNING]: EmptyResponse: Site: https://www.bcso.com/joint-investigation-leads-to-arrest-of-lenoir-city-man/ provided an empty response, , crawler: 4
+2026-08-05 20:08:47,187 [WARNING]: EmptyResponse: Site: https://www.youtube.com/playlist?list=PL0lo9MOBetEFKNlPHNouEmVeYeyoyGTXC provided an empty response, , crawler: 2
+2026-08-05 20:08:47,187 [WARNING]: EmptyResponse: Site: https://www.youtube.com/playlist?list=PL0lo9MOBetEFKNlPHNouEmVeYeyoyGTXC provided an empty response, , crawler: 2
+2026-08-05 20:08:47,194 [WARNING]: EmptyResponse: Site: https://www.cosmopolitan.com provided an empty response, , crawler: 2
+2026-08-05 20:08:47,194 [WARNING]: EmptyResponse: Site: https://www.cosmopolitan.com provided an empty response, , crawler: 2
+2026-08-05 20:08:47,278 [WARNING]: Site: https://www.njoag.gov/wp-content/uploads/2026/08/2026-0804_Complaint_NJ-v-Amazon.pdf returned HTTP 403, crawler: 1
+2026-08-05 20:08:47,278 [WARNING]: Site: https://www.njoag.gov/wp-content/uploads/2026/08/2026-0804_Complaint_NJ-v-Amazon.pdf returned HTTP 403, crawler: 1
+2026-08-05 20:08:47,278 [WARNING]: EmptyResponse: Site: https://www.njoag.gov/wp-content/uploads/2026/08/2026-0804_Complaint_NJ-v-Amazon.pdf provided an empty response, , crawler: 1
+2026-08-05 20:08:47,278 [WARNING]: EmptyResponse: Site: https://www.njoag.gov/wp-content/uploads/2026/08/2026-0804_Complaint_NJ-v-Amazon.pdf provided an empty response, , crawler: 1
+2026-08-05 20:08:47,610 [WARNING]: EmptyResponse: Site: https://apnews.com/article/leonardo-dicaprio-jeff-bezos-endangered-species-project-32320ba8dd021f162021d08050aaa9d3 provided an empty response, , crawler: 2
+2026-08-05 20:08:47,610 [WARNING]: EmptyResponse: Site: https://apnews.com/article/leonardo-dicaprio-jeff-bezos-endangered-species-project-32320ba8dd021f162021d08050aaa9d3 provided an empty response, , crawler: 2
+2026-08-05 20:08:47,654 [WARNING]: EmptyResponse: Site: https://www.youtube.com/c/africanews provided an empty response, , crawler: 2
+2026-08-05 20:08:47,654 [WARNING]: EmptyResponse: Site: https://www.youtube.com/c/africanews provided an empty response, , crawler: 2
+2026-08-05 20:08:47,662 [WARNING]: EmptyResponse: Site: https://www.youtube.com/user/theverge provided an empty response, , crawler: 2
+2026-08-05 20:08:47,662 [WARNING]: EmptyResponse: Site: https://www.youtube.com/user/theverge provided an empty response, , crawler: 2
+2026-08-05 20:08:48,538 [WARNING]: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx returned HTTP 403, crawler: 0
+2026-08-05 20:08:48,538 [WARNING]: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx returned HTTP 403, crawler: 0
+2026-08-05 20:08:48,539 [WARNING]: EmptyResponse: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx provided an empty response, , crawler: 0
+2026-08-05 20:08:48,539 [WARNING]: EmptyResponse: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx provided an empty response, , crawler: 0
+2026-08-05 20:08:48,598 [WARNING]: Site: https://hackernoon.com/u/katul1512 returned HTTP 403, crawler: 4
+2026-08-05 20:08:48,598 [WARNING]: Site: https://hackernoon.com/u/katul1512 returned HTTP 403, crawler: 4
+2026-08-05 20:08:48,599 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/katul1512 provided an empty response, , crawler: 4
+2026-08-05 20:08:48,599 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/katul1512 provided an empty response, , crawler: 4
+2026-08-05 20:08:48,666 [WARNING]: No usable robots.txt for https://www.gigabyte.com (HTTP 403), crawler: 2
+2026-08-05 20:08:48,666 [WARNING]: No usable robots.txt for https://www.gigabyte.com (HTTP 403), crawler: 2
+2026-08-05 20:08:48,844 [WARNING]: No usable robots.txt for https://movies.stackexchange.com (HTTP 403), crawler: 2
+2026-08-05 20:08:48,844 [WARNING]: No usable robots.txt for https://movies.stackexchange.com (HTTP 403), crawler: 2
+2026-08-05 20:08:49,397 [WARNING]: Site: https://hackernoon.com/tagged/futurism returned HTTP 403, crawler: 3
+2026-08-05 20:08:49,397 [WARNING]: Site: https://hackernoon.com/tagged/futurism returned HTTP 403, crawler: 3
+2026-08-05 20:08:49,397 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/futurism provided an empty response, , crawler: 3
+2026-08-05 20:08:49,397 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/futurism provided an empty response, , crawler: 3
+2026-08-05 20:08:49,574 [WARNING]: No usable robots.txt for https://academia.stackexchange.com (HTTP 403), crawler: 2
+2026-08-05 20:08:49,574 [WARNING]: No usable robots.txt for https://academia.stackexchange.com (HTTP 403), crawler: 2
+2026-08-05 20:08:49,605 [WARNING]: No usable robots.txt for http://www.bom.gov.au (HTTP 403), crawler: 3
+2026-08-05 20:08:49,605 [WARNING]: No usable robots.txt for http://www.bom.gov.au (HTTP 403), crawler: 3
+2026-08-05 20:08:49,623 [WARNING]: Site: https://hackernoon.com/u/product returned HTTP 403, crawler: 3
+2026-08-05 20:08:49,623 [WARNING]: Site: https://hackernoon.com/u/product returned HTTP 403, crawler: 3
+2026-08-05 20:08:49,624 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/product provided an empty response, , crawler: 3
+2026-08-05 20:08:49,624 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/product provided an empty response, , crawler: 3
+2026-08-05 20:08:49,877 [WARNING]: Site: http://www.bom.gov.au/nsw/forecasts/sydney.shtml returned HTTP 403, crawler: 3
+2026-08-05 20:08:49,877 [WARNING]: Site: http://www.bom.gov.au/nsw/forecasts/sydney.shtml returned HTTP 403, crawler: 3
+2026-08-05 20:08:49,878 [WARNING]: EmptyResponse: Site: http://www.bom.gov.au/nsw/forecasts/sydney.shtml provided an empty response, , crawler: 3
+2026-08-05 20:08:49,878 [WARNING]: EmptyResponse: Site: http://www.bom.gov.au/nsw/forecasts/sydney.shtml provided an empty response, , crawler: 3
+2026-08-05 20:08:49,977 [WARNING]: Site: https://hackernoon.com/tagged/hackernoon-product-update returned HTTP 403, crawler: 3
+2026-08-05 20:08:49,977 [WARNING]: Site: https://hackernoon.com/tagged/hackernoon-product-update returned HTTP 403, crawler: 3
+2026-08-05 20:08:49,979 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/hackernoon-product-update provided an empty response, , crawler: 3
+2026-08-05 20:08:49,979 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/hackernoon-product-update provided an empty response, , crawler: 3
+2026-08-05 20:08:50,194 [WARNING]: No usable robots.txt for https://e360.yale.edu (HTTP 404), crawler: 4
+2026-08-05 20:08:50,194 [WARNING]: No usable robots.txt for https://e360.yale.edu (HTTP 404), crawler: 4
+2026-08-05 20:08:50,509 [WARNING]: No usable robots.txt for https://workplace.stackexchange.com (HTTP 403), crawler: 1
+2026-08-05 20:08:50,509 [WARNING]: No usable robots.txt for https://workplace.stackexchange.com (HTTP 403), crawler: 1
+2026-08-05 20:08:50,594 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 20:08:50,594 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 20:08:50,612 [WARNING]: Site: https://stackoverflow.com/legal/cookie-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 3
+2026-08-05 20:08:50,612 [WARNING]: Site: https://stackoverflow.com/legal/cookie-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 3
+2026-08-05 20:08:50,613 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/legal/cookie-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 3
+2026-08-05 20:08:50,613 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/legal/cookie-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 3
+2026-08-05 20:08:50,616 [WARNING]: Site: https://hackernoon.com/tagged/varonis-atlas-agent returned HTTP 403, crawler: 3
+2026-08-05 20:08:50,616 [WARNING]: Site: https://hackernoon.com/tagged/varonis-atlas-agent returned HTTP 403, crawler: 3
+2026-08-05 20:08:50,616 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/varonis-atlas-agent provided an empty response, , crawler: 3
+2026-08-05 20:08:50,616 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/varonis-atlas-agent provided an empty response, , crawler: 3
+2026-08-05 20:08:50,659 [WARNING]: Site: https://www.njoag.gov/ag-davenport-sues-amazon-over-anticompetitive-practices-affecting-dsp-delivery-drivers/ returned HTTP 403, crawler: 3
+2026-08-05 20:08:50,659 [WARNING]: Site: https://www.njoag.gov/ag-davenport-sues-amazon-over-anticompetitive-practices-affecting-dsp-delivery-drivers/ returned HTTP 403, crawler: 3
+2026-08-05 20:08:50,660 [WARNING]: EmptyResponse: Site: https://www.njoag.gov/ag-davenport-sues-amazon-over-anticompetitive-practices-affecting-dsp-delivery-drivers/ provided an empty response, , crawler: 3
+2026-08-05 20:08:50,660 [WARNING]: EmptyResponse: Site: https://www.njoag.gov/ag-davenport-sues-amazon-over-anticompetitive-practices-affecting-dsp-delivery-drivers/ provided an empty response, , crawler: 3
+2026-08-05 20:08:51,203 [WARNING]: No usable robots.txt for https://www.armaangomes.com (HTTP 404), crawler: 0
+2026-08-05 20:08:51,203 [WARNING]: No usable robots.txt for https://www.armaangomes.com (HTTP 404), crawler: 0
+2026-08-05 20:08:51,245 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/07/28/you-need-reliable-ai-context-for-your-site-reliability/ provided an empty response, , crawler: 4
+2026-08-05 20:08:51,245 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/07/28/you-need-reliable-ai-context-for-your-site-reliability/ provided an empty response, , crawler: 4
+2026-08-05 20:08:51,266 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/author/eyepis/ provided an empty response, , crawler: 4
+2026-08-05 20:08:51,266 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/author/eyepis/ provided an empty response, , crawler: 4
+2026-08-05 20:08:51,354 [WARNING]: EmptyResponse: Site: https://github.blog/open-source/ provided an empty response, , crawler: 3
+2026-08-05 20:08:51,354 [WARNING]: EmptyResponse: Site: https://github.blog/open-source/ provided an empty response, , crawler: 3
+2026-08-05 20:08:51,599 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/07/30/introducing-stack-internal-new-platform-experience/ provided an empty response, , crawler: 1
+2026-08-05 20:08:51,599 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/07/30/introducing-stack-internal-new-platform-experience/ provided an empty response, , crawler: 1
+2026-08-05 20:08:51,788 [WARNING]: No usable robots.txt for https://fabiensanglard.net (HTTP 404), crawler: 2
+2026-08-05 20:08:51,788 [WARNING]: No usable robots.txt for https://fabiensanglard.net (HTTP 404), crawler: 2
+2026-08-05 20:08:51,967 [WARNING]: EmptyResponse: Site: https://github.blog/open-source/maintainers/ provided an empty response, , crawler: 0
+2026-08-05 20:08:51,967 [WARNING]: EmptyResponse: Site: https://github.blog/open-source/maintainers/ provided an empty response, , crawler: 0
+2026-08-05 20:08:52,230 [WARNING]: No usable robots.txt for https://law.stackexchange.com (HTTP 403), crawler: 0
+2026-08-05 20:08:52,230 [WARNING]: No usable robots.txt for https://law.stackexchange.com (HTTP 403), crawler: 0
+2026-08-05 20:08:52,311 [WARNING]: Site: https://www.domain.com.au returned HTTP 403, crawler: 4
+2026-08-05 20:08:52,311 [WARNING]: Site: https://www.domain.com.au returned HTTP 403, crawler: 4
+2026-08-05 20:08:52,311 [WARNING]: EmptyResponse: Site: https://www.domain.com.au provided an empty response, , crawler: 4
+2026-08-05 20:08:52,311 [WARNING]: EmptyResponse: Site: https://www.domain.com.au provided an empty response, , crawler: 4
+2026-08-05 20:08:52,456 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/llms/unlocking-the-power-of-unstructured-data-with-rag/ provided an empty response, , crawler: 3
+2026-08-05 20:08:52,456 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/llms/unlocking-the-power-of-unstructured-data-with-rag/ provided an empty response, , crawler: 3
+2026-08-05 20:08:52,503 [WARNING]: Site: https://www.reuters.com/world/trump-administration-drafting-ban-chinese-data-center-devices-sources-say-2026-08-04/ returned HTTP 401, crawler: 1
+2026-08-05 20:08:52,503 [WARNING]: Site: https://www.reuters.com/world/trump-administration-drafting-ban-chinese-data-center-devices-sources-say-2026-08-04/ returned HTTP 401, crawler: 1
+2026-08-05 20:08:52,503 [WARNING]: EmptyResponse: Site: https://www.reuters.com/world/trump-administration-drafting-ban-chinese-data-center-devices-sources-say-2026-08-04/ provided an empty response, , crawler: 1
+2026-08-05 20:08:52,503 [WARNING]: EmptyResponse: Site: https://www.reuters.com/world/trump-administration-drafting-ban-chinese-data-center-devices-sources-say-2026-08-04/ provided an empty response, , crawler: 1
+2026-08-05 20:08:53,463 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/09/03/kubernetes-v1-34-sa-tokens-image-pulls-beta/ provided an empty response, , crawler: 0
+2026-08-05 20:08:53,463 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/09/03/kubernetes-v1-34-sa-tokens-image-pulls-beta/ provided an empty response, , crawler: 0
+2026-08-05 20:08:53,465 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/08/27/kubernetes-v1-34-release/ provided an empty response, , crawler: 0
+2026-08-05 20:08:53,465 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/08/27/kubernetes-v1-34-release/ provided an empty response, , crawler: 0
+2026-08-05 20:08:53,899 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/02/16/sig-node-ci-subproject-celebrates/ provided an empty response, , crawler: 0
+2026-08-05 20:08:53,899 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/02/16/sig-node-ci-subproject-celebrates/ provided an empty response, , crawler: 0
+2026-08-05 20:08:53,907 [WARNING]: EmptyResponse: Site: https://apnews.com/article/gorilla-germany-fatou-berlin-zoo-0196b95f3b6d48593bb7c872cab51adf provided an empty response, , crawler: 0
+2026-08-05 20:08:53,907 [WARNING]: EmptyResponse: Site: https://apnews.com/article/gorilla-germany-fatou-berlin-zoo-0196b95f3b6d48593bb7c872cab51adf provided an empty response, , crawler: 0
+2026-08-05 20:08:53,944 [WARNING]: EmptyResponse: Site: https://github.blog/changelog/2026-08-04-upcoming-deprecation-of-github-spark-on-github-com provided an empty response, , crawler: 1
+2026-08-05 20:08:53,944 [WARNING]: EmptyResponse: Site: https://github.blog/changelog/2026-08-04-upcoming-deprecation-of-github-spark-on-github-com provided an empty response, , crawler: 1
+2026-08-05 20:08:54,256 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2024/12/13/memory-manager-goes-ga/ provided an empty response, , crawler: 3
+2026-08-05 20:08:54,256 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2024/12/13/memory-manager-goes-ga/ provided an empty response, , crawler: 3
+2026-08-05 20:08:54,857 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2024/12/16/cpumanager-strict-cpu-reservation/ provided an empty response, , crawler: 1
+2026-08-05 20:08:54,857 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2024/12/16/cpumanager-strict-cpu-reservation/ provided an empty response, , crawler: 1
+2026-08-05 20:08:54,875 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/author/fabio-salvadori/ provided an empty response, , crawler: 1
+2026-08-05 20:08:54,875 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/author/fabio-salvadori/ provided an empty response, , crawler: 1
+2026-08-05 20:08:54,877 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/devex/ provided an empty response, , crawler: 1
+2026-08-05 20:08:54,877 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/devex/ provided an empty response, , crawler: 1
+2026-08-05 20:08:54,878 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/06/08/what-can-500-years-of-journalism-teach-developers-about-ai-trustworthiness/ provided an empty response, , crawler: 1
+2026-08-05 20:08:54,878 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/06/08/what-can-500-years-of-journalism-teach-developers-about-ai-trustworthiness/ provided an empty response, , crawler: 1
+2026-08-05 20:08:55,070 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/06/28/announcing-kubernetes-community-group-annual-reports/ provided an empty response, , crawler: 2
+2026-08-05 20:08:55,070 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/06/28/announcing-kubernetes-community-group-annual-reports/ provided an empty response, , crawler: 2
+2026-08-05 20:08:55,082 [WARNING]: No usable robots.txt for https://www.pigeonsandplanes.com (HTTP 404), crawler: 2
+2026-08-05 20:08:55,082 [WARNING]: No usable robots.txt for https://www.pigeonsandplanes.com (HTTP 404), crawler: 2
+2026-08-05 20:08:55,255 [WARNING]: EmptyResponse: Site: https://www.smh.com.au/world/south-america provided an empty response, , crawler: 2
+2026-08-05 20:08:55,255 [WARNING]: EmptyResponse: Site: https://www.smh.com.au/world/south-america provided an empty response, , crawler: 2
+2026-08-05 20:08:55,464 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/05/15/kubernetes-1-33-jobs-success-policy-goes-ga/ provided an empty response, , crawler: 1
+2026-08-05 20:08:55,464 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/05/15/kubernetes-1-33-jobs-success-policy-goes-ga/ provided an empty response, , crawler: 1
+2026-08-05 20:08:55,637 [WARNING]: EmptyResponse: Site: https://www.theverge.com/tech/975508/this-is-a-surprise-to-all-of-us provided an empty response, , crawler: 3
+2026-08-05 20:08:55,637 [WARNING]: EmptyResponse: Site: https://www.theverge.com/tech/975508/this-is-a-surprise-to-all-of-us provided an empty response, , crawler: 3
+2026-08-05 20:08:55,639 [WARNING]: EmptyResponse: Site: https://www.theverge.com/transportation/975172/bmw-spider-man-movie-infotainment-ad provided an empty response, , crawler: 3
+2026-08-05 20:08:55,639 [WARNING]: EmptyResponse: Site: https://www.theverge.com/transportation/975172/bmw-spider-man-movie-infotainment-ad provided an empty response, , crawler: 3
+2026-08-05 20:08:55,651 [WARNING]: EmptyResponse: Site: https://www.smh.com.au/topic/naplan-5zw provided an empty response, , crawler: 2
+2026-08-05 20:08:55,651 [WARNING]: EmptyResponse: Site: https://www.smh.com.au/topic/naplan-5zw provided an empty response, , crawler: 2
+2026-08-05 20:08:55,657 [WARNING]: EmptyResponse: Site: https://go.skimresources.com/?id=1025X1701640&xs=1&url=https%3A%2F%2Fbookshop.org%2Fp%2Fbooks%2Fthe-martian-chronicles-ray-bradbury%2F7225eae91a5fef0b%3Fean%3D9781668094853%26bkshp-astro%3Dt provided an empty response, , crawler: 2
+2026-08-05 20:08:55,657 [WARNING]: EmptyResponse: Site: https://go.skimresources.com/?id=1025X1701640&xs=1&url=https%3A%2F%2Fbookshop.org%2Fp%2Fbooks%2Fthe-martian-chronicles-ray-bradbury%2F7225eae91a5fef0b%3Fean%3D9781668094853%26bkshp-astro%3Dt provided an empty response, , crawler: 2
+2026-08-05 20:08:55,660 [WARNING]: EmptyResponse: Site: https://docs.python.org/3.2/using/index.html provided an empty response, , crawler: 2
+2026-08-05 20:08:55,660 [WARNING]: EmptyResponse: Site: https://docs.python.org/3.2/using/index.html provided an empty response, , crawler: 2
+2026-08-05 20:08:55,662 [WARNING]: EmptyResponse: Site: https://www.theverge.com/news/694917/google-classroom-gemini-ai-notebooklm-education-chromeos-updates provided an empty response, , crawler: 2
+2026-08-05 20:08:55,662 [WARNING]: EmptyResponse: Site: https://www.theverge.com/news/694917/google-classroom-gemini-ai-notebooklm-education-chromeos-updates provided an empty response, , crawler: 2
+2026-08-05 20:08:55,669 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/running-software/ provided an empty response, , crawler: 2
+2026-08-05 20:08:55,669 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/running-software/ provided an empty response, , crawler: 2
+2026-08-05 20:08:55,672 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/06/12/what-s-the-facts-charity-how-do-i-get-my-leaders-to-stop-running-teams-into-the-ground/ provided an empty response, , crawler: 2
+2026-08-05 20:08:55,672 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/06/12/what-s-the-facts-charity-how-do-i-get-my-leaders-to-stop-running-teams-into-the-ground/ provided an empty response, , crawler: 2
+2026-08-05 20:08:55,673 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/survey/ provided an empty response, , crawler: 2
+2026-08-05 20:08:55,673 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/survey/ provided an empty response, , crawler: 2
+2026-08-05 20:08:55,692 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/16/volume-populators-beta/ provided an empty response, , crawler: 1
+2026-08-05 20:08:55,692 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/16/volume-populators-beta/ provided an empty response, , crawler: 1
+2026-08-05 20:08:55,716 [WARNING]: Site: https://stackoverflow.com/legal/cookie-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 0
+2026-08-05 20:08:55,716 [WARNING]: Site: https://stackoverflow.com/legal/cookie-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 0
+2026-08-05 20:08:55,717 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/legal/cookie-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 0
+2026-08-05 20:08:55,717 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/legal/cookie-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 0
+2026-08-05 20:08:55,753 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/15/kubernetes-1-23-prevent-persistentvolume-leaks-when-deleting-out-of-order/ provided an empty response, , crawler: 0
+2026-08-05 20:08:55,753 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/15/kubernetes-1-23-prevent-persistentvolume-leaks-when-deleting-out-of-order/ provided an empty response, , crawler: 0
+2026-08-05 20:08:56,260 [WARNING]: Site: https://www.gigabyte.com/press/news/2440 returned HTTP 403, crawler: 2
+2026-08-05 20:08:56,260 [WARNING]: Site: https://www.gigabyte.com/press/news/2440 returned HTTP 403, crawler: 2
+2026-08-05 20:08:56,260 [WARNING]: EmptyResponse: Site: https://www.gigabyte.com/press/news/2440 provided an empty response, , crawler: 2
+2026-08-05 20:08:56,260 [WARNING]: EmptyResponse: Site: https://www.gigabyte.com/press/news/2440 provided an empty response, , crawler: 2
+2026-08-05 20:08:56,384 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/03/16/meet-our-contributors-au-nz-ep-02/ provided an empty response, , crawler: 1
+2026-08-05 20:08:56,384 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/03/16/meet-our-contributors-au-nz-ep-02/ provided an empty response, , crawler: 1
+2026-08-05 20:08:56,385 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/10/storage-in-tree-to-csi-migration-status-update/ provided an empty response, , crawler: 1
+2026-08-05 20:08:56,385 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/10/storage-in-tree-to-csi-migration-status-update/ provided an empty response, , crawler: 1
+2026-08-05 20:08:56,387 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/17/security-profiles-operator/ provided an empty response, , crawler: 1
+2026-08-05 20:08:56,387 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/17/security-profiles-operator/ provided an empty response, , crawler: 1
+2026-08-05 20:08:56,799 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/opinion-columns provided an empty response, , crawler: 3
+2026-08-05 20:08:56,799 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/opinion-columns provided an empty response, , crawler: 3
+2026-08-05 20:08:56,807 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/04/13/kube-state-metrics-v-2-0/ provided an empty response, , crawler: 2
+2026-08-05 20:08:56,807 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/04/13/kube-state-metrics-v-2-0/ provided an empty response, , crawler: 2
+2026-08-05 20:08:56,827 [WARNING]: EmptyResponse: Site: http://wiki.python.org/moin/PythonBooks provided an empty response, , crawler: 3
+2026-08-05 20:08:56,827 [WARNING]: EmptyResponse: Site: http://wiki.python.org/moin/PythonBooks provided an empty response, , crawler: 3
+2026-08-05 20:08:56,865 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/09/01/ephemeral-volumes-with-storage-capacity-tracking/ provided an empty response, , crawler: 0
+2026-08-05 20:08:56,865 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/09/01/ephemeral-volumes-with-storage-capacity-tracking/ provided an empty response, , crawler: 0
+2026-08-05 20:08:56,990 [WARNING]: EmptyResponse: Site: https://apnews.com/newsletters?id=AP+Entertainment+Wire provided an empty response, , crawler: 4
+2026-08-05 20:08:56,990 [WARNING]: EmptyResponse: Site: https://apnews.com/newsletters?id=AP+Entertainment+Wire provided an empty response, , crawler: 4
+2026-08-05 20:08:57,471 [WARNING]: EmptyResponse: Site: http://docs.python.org/3.3/ provided an empty response, , crawler: 4
+2026-08-05 20:08:57,471 [WARNING]: EmptyResponse: Site: http://docs.python.org/3.3/ provided an empty response, , crawler: 4
+2026-08-05 20:08:57,732 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/12/04/gsod-2020-improving-api-reference-experience/ provided an empty response, , crawler: 0
+2026-08-05 20:08:57,732 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/12/04/gsod-2020-improving-api-reference-experience/ provided an empty response, , crawler: 0
+2026-08-05 20:08:57,772 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/09/csi-windows-support-with-csi-proxy-reaches-ga/ provided an empty response, , crawler: 0
+2026-08-05 20:08:57,772 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/09/csi-windows-support-with-csi-proxy-reaches-ga/ provided an empty response, , crawler: 0
+2026-08-05 20:08:57,774 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/30/volume-populators-redesigned/ provided an empty response, , crawler: 0
+2026-08-05 20:08:57,774 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/30/volume-populators-redesigned/ provided an empty response, , crawler: 0
+2026-08-05 20:08:57,805 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/04/21/graceful-node-shutdown-beta/ provided an empty response, , crawler: 1
+2026-08-05 20:08:57,805 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/04/21/graceful-node-shutdown-beta/ provided an empty response, , crawler: 1
+2026-08-05 20:08:57,808 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/03/26/kubernetes-v1-33-upcoming-changes/ provided an empty response, , crawler: 1
+2026-08-05 20:08:57,808 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/03/26/kubernetes-v1-33-upcoming-changes/ provided an empty response, , crawler: 1
+2026-08-05 20:08:57,829 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/04/15/three-tenancy-models-for-kubernetes/ provided an empty response, , crawler: 1
+2026-08-05 20:08:57,829 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/04/15/three-tenancy-models-for-kubernetes/ provided an empty response, , crawler: 1
+2026-08-05 20:08:57,832 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/12/10/kubernetes-1.20-volume-snapshot-moves-to-ga/ provided an empty response, , crawler: 1
+2026-08-05 20:08:57,832 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/12/10/kubernetes-1.20-volume-snapshot-moves-to-ga/ provided an empty response, , crawler: 1
+2026-08-05 20:08:57,839 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/08/14/introducing-hierarchical-namespaces/ provided an empty response, , crawler: 1
+2026-08-05 20:08:57,839 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/08/14/introducing-hierarchical-namespaces/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,056 [WARNING]: EmptyResponse: Site: https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/casio3.jpg?quality=90&strip=all provided an empty response, , crawler: 3
+2026-08-05 20:08:58,056 [WARNING]: EmptyResponse: Site: https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/casio3.jpg?quality=90&strip=all provided an empty response, , crawler: 3
+2026-08-05 20:08:58,105 [WARNING]: Site: https://hackernoon.com/tagged/gptzero returned HTTP 403, crawler: 3
+2026-08-05 20:08:58,105 [WARNING]: Site: https://hackernoon.com/tagged/gptzero returned HTTP 403, crawler: 3
+2026-08-05 20:08:58,106 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/gptzero provided an empty response, , crawler: 3
+2026-08-05 20:08:58,106 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/gptzero provided an empty response, , crawler: 3
+2026-08-05 20:08:58,110 [WARNING]: No usable robots.txt for https://services.github.com (HTTP 404), crawler: 2
+2026-08-05 20:08:58,110 [WARNING]: No usable robots.txt for https://services.github.com (HTTP 404), crawler: 2
+2026-08-05 20:08:58,114 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/18/prevent-unauthorised-volume-mode-conversion-alpha/ provided an empty response, , crawler: 4
+2026-08-05 20:08:58,114 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/18/prevent-unauthorised-volume-mode-conversion-alpha/ provided an empty response, , crawler: 4
+2026-08-05 20:08:58,122 [WARNING]: Site: https://www.africanews.com/programmes/af-podcast/ returned HTTP 404, crawler: 3
+2026-08-05 20:08:58,122 [WARNING]: Site: https://www.africanews.com/programmes/af-podcast/ returned HTTP 404, crawler: 3
+2026-08-05 20:08:58,122 [WARNING]: EmptyResponse: Site: https://www.africanews.com/programmes/af-podcast/ provided an empty response, , crawler: 3
+2026-08-05 20:08:58,122 [WARNING]: EmptyResponse: Site: https://www.africanews.com/programmes/af-podcast/ provided an empty response, , crawler: 3
+2026-08-05 20:08:58,184 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/06/server-side-apply-ga/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,184 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/06/server-side-apply-ga/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,185 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/06/21/writing-a-controller-for-pod-labels/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,185 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/06/21/writing-a-controller-for-pod-labels/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,188 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/11/09/non-root-containers-and-devices/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,188 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/11/09/non-root-containers-and-devices/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,236 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2024/11/21/dynamic-kubernetes-api-server-for-cozystack/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,236 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2024/11/21/dynamic-kubernetes-api-server-for-cozystack/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,294 [WARNING]: EmptyResponse: Site: https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/casio1.jpg?quality=90&strip=all provided an empty response, , crawler: 4
+2026-08-05 20:08:58,294 [WARNING]: EmptyResponse: Site: https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/casio1.jpg?quality=90&strip=all provided an empty response, , crawler: 4
+2026-08-05 20:08:58,366 [WARNING]: No usable robots.txt for https://pudding.cool (HTTP 404), crawler: 0
+2026-08-05 20:08:58,366 [WARNING]: No usable robots.txt for https://pudding.cool (HTTP 404), crawler: 0
+2026-08-05 20:08:58,369 [WARNING]: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ returned HTTP 403, crawler: 2
+2026-08-05 20:08:58,369 [WARNING]: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ returned HTTP 403, crawler: 2
+2026-08-05 20:08:58,370 [WARNING]: EmptyResponse: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ provided an empty response, , crawler: 2
+2026-08-05 20:08:58,370 [WARNING]: EmptyResponse: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ provided an empty response, , crawler: 2
+2026-08-05 20:08:58,386 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/05/08/kubernetes-v1-33-volume-populators-ga/ provided an empty response, , crawler: 2
+2026-08-05 20:08:58,386 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/05/08/kubernetes-v1-33-volume-populators-ga/ provided an empty response, , crawler: 2
+2026-08-05 20:08:58,424 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/01/contribution-containers-and-cricket-the-kubernetes-1.22-release-interview/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,424 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/01/contribution-containers-and-cricket-the-kubernetes-1.22-release-interview/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,426 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/01/10/meet-our-contributors-india-ep-01/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,426 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/01/10/meet-our-contributors-india-ep-01/ provided an empty response, , crawler: 1
+2026-08-05 20:08:58,623 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/04/06/podsecuritypolicy-deprecation-past-present-and-future/ provided an empty response, , crawler: 2
+2026-08-05 20:08:58,623 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/04/06/podsecuritypolicy-deprecation-past-present-and-future/ provided an empty response, , crawler: 2
+2026-08-05 20:08:58,626 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/04/07/introducing-kube-scheduler-simulator/ provided an empty response, , crawler: 2
+2026-08-05 20:08:58,626 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/04/07/introducing-kube-scheduler-simulator/ provided an empty response, , crawler: 2
+2026-08-05 20:08:58,747 [WARNING]: Site: https://law.stackexchange.com/questions/115169/would-the-trojan-horse-ruse-be-legal-under-the-modern-laws-of-war returned HTTP 403, crawler: 0
+2026-08-05 20:08:58,747 [WARNING]: Site: https://law.stackexchange.com/questions/115169/would-the-trojan-horse-ruse-be-legal-under-the-modern-laws-of-war returned HTTP 403, crawler: 0
+2026-08-05 20:08:58,748 [WARNING]: EmptyResponse: Site: https://law.stackexchange.com/questions/115169/would-the-trojan-horse-ruse-be-legal-under-the-modern-laws-of-war provided an empty response, , crawler: 0
+2026-08-05 20:08:58,748 [WARNING]: EmptyResponse: Site: https://law.stackexchange.com/questions/115169/would-the-trojan-horse-ruse-be-legal-under-the-modern-laws-of-war provided an empty response, , crawler: 0
+2026-08-05 20:08:58,822 [WARNING]: EmptyResponse: Site: https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/ provided an empty response, , crawler: 3
+2026-08-05 20:08:58,822 [WARNING]: EmptyResponse: Site: https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/ provided an empty response, , crawler: 3
+2026-08-05 20:08:58,860 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/05/29/k8s-kpis-with-kuberhealthy/ provided an empty response, , crawler: 3
+2026-08-05 20:08:58,860 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/05/29/k8s-kpis-with-kuberhealthy/ provided an empty response, , crawler: 3
+2026-08-05 20:08:59,119 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/04/16/volume-health-monitoring-alpha-update/ provided an empty response, , crawler: 4
+2026-08-05 20:08:59,119 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/04/16/volume-health-monitoring-alpha-update/ provided an empty response, , crawler: 4
+2026-08-05 20:08:59,123 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/06/working-with-terraform-and-kubernetes/ provided an empty response, , crawler: 4
+2026-08-05 20:08:59,123 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/06/working-with-terraform-and-kubernetes/ provided an empty response, , crawler: 4
+2026-08-05 20:08:59,137 [WARNING]: Site: https://hackernoon.com/u/gptzero returned HTTP 403, crawler: 4
+2026-08-05 20:08:59,137 [WARNING]: Site: https://hackernoon.com/u/gptzero returned HTTP 403, crawler: 4
+2026-08-05 20:08:59,138 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/gptzero provided an empty response, , crawler: 4
+2026-08-05 20:08:59,138 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/gptzero provided an empty response, , crawler: 4
+2026-08-05 20:08:59,158 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/16/windows-hostprocess-containers/ provided an empty response, , crawler: 4
+2026-08-05 20:08:59,158 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/16/windows-hostprocess-containers/ provided an empty response, , crawler: 4
+2026-08-05 20:08:59,187 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/11/08/steering-committee-results-2021/ provided an empty response, , crawler: 1
+2026-08-05 20:08:59,187 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/11/08/steering-committee-results-2021/ provided an empty response, , crawler: 1
+2026-08-05 20:08:59,293 [WARNING]: Site: https://stackoverflow.com/users/email/settings/current returned HTTP 403, crawler: 4
+2026-08-05 20:08:59,293 [WARNING]: Site: https://stackoverflow.com/users/email/settings/current returned HTTP 403, crawler: 4
+2026-08-05 20:08:59,293 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/users/email/settings/current provided an empty response, , crawler: 4
+2026-08-05 20:08:59,293 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/users/email/settings/current provided an empty response, , crawler: 4
+2026-08-05 20:08:59,555 [WARNING]: No usable robots.txt for https://partner.github.com (HTTP 404), crawler: 4
+2026-08-05 20:08:59,555 [WARNING]: No usable robots.txt for https://partner.github.com (HTTP 404), crawler: 4
+2026-08-05 20:09:00,413 [WARNING]: Site: https://www.indiatoday.in/world/story/us-iran-war-news-live-updates-trump-iran-talks-gulf-states-hormuz-blockade-middle-east-conflict-oil-prices-latest-news-2962849-2026-08-04 returned HTTP 403, crawler: 2
+2026-08-05 20:09:00,413 [WARNING]: Site: https://www.indiatoday.in/world/story/us-iran-war-news-live-updates-trump-iran-talks-gulf-states-hormuz-blockade-middle-east-conflict-oil-prices-latest-news-2962849-2026-08-04 returned HTTP 403, crawler: 2
+2026-08-05 20:09:00,413 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/world/story/us-iran-war-news-live-updates-trump-iran-talks-gulf-states-hormuz-blockade-middle-east-conflict-oil-prices-latest-news-2962849-2026-08-04 provided an empty response, , crawler: 2
+2026-08-05 20:09:00,413 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/world/story/us-iran-war-news-live-updates-trump-iran-talks-gulf-states-hormuz-blockade-middle-east-conflict-oil-prices-latest-news-2962849-2026-08-04 provided an empty response, , crawler: 2
+2026-08-05 20:09:00,567 [WARNING]: No usable robots.txt for https://www.politico.com (HTTP 403), crawler: 0
+2026-08-05 20:09:00,567 [WARNING]: No usable robots.txt for https://www.politico.com (HTTP 403), crawler: 0
+2026-08-05 20:09:00,572 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/12/21/writing-crl-scheduler/ provided an empty response, , crawler: 0
+2026-08-05 20:09:00,572 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/12/21/writing-crl-scheduler/ provided an empty response, , crawler: 0
+2026-08-05 20:09:00,575 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/09/02/scaling-kubernetes-networking-with-endpointslices/ provided an empty response, , crawler: 0
+2026-08-05 20:09:00,575 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/09/02/scaling-kubernetes-networking-with-endpointslices/ provided an empty response, , crawler: 0
+2026-08-05 20:09:00,588 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/08/03/physics-politics-and-pull-requests-the-kubernetes-1.18-release-interview/ provided an empty response, , crawler: 0
+2026-08-05 20:09:00,588 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/08/03/physics-politics-and-pull-requests-the-kubernetes-1.18-release-interview/ provided an empty response, , crawler: 0
+2026-08-05 20:09:00,616 [WARNING]: Site: https://www.smh.com.au/myaccount returned HTTP 401, crawler: 3
+2026-08-05 20:09:00,616 [WARNING]: Site: https://www.smh.com.au/myaccount returned HTTP 401, crawler: 3
+2026-08-05 20:09:00,616 [WARNING]: EmptyResponse: Site: https://www.smh.com.au/myaccount provided an empty response, , crawler: 3
+2026-08-05 20:09:00,616 [WARNING]: EmptyResponse: Site: https://www.smh.com.au/myaccount provided an empty response, , crawler: 3
+2026-08-05 20:09:00,686 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/05/27/an-introduction-to-the-k8s-infrastructure-working-group/ provided an empty response, , crawler: 3
+2026-08-05 20:09:00,686 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/05/27/an-introduction-to-the-k8s-infrastructure-working-group/ provided an empty response, , crawler: 3
+2026-08-05 20:09:00,879 [WARNING]: Site: https://www.africanews.com/programmes/af-podcast/ returned HTTP 404, crawler: 2
+2026-08-05 20:09:00,879 [WARNING]: Site: https://www.africanews.com/programmes/af-podcast/ returned HTTP 404, crawler: 2
+2026-08-05 20:09:00,880 [WARNING]: EmptyResponse: Site: https://www.africanews.com/programmes/af-podcast/ provided an empty response, , crawler: 2
+2026-08-05 20:09:00,880 [WARNING]: EmptyResponse: Site: https://www.africanews.com/programmes/af-podcast/ provided an empty response, , crawler: 2
+2026-08-05 20:09:01,560 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/12/08/kubernetes-1-20-release-announcement/ provided an empty response, , crawler: 2
+2026-08-05 20:09:01,560 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/12/08/kubernetes-1-20-release-announcement/ provided an empty response, , crawler: 2
+2026-08-05 20:09:01,585 [WARNING]: No usable robots.txt for https://www.ap.org (HTTP 403), crawler: 4
+2026-08-05 20:09:01,585 [WARNING]: No usable robots.txt for https://www.ap.org (HTTP 403), crawler: 4
+2026-08-05 20:09:01,862 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/07/15/sig-usability-spotlight-2021/ provided an empty response, , crawler: 3
+2026-08-05 20:09:01,862 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/07/15/sig-usability-spotlight-2021/ provided an empty response, , crawler: 3
+2026-08-05 20:09:02,368 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/ provided an empty response, , crawler: 3
+2026-08-05 20:09:02,368 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/ provided an empty response, , crawler: 3
+2026-08-05 20:09:02,535 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/02/07/sig-multicluster-spotlight-2022/ provided an empty response, , crawler: 3
+2026-08-05 20:09:02,535 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/02/07/sig-multicluster-spotlight-2022/ provided an empty response, , crawler: 3
+2026-08-05 20:09:03,023 [WARNING]: EmptyResponse: Site: https://apnews.com/termsofservice provided an empty response, , crawler: 1
+2026-08-05 20:09:03,023 [WARNING]: EmptyResponse: Site: https://apnews.com/termsofservice provided an empty response, , crawler: 1
+2026-08-05 20:09:03,184 [WARNING]: EmptyResponse: Site: https://github.blog/2023-04-07-what-developers-need-to-know-about-generative-ai/ provided an empty response, , crawler: 0
+2026-08-05 20:09:03,184 [WARNING]: EmptyResponse: Site: https://github.blog/2023-04-07-what-developers-need-to-know-about-generative-ai/ provided an empty response, , crawler: 0
+2026-08-05 20:09:03,377 [WARNING]: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 returned HTTP 403, crawler: 0
+2026-08-05 20:09:03,377 [WARNING]: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 returned HTTP 403, crawler: 0
+2026-08-05 20:09:03,378 [WARNING]: EmptyResponse: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 provided an empty response, , crawler: 0
+2026-08-05 20:09:03,378 [WARNING]: EmptyResponse: Site: https://www.politico.com/news/2026/08/03/white-house-finalizes-voluntary-ai-oversight-framework-01022437 provided an empty response, , crawler: 0
+2026-08-05 20:09:03,414 [WARNING]: Site: https://workplace.stackexchange.com/questions/203552/i-was-asked-to-come-in-1hr-earlier-than-my-shift-starts-but-i-cant-since-i-have returned HTTP 403, crawler: 1
+2026-08-05 20:09:03,414 [WARNING]: Site: https://workplace.stackexchange.com/questions/203552/i-was-asked-to-come-in-1hr-earlier-than-my-shift-starts-but-i-cant-since-i-have returned HTTP 403, crawler: 1
+2026-08-05 20:09:03,415 [WARNING]: EmptyResponse: Site: https://workplace.stackexchange.com/questions/203552/i-was-asked-to-come-in-1hr-earlier-than-my-shift-starts-but-i-cant-since-i-have provided an empty response, , crawler: 1
+2026-08-05 20:09:03,415 [WARNING]: EmptyResponse: Site: https://workplace.stackexchange.com/questions/203552/i-was-asked-to-come-in-1hr-earlier-than-my-shift-starts-but-i-cant-since-i-have provided an empty response, , crawler: 1
+2026-08-05 20:09:03,460 [WARNING]: Site: https://invite.slack.golangbridge.org/ returned HTTP 403, crawler: 0
+2026-08-05 20:09:03,460 [WARNING]: Site: https://invite.slack.golangbridge.org/ returned HTTP 403, crawler: 0
+2026-08-05 20:09:03,461 [WARNING]: EmptyResponse: Site: https://invite.slack.golangbridge.org/ provided an empty response, , crawler: 0
+2026-08-05 20:09:03,461 [WARNING]: EmptyResponse: Site: https://invite.slack.golangbridge.org/ provided an empty response, , crawler: 0
+2026-08-05 20:09:04,008 [WARNING]: EmptyResponse: Site: https://apnews.com/article/vermont-roman-catholic-diocese-bankruptcy-clergy-abuse-dad487c5f51d89825fa0276b6ca46066 provided an empty response, , crawler: 1
+2026-08-05 20:09:04,008 [WARNING]: EmptyResponse: Site: https://apnews.com/article/vermont-roman-catholic-diocese-bankruptcy-clergy-abuse-dad487c5f51d89825fa0276b6ca46066 provided an empty response, , crawler: 1
+2026-08-05 20:09:04,662 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/08/26/kubernetes-release-1.19-accentuate-the-paw-sitive/ provided an empty response, , crawler: 2
+2026-08-05 20:09:04,662 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2020/08/26/kubernetes-release-1.19-accentuate-the-paw-sitive/ provided an empty response, , crawler: 2
+2026-08-05 20:09:05,046 [WARNING]: EmptyResponse: Site: https://apnews.com/hub/be-well provided an empty response, , crawler: 3
+2026-08-05 20:09:05,046 [WARNING]: EmptyResponse: Site: https://apnews.com/hub/be-well provided an empty response, , crawler: 3
+2026-08-05 20:09:05,116 [WARNING]: EmptyResponse: Site: https://go.dev/blog/16years provided an empty response, , crawler: 3
+2026-08-05 20:09:05,116 [WARNING]: EmptyResponse: Site: https://go.dev/blog/16years provided an empty response, , crawler: 3
+2026-08-05 20:09:05,730 [WARNING]: Site: https://www.indiatoday.in/science/story/spacex-rocket-has-likely-crashed-into-the-moon-confirmation-still-awaited-2964119-2026-08-05 returned HTTP 403, crawler: 3
+2026-08-05 20:09:05,730 [WARNING]: Site: https://www.indiatoday.in/science/story/spacex-rocket-has-likely-crashed-into-the-moon-confirmation-still-awaited-2964119-2026-08-05 returned HTTP 403, crawler: 3
+2026-08-05 20:09:05,730 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/science/story/spacex-rocket-has-likely-crashed-into-the-moon-confirmation-still-awaited-2964119-2026-08-05 provided an empty response, , crawler: 3
+2026-08-05 20:09:05,730 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/science/story/spacex-rocket-has-likely-crashed-into-the-moon-confirmation-still-awaited-2964119-2026-08-05 provided an empty response, , crawler: 3
+2026-08-05 20:09:05,964 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/company-news/github-availability-report-november-2025/ provided an empty response, , crawler: 4
+2026-08-05 20:09:05,964 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/company-news/github-availability-report-november-2025/ provided an empty response, , crawler: 4
+2026-08-05 20:09:06,340 [WARNING]: Site: https://www.indiatoday.in/india/story/rahul-gandhi-silent-jharkhand-students-protest-jpsc-jssc-cjp-protest-new-delhi-jantar-mantar-pellet-gun-2964334-2026-08-05 returned HTTP 403, crawler: 3
+2026-08-05 20:09:06,340 [WARNING]: Site: https://www.indiatoday.in/india/story/rahul-gandhi-silent-jharkhand-students-protest-jpsc-jssc-cjp-protest-new-delhi-jantar-mantar-pellet-gun-2964334-2026-08-05 returned HTTP 403, crawler: 3
+2026-08-05 20:09:06,341 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india/story/rahul-gandhi-silent-jharkhand-students-protest-jpsc-jssc-cjp-protest-new-delhi-jantar-mantar-pellet-gun-2964334-2026-08-05 provided an empty response, , crawler: 3
+2026-08-05 20:09:06,341 [WARNING]: EmptyResponse: Site: https://www.indiatoday.in/india/story/rahul-gandhi-silent-jharkhand-students-protest-jpsc-jssc-cjp-protest-new-delhi-jantar-mantar-pellet-gun-2964334-2026-08-05 provided an empty response, , crawler: 3
+2026-08-05 20:09:06,521 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/ provided an empty response, , crawler: 3
+2026-08-05 20:09:06,521 [WARNING]: EmptyResponse: Site: https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/ provided an empty response, , crawler: 3
+2026-08-05 20:09:06,568 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/06/10/announcing-stack-overflow-for-agents/ provided an empty response, , crawler: 3
+2026-08-05 20:09:06,568 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/06/10/announcing-stack-overflow-for-agents/ provided an empty response, , crawler: 3
+2026-08-05 20:09:06,588 [WARNING]: EmptyResponse: Site: https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/ provided an empty response, , crawler: 1
+2026-08-05 20:09:06,588 [WARNING]: EmptyResponse: Site: https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/ provided an empty response, , crawler: 1
+2026-08-05 20:09:06,660 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/engineering-leadership/ provided an empty response, , crawler: 3
+2026-08-05 20:09:06,660 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/engineering-leadership/ provided an empty response, , crawler: 3
+2026-08-05 20:09:06,669 [WARNING]: No usable robots.txt for https://www.ap.org (HTTP 403), crawler: 3
+2026-08-05 20:09:06,669 [WARNING]: No usable robots.txt for https://www.ap.org (HTTP 403), crawler: 3
+2026-08-05 20:09:06,767 [WARNING]: Site: https://www.ap.org/ returned HTTP 403, crawler: 3
+2026-08-05 20:09:06,767 [WARNING]: Site: https://www.ap.org/ returned HTTP 403, crawler: 3
+2026-08-05 20:09:06,767 [WARNING]: EmptyResponse: Site: https://www.ap.org/ provided an empty response, , crawler: 3
+2026-08-05 20:09:06,767 [WARNING]: EmptyResponse: Site: https://www.ap.org/ provided an empty response, , crawler: 3
+2026-08-05 20:09:06,873 [INFO]: BALANCER moved 11008 urls from proc: 1 to proc: 2
+2026-08-05 20:09:06,873 [INFO]: BALANCER moved 11008 urls from proc: 1 to proc: 2
