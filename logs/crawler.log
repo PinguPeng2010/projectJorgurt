@@ -1049,3 +1049,522 @@
 2026-08-05 17:00:45,526 [WARNING]: EmptyResponse: Site: https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/ provided an empty response, , crawler: 2
 2026-08-05 17:00:45,568 [WARNING]: EmptyResponse: Site: https://x.com/ghchangelog provided an empty response, , crawler: 0
 2026-08-05 17:00:45,568 [WARNING]: EmptyResponse: Site: https://x.com/ghchangelog provided an empty response, , crawler: 0
+2026-08-05 17:02:18,593 [INFO]: GRABBER STARTED: PROC: 0
+2026-08-05 17:02:18,593 [INFO]: GRABBER STARTED: PROC: 0
+2026-08-05 17:02:18,593 [INFO]: in run crawler
+2026-08-05 17:02:18,593 [INFO]: in run crawler
+2026-08-05 17:02:20,496 [WARNING]: Site: https://openai.com/index/ten-advances-in-mathematics/ returned HTTP 403, crawler: 0
+2026-08-05 17:02:20,496 [WARNING]: Site: https://openai.com/index/ten-advances-in-mathematics/ returned HTTP 403, crawler: 0
+2026-08-05 17:02:20,496 [WARNING]: EmptyResponse: Site: https://openai.com/index/ten-advances-in-mathematics/ provided an empty response, , crawler: 0
+2026-08-05 17:02:20,496 [WARNING]: EmptyResponse: Site: https://openai.com/index/ten-advances-in-mathematics/ provided an empty response, , crawler: 0
+2026-08-05 17:02:27,363 [INFO]: GRABBER STARTED: PROC: 0
+2026-08-05 17:02:27,363 [INFO]: GRABBER STARTED: PROC: 0
+2026-08-05 17:02:27,363 [INFO]: in run crawler
+2026-08-05 17:02:27,363 [INFO]: in run crawler
+2026-08-05 17:02:32,047 [WARNING]: No usable robots.txt for https://www.algolia.com (HTTP 403), crawler: 0
+2026-08-05 17:02:32,047 [WARNING]: No usable robots.txt for https://www.algolia.com (HTTP 403), crawler: 0
+2026-08-05 17:02:32,082 [WARNING]: Site: https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral returned HTTP 403, crawler: 0
+2026-08-05 17:02:32,082 [WARNING]: Site: https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral returned HTTP 403, crawler: 0
+2026-08-05 17:02:32,082 [WARNING]: EmptyResponse: Site: https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral provided an empty response, , crawler: 0
+2026-08-05 17:02:32,082 [WARNING]: EmptyResponse: Site: https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral provided an empty response, , crawler: 0
+2026-08-05 17:02:38,452 [WARNING]: Site: https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral&bb=146443 returned HTTP 403, crawler: 0
+2026-08-05 17:02:38,452 [WARNING]: Site: https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral&bb=146443 returned HTTP 403, crawler: 0
+2026-08-05 17:02:38,453 [WARNING]: EmptyResponse: Site: https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral&bb=146443 provided an empty response, , crawler: 0
+2026-08-05 17:02:38,453 [WARNING]: EmptyResponse: Site: https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral&bb=146443 provided an empty response, , crawler: 0
+2026-08-05 17:02:49,742 [WARNING]: EmptyResponse: Site: https://flipboard.com/@Africanews provided an empty response, , crawler: 0
+2026-08-05 17:02:49,742 [WARNING]: EmptyResponse: Site: https://flipboard.com/@Africanews provided an empty response, , crawler: 0
+2026-08-05 17:02:50,227 [WARNING]: Site: https://www.linkedin.com/company/africanews?trk=biz-companies-cym returned HTTP 999, crawler: 0
+2026-08-05 17:02:50,227 [WARNING]: Site: https://www.linkedin.com/company/africanews?trk=biz-companies-cym returned HTTP 999, crawler: 0
+2026-08-05 17:02:50,227 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/africanews?trk=biz-companies-cym provided an empty response, , crawler: 0
+2026-08-05 17:02:50,227 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/africanews?trk=biz-companies-cym provided an empty response, , crawler: 0
+2026-08-05 17:02:51,222 [WARNING]: Site: https://www.africanews.com/programmes/af-podcast/ returned HTTP 404, crawler: 0
+2026-08-05 17:02:51,222 [WARNING]: Site: https://www.africanews.com/programmes/af-podcast/ returned HTTP 404, crawler: 0
+2026-08-05 17:02:51,222 [WARNING]: EmptyResponse: Site: https://www.africanews.com/programmes/af-podcast/ provided an empty response, , crawler: 0
+2026-08-05 17:02:51,222 [WARNING]: EmptyResponse: Site: https://www.africanews.com/programmes/af-podcast/ provided an empty response, , crawler: 0
+2026-08-05 19:21:23,483 [INFO]: GRABBER STARTED: PROC: 0
+2026-08-05 19:21:23,483 [INFO]: GRABBER STARTED: PROC: 0
+2026-08-05 19:21:23,483 [INFO]: in run crawler
+2026-08-05 19:21:23,483 [INFO]: in run crawler
+2026-08-05 19:21:23,484 [INFO]: in run crawler
+2026-08-05 19:21:23,484 [INFO]: in run crawler
+2026-08-05 19:21:23,484 [INFO]: in run crawler
+2026-08-05 19:21:23,484 [INFO]: in run crawler
+2026-08-05 19:21:23,485 [INFO]: in run crawler
+2026-08-05 19:21:23,485 [INFO]: in run crawler
+2026-08-05 19:21:23,485 [INFO]: in run crawler
+2026-08-05 19:21:23,485 [INFO]: in run crawler
+2026-08-05 19:21:23,499 [INFO]: GRABBER STARTED: PROC: 1
+2026-08-05 19:21:23,499 [INFO]: GRABBER STARTED: PROC: 1
+2026-08-05 19:21:23,499 [INFO]: GRABBER STARTED: PROC: 2
+2026-08-05 19:21:23,500 [INFO]: in run crawler
+2026-08-05 19:21:23,500 [INFO]: in run crawler
+2026-08-05 19:21:23,500 [INFO]: in run crawler
+2026-08-05 19:21:23,500 [INFO]: in run crawler
+2026-08-05 19:21:23,500 [INFO]: in run crawler
+2026-08-05 19:21:23,500 [INFO]: in run crawler
+2026-08-05 19:21:23,500 [INFO]: in run crawler
+2026-08-05 19:21:23,500 [INFO]: in run crawler
+2026-08-05 19:21:23,500 [INFO]: in run crawler
+2026-08-05 19:21:23,500 [INFO]: in run crawler
+2026-08-05 19:21:23,500 [INFO]: in run crawler
+2026-08-05 19:21:23,501 [INFO]: in run crawler
+2026-08-05 19:21:23,501 [INFO]: in run crawler
+2026-08-05 19:21:23,501 [INFO]: in run crawler
+2026-08-05 19:21:23,501 [INFO]: in run crawler
+2026-08-05 19:21:23,501 [INFO]: in run crawler
+2026-08-05 19:21:23,502 [INFO]: in run crawler
+2026-08-05 19:21:23,502 [INFO]: in run crawler
+2026-08-05 19:21:23,506 [INFO]: GRABBER STARTED: PROC: 3
+2026-08-05 19:21:23,506 [INFO]: GRABBER STARTED: PROC: 3
+2026-08-05 19:21:23,507 [INFO]: in run crawler
+2026-08-05 19:21:23,507 [INFO]: in run crawler
+2026-08-05 19:21:23,507 [INFO]: in run crawler
+2026-08-05 19:21:23,507 [INFO]: in run crawler
+2026-08-05 19:21:23,507 [INFO]: in run crawler
+2026-08-05 19:21:23,507 [INFO]: in run crawler
+2026-08-05 19:21:23,508 [INFO]: in run crawler
+2026-08-05 19:21:23,508 [INFO]: in run crawler
+2026-08-05 19:21:23,508 [INFO]: in run crawler
+2026-08-05 19:21:23,508 [INFO]: in run crawler
+2026-08-05 19:21:27,224 [WARNING]: Site: https://www.linkedin.com/company/groundnews returned HTTP 999, crawler: 0
+2026-08-05 19:21:27,224 [WARNING]: Site: https://www.linkedin.com/company/groundnews returned HTTP 999, crawler: 0
+2026-08-05 19:21:27,224 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/groundnews provided an empty response, , crawler: 0
+2026-08-05 19:21:27,224 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/groundnews provided an empty response, , crawler: 0
+2026-08-05 19:21:27,917 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 19:21:27,917 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 19:21:28,505 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 19:21:28,505 [WARNING]: No usable robots.txt for https://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 19:21:28,506 [WARNING]: No usable robots.txt for https://peps.python.org (HTTP 404), crawler: 3
+2026-08-05 19:21:28,506 [WARNING]: No usable robots.txt for https://peps.python.org (HTTP 404), crawler: 3
+2026-08-05 19:21:28,696 [WARNING]: Site: https://hackernoon.com/c/cybersecurity returned HTTP 403, crawler: 1
+2026-08-05 19:21:28,696 [WARNING]: Site: https://hackernoon.com/c/cybersecurity returned HTTP 403, crawler: 1
+2026-08-05 19:21:28,697 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/cybersecurity provided an empty response, , crawler: 1
+2026-08-05 19:21:28,697 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/cybersecurity provided an empty response, , crawler: 1
+2026-08-05 19:21:30,370 [WARNING]: Site: https://hackernoon.com/lang/pt/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 1
+2026-08-05 19:21:30,370 [WARNING]: Site: https://hackernoon.com/lang/pt/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 1
+2026-08-05 19:21:30,370 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/pt/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 1
+2026-08-05 19:21:30,370 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/pt/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 1
+2026-08-05 19:21:30,396 [WARNING]: Site: https://hackernoon.com/about/katul1512 returned HTTP 403, crawler: 1
+2026-08-05 19:21:30,396 [WARNING]: Site: https://hackernoon.com/about/katul1512 returned HTTP 403, crawler: 1
+2026-08-05 19:21:30,396 [WARNING]: EmptyResponse: Site: https://hackernoon.com/about/katul1512 provided an empty response, , crawler: 1
+2026-08-05 19:21:30,396 [WARNING]: EmptyResponse: Site: https://hackernoon.com/about/katul1512 provided an empty response, , crawler: 1
+2026-08-05 19:21:31,288 [WARNING]: Site: https://hackernoon.com/tagged/ai-agent-governance returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,288 [WARNING]: Site: https://hackernoon.com/tagged/ai-agent-governance returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,289 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/ai-agent-governance provided an empty response, , crawler: 1
+2026-08-05 19:21:31,289 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/ai-agent-governance provided an empty response, , crawler: 1
+2026-08-05 19:21:31,638 [WARNING]: Site: https://hackernoon.com/lang/ht/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 0
+2026-08-05 19:21:31,638 [WARNING]: Site: https://hackernoon.com/lang/ht/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 0
+2026-08-05 19:21:31,639 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/ht/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 0
+2026-08-05 19:21:31,639 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/ht/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 0
+2026-08-05 19:21:31,692 [WARNING]: Site: https://hackernoon.com/lang/lo/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,692 [WARNING]: Site: https://hackernoon.com/lang/lo/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,693 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/lo/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 1
+2026-08-05 19:21:31,693 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/lo/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 1
+2026-08-05 19:21:31,834 [WARNING]: Site: https://hackernoon.com/tagged/ai-decision-architecture returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,834 [WARNING]: Site: https://hackernoon.com/tagged/ai-decision-architecture returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,834 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/ai-decision-architecture provided an empty response, , crawler: 1
+2026-08-05 19:21:31,834 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/ai-decision-architecture provided an empty response, , crawler: 1
+2026-08-05 19:21:31,836 [WARNING]: Site: https://hackernoon.com/tagged/enterprise-ai-governance returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,836 [WARNING]: Site: https://hackernoon.com/tagged/enterprise-ai-governance returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,836 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/enterprise-ai-governance provided an empty response, , crawler: 1
+2026-08-05 19:21:31,836 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/enterprise-ai-governance provided an empty response, , crawler: 1
+2026-08-05 19:21:31,932 [WARNING]: Site: https://hackernoon.com/lang/be/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,932 [WARNING]: Site: https://hackernoon.com/lang/be/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,933 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/be/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 1
+2026-08-05 19:21:31,933 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/be/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 1
+2026-08-05 19:21:31,982 [WARNING]: Site: https://hackernoon.com/tagged/multi-agent-enterprise-systems returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,982 [WARNING]: Site: https://hackernoon.com/tagged/multi-agent-enterprise-systems returned HTTP 403, crawler: 1
+2026-08-05 19:21:31,983 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/multi-agent-enterprise-systems provided an empty response, , crawler: 1
+2026-08-05 19:21:31,983 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/multi-agent-enterprise-systems provided an empty response, , crawler: 1
+2026-08-05 19:21:32,446 [WARNING]: Site: https://hackernoon.com/lang/ru/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 4
+2026-08-05 19:21:32,446 [WARNING]: Site: https://hackernoon.com/lang/ru/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 4
+2026-08-05 19:21:32,447 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/ru/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 4
+2026-08-05 19:21:32,447 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/ru/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 4
+2026-08-05 19:21:32,787 [WARNING]: Site: https://hackernoon.com/lang/ja/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 4
+2026-08-05 19:21:32,787 [WARNING]: Site: https://hackernoon.com/lang/ja/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 4
+2026-08-05 19:21:32,787 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/ja/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 4
+2026-08-05 19:21:32,787 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/ja/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 4
+2026-08-05 19:21:33,660 [WARNING]: Site: https://hackernoon.com/lang/tl/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 0
+2026-08-05 19:21:33,660 [WARNING]: Site: https://hackernoon.com/lang/tl/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 0
+2026-08-05 19:21:33,660 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/tl/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 0
+2026-08-05 19:21:33,660 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/tl/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 0
+2026-08-05 19:21:33,700 [WARNING]: No usable robots.txt for https://policies.google.com (HTTP 404), crawler: 0
+2026-08-05 19:21:33,700 [WARNING]: No usable robots.txt for https://policies.google.com (HTTP 404), crawler: 0
+2026-08-05 19:21:33,815 [WARNING]: Site: https://hackernoon.com/lang/th/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 2
+2026-08-05 19:21:33,815 [WARNING]: Site: https://hackernoon.com/lang/th/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 2
+2026-08-05 19:21:33,817 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/th/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 2
+2026-08-05 19:21:33,817 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/th/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 2
+2026-08-05 19:21:33,819 [WARNING]: Site: https://hackernoon.com/archives/2026/08/01 returned HTTP 403, crawler: 2
+2026-08-05 19:21:33,819 [WARNING]: Site: https://hackernoon.com/archives/2026/08/01 returned HTTP 403, crawler: 2
+2026-08-05 19:21:33,819 [WARNING]: EmptyResponse: Site: https://hackernoon.com/archives/2026/08/01 provided an empty response, , crawler: 2
+2026-08-05 19:21:33,819 [WARNING]: EmptyResponse: Site: https://hackernoon.com/archives/2026/08/01 provided an empty response, , crawler: 2
+2026-08-05 19:21:34,590 [WARNING]: Site: https://hackernoon.com/lang/zu/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 3
+2026-08-05 19:21:34,590 [WARNING]: Site: https://hackernoon.com/lang/zu/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 3
+2026-08-05 19:21:34,591 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/zu/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 3
+2026-08-05 19:21:34,591 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/zu/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 3
+2026-08-05 19:21:35,198 [WARNING]: Site: https://hackernoon.com/tagged/mcp-enterprise-integration returned HTTP 403, crawler: 2
+2026-08-05 19:21:35,198 [WARNING]: Site: https://hackernoon.com/tagged/mcp-enterprise-integration returned HTTP 403, crawler: 2
+2026-08-05 19:21:35,198 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/mcp-enterprise-integration provided an empty response, , crawler: 2
+2026-08-05 19:21:35,198 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/mcp-enterprise-integration provided an empty response, , crawler: 2
+2026-08-05 19:21:35,226 [WARNING]: Site: https://hackernoon.com/lang/es/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 0
+2026-08-05 19:21:35,226 [WARNING]: Site: https://hackernoon.com/lang/es/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 0
+2026-08-05 19:21:35,226 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/es/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 0
+2026-08-05 19:21:35,226 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/es/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 0
+2026-08-05 19:21:35,896 [WARNING]: Site: https://hackernoon.com/lang/ne/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 2
+2026-08-05 19:21:35,896 [WARNING]: Site: https://hackernoon.com/lang/ne/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 2
+2026-08-05 19:21:35,896 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/ne/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 2
+2026-08-05 19:21:35,896 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/ne/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 2
+2026-08-05 19:21:37,164 [WARNING]: Site: https://hackernoon.com/gallery/multi-agent-enterprise-systems-yckzfk0vflokt9hcqd6r3q4l returned HTTP 403, crawler: 4
+2026-08-05 19:21:37,164 [WARNING]: Site: https://hackernoon.com/gallery/multi-agent-enterprise-systems-yckzfk0vflokt9hcqd6r3q4l returned HTTP 403, crawler: 4
+2026-08-05 19:21:37,164 [WARNING]: EmptyResponse: Site: https://hackernoon.com/gallery/multi-agent-enterprise-systems-yckzfk0vflokt9hcqd6r3q4l provided an empty response, , crawler: 4
+2026-08-05 19:21:37,164 [WARNING]: EmptyResponse: Site: https://hackernoon.com/gallery/multi-agent-enterprise-systems-yckzfk0vflokt9hcqd6r3q4l provided an empty response, , crawler: 4
+2026-08-05 19:21:40,121 [WARNING]: Site: https://hackernoon.com/lang/ca/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 1
+2026-08-05 19:21:40,121 [WARNING]: Site: https://hackernoon.com/lang/ca/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade returned HTTP 403, crawler: 1
+2026-08-05 19:21:40,122 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/ca/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 1
+2026-08-05 19:21:40,122 [WARNING]: EmptyResponse: Site: https://hackernoon.com/lang/ca/from-generative-ai-to-agentic-enterprises-designing-autonomous-decision-systems-for-the-next-decade provided an empty response, , crawler: 1
+2026-08-05 19:21:40,972 [WARNING]: Site: https://hackernoon.com/tagged/enterprise-ai-autonomy returned HTTP 403, crawler: 1
+2026-08-05 19:21:40,972 [WARNING]: Site: https://hackernoon.com/tagged/enterprise-ai-autonomy returned HTTP 403, crawler: 1
+2026-08-05 19:21:40,972 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/enterprise-ai-autonomy provided an empty response, , crawler: 1
+2026-08-05 19:21:40,972 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/enterprise-ai-autonomy provided an empty response, , crawler: 1
+2026-08-05 19:21:42,070 [WARNING]: EmptyResponse: Site: https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot provided an empty response, , crawler: 3
+2026-08-05 19:21:42,070 [WARNING]: EmptyResponse: Site: https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot provided an empty response, , crawler: 3
+2026-08-05 19:21:42,427 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/08/31/cgroupv2-ga-1-25/ provided an empty response, , crawler: 3
+2026-08-05 19:21:42,427 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/08/31/cgroupv2-ga-1-25/ provided an empty response, , crawler: 3
+2026-08-05 19:21:42,430 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/20/kubernetes-1-24-non-graceful-node-shutdown-alpha/ provided an empty response, , crawler: 3
+2026-08-05 19:21:42,430 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/20/kubernetes-1-24-non-graceful-node-shutdown-alpha/ provided an empty response, , crawler: 3
+2026-08-05 19:21:42,607 [WARNING]: No usable robots.txt for https://www.electronjs.org (HTTP 404), crawler: 4
+2026-08-05 19:21:42,607 [WARNING]: No usable robots.txt for https://www.electronjs.org (HTTP 404), crawler: 4
+2026-08-05 19:21:43,075 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/07/iptables-chains-not-api/ provided an empty response, , crawler: 1
+2026-08-05 19:21:43,075 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/07/iptables-chains-not-api/ provided an empty response, , crawler: 1
+2026-08-05 19:21:43,328 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/20/validating-admission-policies-alpha/ provided an empty response, , crawler: 1
+2026-08-05 19:21:43,328 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/20/validating-admission-policies-alpha/ provided an empty response, , crawler: 1
+2026-08-05 19:21:43,414 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/05/09/introducing-kubectl-applyset-pruning/ provided an empty response, , crawler: 0
+2026-08-05 19:21:43,414 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/05/09/introducing-kubectl-applyset-pruning/ provided an empty response, , crawler: 0
+2026-08-05 19:21:43,754 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/14/pod-has-network-condition/ provided an empty response, , crawler: 0
+2026-08-05 19:21:43,754 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/14/pod-has-network-condition/ provided an empty response, , crawler: 0
+2026-08-05 19:21:44,155 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/26/pod-scheduling-readiness-alpha/ provided an empty response, , crawler: 0
+2026-08-05 19:21:44,155 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/12/26/pod-scheduling-readiness-alpha/ provided an empty response, , crawler: 0
+2026-08-05 19:21:44,541 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/04/17/fine-grained-pod-topology-spread-features-beta/ provided an empty response, , crawler: 4
+2026-08-05 19:21:44,541 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/04/17/fine-grained-pod-topology-spread-features-beta/ provided an empty response, , crawler: 4
+2026-08-05 19:21:44,765 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/09/run-nodes-with-swap-alpha/ provided an empty response, , crawler: 3
+2026-08-05 19:21:44,765 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/09/run-nodes-with-swap-alpha/ provided an empty response, , crawler: 3
+2026-08-05 19:21:44,852 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/09/csi-windows-support-with-csi-proxy-reaches-ga/ provided an empty response, , crawler: 3
+2026-08-05 19:21:44,852 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/08/09/csi-windows-support-with-csi-proxy-reaches-ga/ provided an empty response, , crawler: 3
+2026-08-05 19:21:45,297 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/02/16/sig-node-ci-subproject-celebrates/ provided an empty response, , crawler: 0
+2026-08-05 19:21:45,297 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/02/16/sig-node-ci-subproject-celebrates/ provided an empty response, , crawler: 0
+2026-08-05 19:21:45,411 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/08/11/enhancing-kubernetes-one-kep-at-a-time/ provided an empty response, , crawler: 2
+2026-08-05 19:21:45,411 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/08/11/enhancing-kubernetes-one-kep-at-a-time/ provided an empty response, , crawler: 2
+2026-08-05 19:21:45,414 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/21/admission-controllers-for-container-drift/ provided an empty response, , crawler: 2
+2026-08-05 19:21:45,414 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/21/admission-controllers-for-container-drift/ provided an empty response, , crawler: 2
+2026-08-05 19:21:45,609 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/09/pod-security-admission-beta/ provided an empty response, , crawler: 3
+2026-08-05 19:21:45,609 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/09/pod-security-admission-beta/ provided an empty response, , crawler: 3
+2026-08-05 19:21:45,632 [WARNING]: EmptyResponse: Site: https://github.blog/engineering/the-cost-of-saying-yes-has-changed/ provided an empty response, , crawler: 0
+2026-08-05 19:21:45,632 [WARNING]: EmptyResponse: Site: https://github.blog/engineering/the-cost-of-saying-yes-has-changed/ provided an empty response, , crawler: 0
+2026-08-05 19:21:45,639 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/25/contextual-logging/ provided an empty response, , crawler: 3
+2026-08-05 19:21:45,639 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/05/25/contextual-logging/ provided an empty response, , crawler: 3
+2026-08-05 19:21:45,706 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/09/29/how-to-handle-data-duplication-in-data-heavy-kubernetes-environments/ provided an empty response, , crawler: 1
+2026-08-05 19:21:45,706 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/09/29/how-to-handle-data-duplication-in-data-heavy-kubernetes-environments/ provided an empty response, , crawler: 1
+2026-08-05 19:21:45,708 [WARNING]: EmptyResponse: Site: https://github.blog/author/levangelist/ provided an empty response, , crawler: 4
+2026-08-05 19:21:45,708 [WARNING]: EmptyResponse: Site: https://github.blog/author/levangelist/ provided an empty response, , crawler: 4
+2026-08-05 19:21:45,767 [WARNING]: No usable robots.txt for https://githubuniverse.com (HTTP 404), crawler: 4
+2026-08-05 19:21:45,767 [WARNING]: No usable robots.txt for https://githubuniverse.com (HTTP 404), crawler: 4
+2026-08-05 19:21:45,900 [WARNING]: Site: https://hackernoon.com/u/mcsee returned HTTP 403, crawler: 3
+2026-08-05 19:21:45,900 [WARNING]: Site: https://hackernoon.com/u/mcsee returned HTTP 403, crawler: 3
+2026-08-05 19:21:45,900 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/mcsee provided an empty response, , crawler: 3
+2026-08-05 19:21:45,900 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/mcsee provided an empty response, , crawler: 3
+2026-08-05 19:21:46,158 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/03/16/meet-our-contributors-au-nz-ep-02/ provided an empty response, , crawler: 4
+2026-08-05 19:21:46,158 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/03/16/meet-our-contributors-au-nz-ep-02/ provided an empty response, , crawler: 4
+2026-08-05 19:21:46,230 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 1
+2026-08-05 19:21:46,230 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 1
+2026-08-05 19:21:46,335 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/08/31/legacy-package-repository-deprecation/ provided an empty response, , crawler: 2
+2026-08-05 19:21:46,335 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/08/31/legacy-package-repository-deprecation/ provided an empty response, , crawler: 2
+2026-08-05 19:21:46,336 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/09/26/happy-7th-birthday-kubeadm/ provided an empty response, , crawler: 2
+2026-08-05 19:21:46,336 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/09/26/happy-7th-birthday-kubeadm/ provided an empty response, , crawler: 2
+2026-08-05 19:21:47,048 [WARNING]: Site: https://hackernoon.com/tagged/programming returned HTTP 403, crawler: 2
+2026-08-05 19:21:47,048 [WARNING]: Site: https://hackernoon.com/tagged/programming returned HTTP 403, crawler: 2
+2026-08-05 19:21:47,049 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/programming provided an empty response, , crawler: 2
+2026-08-05 19:21:47,049 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/programming provided an empty response, , crawler: 2
+2026-08-05 19:21:47,049 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 2
+2026-08-05 19:21:47,049 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 2
+2026-08-05 19:21:47,248 [WARNING]: No usable robots.txt for https://desktop.github.com (HTTP 404), crawler: 1
+2026-08-05 19:21:47,248 [WARNING]: No usable robots.txt for https://desktop.github.com (HTTP 404), crawler: 1
+2026-08-05 19:21:47,542 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/01/02/cross-namespace-data-sources-alpha/ provided an empty response, , crawler: 4
+2026-08-05 19:21:47,542 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2023/01/02/cross-namespace-data-sources-alpha/ provided an empty response, , crawler: 4
+2026-08-05 19:21:47,554 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/01/contribution-containers-and-cricket-the-kubernetes-1.22-release-interview/ provided an empty response, , crawler: 4
+2026-08-05 19:21:47,554 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/12/01/contribution-containers-and-cricket-the-kubernetes-1.22-release-interview/ provided an empty response, , crawler: 4
+2026-08-05 19:21:47,972 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/10/05/nsa-cisa-kubernetes-hardening-guidance/ provided an empty response, , crawler: 1
+2026-08-05 19:21:47,972 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/10/05/nsa-cisa-kubernetes-hardening-guidance/ provided an empty response, , crawler: 1
+2026-08-05 19:21:47,989 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/09/27/sig-node-spotlight-2021/ provided an empty response, , crawler: 1
+2026-08-05 19:21:47,989 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2021/09/27/sig-node-spotlight-2021/ provided an empty response, , crawler: 1
+2026-08-05 19:21:48,005 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/04/28/ingress-nginx-1-2-0/ provided an empty response, , crawler: 1
+2026-08-05 19:21:48,005 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/04/28/ingress-nginx-1-2-0/ provided an empty response, , crawler: 1
+2026-08-05 19:21:48,482 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/29/enforce-immutability-using-cel/ provided an empty response, , crawler: 4
+2026-08-05 19:21:48,482 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2022/09/29/enforce-immutability-using-cel/ provided an empty response, , crawler: 4
+2026-08-05 19:21:48,749 [WARNING]: No usable robots.txt for https://partner.github.com (HTTP 404), crawler: 1
+2026-08-05 19:21:48,749 [WARNING]: No usable robots.txt for https://partner.github.com (HTTP 404), crawler: 1
+2026-08-05 19:21:51,315 [WARNING]: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx returned HTTP 403, crawler: 3
+2026-08-05 19:21:51,315 [WARNING]: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx returned HTTP 403, crawler: 3
+2026-08-05 19:21:51,316 [WARNING]: EmptyResponse: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx provided an empty response, , crawler: 3
+2026-08-05 19:21:51,316 [WARNING]: EmptyResponse: Site: http://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Move-a-Step-Closer-to-Autonomous-Rides-in-London/default.aspx provided an empty response, , crawler: 3
+2026-08-05 19:21:51,533 [WARNING]: Site: https://hackernoon.com/tagged/artificial-intelligence returned HTTP 403, crawler: 0
+2026-08-05 19:21:51,533 [WARNING]: Site: https://hackernoon.com/tagged/artificial-intelligence returned HTTP 403, crawler: 0
+2026-08-05 19:21:51,534 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/artificial-intelligence provided an empty response, , crawler: 0
+2026-08-05 19:21:51,534 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/artificial-intelligence provided an empty response, , crawler: 0
+2026-08-05 19:21:52,004 [WARNING]: Site: https://www.linkedin.com/company/github returned HTTP 999, crawler: 3
+2026-08-05 19:21:52,004 [WARNING]: Site: https://www.linkedin.com/company/github returned HTTP 999, crawler: 3
+2026-08-05 19:21:52,005 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/github provided an empty response, , crawler: 3
+2026-08-05 19:21:52,005 [WARNING]: EmptyResponse: Site: https://www.linkedin.com/company/github provided an empty response, , crawler: 3
+2026-08-05 19:21:52,939 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 2
+2026-08-05 19:21:52,939 [WARNING]: No usable robots.txt for https://resources.github.com (HTTP 404), crawler: 2
+2026-08-05 19:21:53,060 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/05/27/agents-on-a-leash-agentic-ai-remains-mostly-monitored-at-work/ provided an empty response, , crawler: 3
+2026-08-05 19:21:53,060 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/05/27/agents-on-a-leash-agentic-ai-remains-mostly-monitored-at-work/ provided an empty response, , crawler: 3
+2026-08-05 19:21:53,236 [WARNING]: Site: https://hackernoon.com/tagged/data-science returned HTTP 403, crawler: 3
+2026-08-05 19:21:53,236 [WARNING]: Site: https://hackernoon.com/tagged/data-science returned HTTP 403, crawler: 3
+2026-08-05 19:21:53,237 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/data-science provided an empty response, , crawler: 3
+2026-08-05 19:21:53,237 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/data-science provided an empty response, , crawler: 3
+2026-08-05 19:21:53,246 [WARNING]: EmptyResponse: Site: https://github.blog/author/steiza/ provided an empty response, , crawler: 2
+2026-08-05 19:21:53,246 [WARNING]: EmptyResponse: Site: https://github.blog/author/steiza/ provided an empty response, , crawler: 2
+2026-08-05 19:21:54,158 [WARNING]: EmptyResponse: Site: https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/ provided an empty response, , crawler: 0
+2026-08-05 19:21:54,158 [WARNING]: EmptyResponse: Site: https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/ provided an empty response, , crawler: 0
+2026-08-05 19:21:54,781 [WARNING]: No usable robots.txt for https://githubuniverse.com (HTTP 404), crawler: 0
+2026-08-05 19:21:54,781 [WARNING]: No usable robots.txt for https://githubuniverse.com (HTTP 404), crawler: 0
+2026-08-05 19:21:54,868 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/07/29/developers-are-attached-to-tools-because-tools-encode-trust/ provided an empty response, , crawler: 3
+2026-08-05 19:21:54,868 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/2026/07/29/developers-are-attached-to-tools-because-tools-encode-trust/ provided an empty response, , crawler: 3
+2026-08-05 19:21:55,230 [WARNING]: EmptyResponse: Site: https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/ provided an empty response, , crawler: 2
+2026-08-05 19:21:55,230 [WARNING]: EmptyResponse: Site: https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/ provided an empty response, , crawler: 2
+2026-08-05 19:21:55,978 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 0
+2026-08-05 19:21:55,978 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 0
+2026-08-05 19:21:56,030 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/04/29/kubernetes-v1-36-memory-qos-tiered-protection/ provided an empty response, , crawler: 1
+2026-08-05 19:21:56,030 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/04/29/kubernetes-v1-36-memory-qos-tiered-protection/ provided an empty response, , crawler: 1
+2026-08-05 19:21:56,033 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/05/06/kubernetes-v1-36-server-side-sharded-list-and-watch/ provided an empty response, , crawler: 1
+2026-08-05 19:21:56,033 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/05/06/kubernetes-v1-36-server-side-sharded-list-and-watch/ provided an empty response, , crawler: 1
+2026-08-05 19:21:56,063 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/04/30/kubernetes-v1-36-inplace-pod-level-resources-beta/ provided an empty response, , crawler: 1
+2026-08-05 19:21:56,063 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/04/30/kubernetes-v1-36-inplace-pod-level-resources-beta/ provided an empty response, , crawler: 1
+2026-08-05 19:21:56,081 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/05/01/kubernetes-v1-36-feature-pod-level-resource-managers-alpha/ provided an empty response, , crawler: 1
+2026-08-05 19:21:56,081 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2026/05/01/kubernetes-v1-36-feature-pod-level-resource-managers-alpha/ provided an empty response, , crawler: 1
+2026-08-05 19:21:56,185 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/05/16/kubernetes-v1-33-in-place-pod-resize-beta/ provided an empty response, , crawler: 1
+2026-08-05 19:21:56,185 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/05/16/kubernetes-v1-33-in-place-pod-resize-beta/ provided an empty response, , crawler: 1
+2026-08-05 19:21:56,401 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 1
+2026-08-05 19:21:56,401 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 1
+2026-08-05 19:21:56,404 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 3
+2026-08-05 19:21:56,404 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 3
+2026-08-05 19:21:56,605 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 3
+2026-08-05 19:21:56,605 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 3
+2026-08-05 19:21:56,932 [WARNING]: No usable robots.txt for https://services.github.com (HTTP 404), crawler: 2
+2026-08-05 19:21:56,932 [WARNING]: No usable robots.txt for https://services.github.com (HTTP 404), crawler: 2
+2026-08-05 19:21:56,951 [WARNING]: No usable robots.txt for https://survey.stackoverflow.co (HTTP 404), crawler: 3
+2026-08-05 19:21:56,951 [WARNING]: No usable robots.txt for https://survey.stackoverflow.co (HTTP 404), crawler: 3
+2026-08-05 19:21:57,142 [WARNING]: EmptyResponse: Site: https://github.blog/changelog/2026/?label=actions provided an empty response, , crawler: 0
+2026-08-05 19:21:57,142 [WARNING]: EmptyResponse: Site: https://github.blog/changelog/2026/?label=actions provided an empty response, , crawler: 0
+2026-08-05 19:21:57,332 [WARNING]: Site: https://hackernoon.com/c/business returned HTTP 403, crawler: 1
+2026-08-05 19:21:57,332 [WARNING]: Site: https://hackernoon.com/c/business returned HTTP 403, crawler: 1
+2026-08-05 19:21:57,333 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/business provided an empty response, , crawler: 1
+2026-08-05 19:21:57,333 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/business provided an empty response, , crawler: 1
+2026-08-05 19:21:57,365 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 0
+2026-08-05 19:21:57,365 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 0
+2026-08-05 19:21:57,379 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/podcast/feed/ provided an empty response, , crawler: 2
+2026-08-05 19:21:57,379 [WARNING]: EmptyResponse: Site: https://stackoverflow.blog/podcast/feed/ provided an empty response, , crawler: 2
+2026-08-05 19:21:57,407 [WARNING]: Site: https://hackernoon.com/tagged/ai returned HTTP 403, crawler: 2
+2026-08-05 19:21:57,407 [WARNING]: Site: https://hackernoon.com/tagged/ai returned HTTP 403, crawler: 2
+2026-08-05 19:21:57,408 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/ai provided an empty response, , crawler: 2
+2026-08-05 19:21:57,408 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/ai provided an empty response, , crawler: 2
+2026-08-05 19:21:57,833 [WARNING]: Site: https://hackernoon.com/c/web3 returned HTTP 403, crawler: 4
+2026-08-05 19:21:57,833 [WARNING]: Site: https://hackernoon.com/c/web3 returned HTTP 403, crawler: 4
+2026-08-05 19:21:57,834 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/web3 provided an empty response, , crawler: 4
+2026-08-05 19:21:57,834 [WARNING]: EmptyResponse: Site: https://hackernoon.com/c/web3 provided an empty response, , crawler: 4
+2026-08-05 19:21:58,064 [WARNING]: EmptyResponse: Site: https://github.blog/security/vulnerability-research/seven-years-github-security-bug-bounty-program/ provided an empty response, , crawler: 3
+2026-08-05 19:21:58,064 [WARNING]: EmptyResponse: Site: https://github.blog/security/vulnerability-research/seven-years-github-security-bug-bounty-program/ provided an empty response, , crawler: 3
+2026-08-05 19:21:58,458 [WARNING]: No usable robots.txt for https://policies.google.com (HTTP 404), crawler: 3
+2026-08-05 19:21:58,458 [WARNING]: No usable robots.txt for https://policies.google.com (HTTP 404), crawler: 3
+2026-08-05 19:22:00,824 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 4
+2026-08-05 19:22:00,824 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 4
+2026-08-05 19:22:01,252 [WARNING]: No usable robots.txt for https://www.casio.com.cn (HTTP 404), crawler: 1
+2026-08-05 19:22:01,252 [WARNING]: No usable robots.txt for https://www.casio.com.cn (HTTP 404), crawler: 1
+2026-08-05 19:22:01,453 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 2
+2026-08-05 19:22:01,453 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 2
+2026-08-05 19:22:02,623 [WARNING]: No usable robots.txt for https://policies.stackoverflow.co (HTTP 500), crawler: 1
+2026-08-05 19:22:02,623 [WARNING]: No usable robots.txt for https://policies.stackoverflow.co (HTTP 500), crawler: 1
+2026-08-05 19:22:03,185 [WARNING]: No usable robots.txt for https://overcast.fm (HTTP 404), crawler: 0
+2026-08-05 19:22:03,185 [WARNING]: No usable robots.txt for https://overcast.fm (HTTP 404), crawler: 0
+2026-08-05 19:22:03,771 [WARNING]: Site: https://stackoverflow.com/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 0
+2026-08-05 19:22:03,771 [WARNING]: Site: https://stackoverflow.com/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 0
+2026-08-05 19:22:03,771 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 0
+2026-08-05 19:22:03,771 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 0
+2026-08-05 19:22:04,639 [WARNING]: EmptyResponse: Site: https://invite.slack.golangbridge.org/ provided an empty response, , crawler: 1
+2026-08-05 19:22:04,639 [WARNING]: EmptyResponse: Site: https://invite.slack.golangbridge.org/ provided an empty response, , crawler: 1
+2026-08-05 19:22:06,726 [WARNING]: EmptyResponse: Site: https://www.twitter.com/golang provided an empty response, , crawler: 1
+2026-08-05 19:22:06,726 [WARNING]: EmptyResponse: Site: https://www.twitter.com/golang provided an empty response, , crawler: 1
+2026-08-05 19:22:06,737 [WARNING]: Site: https://stackoverflow.com/help/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 2
+2026-08-05 19:22:06,737 [WARNING]: Site: https://stackoverflow.com/help/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 2
+2026-08-05 19:22:06,737 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/help/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 2
+2026-08-05 19:22:06,737 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/help/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 2
+2026-08-05 19:22:07,324 [WARNING]: No usable robots.txt for https://shop.theverge.com (HTTP 403), crawler: 2
+2026-08-05 19:22:07,324 [WARNING]: No usable robots.txt for https://shop.theverge.com (HTTP 403), crawler: 2
+2026-08-05 19:22:07,338 [WARNING]: Site: https://stackoverflow.com/questions/tagged/go?tab=Newest returned HTTP 403, crawler: 4
+2026-08-05 19:22:07,338 [WARNING]: Site: https://stackoverflow.com/questions/tagged/go?tab=Newest returned HTTP 403, crawler: 4
+2026-08-05 19:22:07,339 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/questions/tagged/go?tab=Newest provided an empty response, , crawler: 4
+2026-08-05 19:22:07,339 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/questions/tagged/go?tab=Newest provided an empty response, , crawler: 4
+2026-08-05 19:22:07,714 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/company-news/npm-security-update-oauth-tokens/ provided an empty response, , crawler: 2
+2026-08-05 19:22:07,714 [WARNING]: EmptyResponse: Site: https://github.blog/news-insights/company-news/npm-security-update-oauth-tokens/ provided an empty response, , crawler: 2
+2026-08-05 19:22:07,889 [WARNING]: Site: https://hackernoon.com/p/services/story-boost returned HTTP 403, crawler: 3
+2026-08-05 19:22:07,889 [WARNING]: Site: https://hackernoon.com/p/services/story-boost returned HTTP 403, crawler: 3
+2026-08-05 19:22:07,890 [WARNING]: EmptyResponse: Site: https://hackernoon.com/p/services/story-boost provided an empty response, , crawler: 3
+2026-08-05 19:22:07,890 [WARNING]: EmptyResponse: Site: https://hackernoon.com/p/services/story-boost provided an empty response, , crawler: 3
+2026-08-05 19:22:08,144 [WARNING]: Site: https://shop.theverge.com/ returned HTTP 403, crawler: 2
+2026-08-05 19:22:08,144 [WARNING]: Site: https://shop.theverge.com/ returned HTTP 403, crawler: 2
+2026-08-05 19:22:08,145 [WARNING]: EmptyResponse: Site: https://shop.theverge.com/ provided an empty response, , crawler: 2
+2026-08-05 19:22:08,145 [WARNING]: EmptyResponse: Site: https://shop.theverge.com/ provided an empty response, , crawler: 2
+2026-08-05 19:22:08,642 [WARNING]: Site: https://stackoverflow.com/legal/privacy-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 1
+2026-08-05 19:22:08,642 [WARNING]: Site: https://stackoverflow.com/legal/privacy-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 1
+2026-08-05 19:22:08,642 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/legal/privacy-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 1
+2026-08-05 19:22:08,642 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/legal/privacy-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 1
+2026-08-05 19:22:09,617 [WARNING]: EmptyResponse: Site: https://go.dev/blog/all provided an empty response, , crawler: 3
+2026-08-05 19:22:09,617 [WARNING]: EmptyResponse: Site: https://go.dev/blog/all provided an empty response, , crawler: 3
+2026-08-05 19:22:10,321 [WARNING]: No usable robots.txt for http://sphinx.pocoo.org (HTTP 400), crawler: 3
+2026-08-05 19:22:10,321 [WARNING]: No usable robots.txt for http://sphinx.pocoo.org (HTTP 400), crawler: 3
+2026-08-05 19:22:10,620 [WARNING]: Site: https://stackoverflow.com/users/email/settings/current returned HTTP 403, crawler: 0
+2026-08-05 19:22:10,620 [WARNING]: Site: https://stackoverflow.com/users/email/settings/current returned HTTP 403, crawler: 0
+2026-08-05 19:22:10,620 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/users/email/settings/current provided an empty response, , crawler: 0
+2026-08-05 19:22:10,620 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/users/email/settings/current provided an empty response, , crawler: 0
+2026-08-05 19:22:10,670 [WARNING]: Site: https://hackernoon.com/u/gptzero returned HTTP 403, crawler: 1
+2026-08-05 19:22:10,670 [WARNING]: Site: https://hackernoon.com/u/gptzero returned HTTP 403, crawler: 1
+2026-08-05 19:22:10,671 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/gptzero provided an empty response, , crawler: 1
+2026-08-05 19:22:10,671 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/gptzero provided an empty response, , crawler: 1
+2026-08-05 19:22:10,836 [WARNING]: No usable robots.txt for https://pudding.cool (HTTP 404), crawler: 0
+2026-08-05 19:22:10,836 [WARNING]: No usable robots.txt for https://pudding.cool (HTTP 404), crawler: 0
+2026-08-05 19:22:10,906 [WARNING]: Site: http://sphinx.pocoo.org/ returned HTTP 400, crawler: 3
+2026-08-05 19:22:10,906 [WARNING]: Site: http://sphinx.pocoo.org/ returned HTTP 400, crawler: 3
+2026-08-05 19:22:10,906 [WARNING]: EmptyResponse: Site: http://sphinx.pocoo.org/ provided an empty response, , crawler: 3
+2026-08-05 19:22:10,906 [WARNING]: EmptyResponse: Site: http://sphinx.pocoo.org/ provided an empty response, , crawler: 3
+2026-08-05 19:22:11,044 [WARNING]: Site: https://hackernoon.com/tagged/artificial-intelligence returned HTTP 403, crawler: 2
+2026-08-05 19:22:11,044 [WARNING]: Site: https://hackernoon.com/tagged/artificial-intelligence returned HTTP 403, crawler: 2
+2026-08-05 19:22:11,044 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/artificial-intelligence provided an empty response, , crawler: 2
+2026-08-05 19:22:11,044 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/artificial-intelligence provided an empty response, , crawler: 2
+2026-08-05 19:22:11,319 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 4
+2026-08-05 19:22:11,319 [WARNING]: No usable robots.txt for https://stackoverflow.com (HTTP 403), crawler: 4
+2026-08-05 19:22:11,413 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 3
+2026-08-05 19:22:11,413 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 3
+2026-08-05 19:22:11,416 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:11,416 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:11,434 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:11,434 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:11,493 [WARNING]: Site: https://stackoverflow.com/contact/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 4
+2026-08-05 19:22:11,493 [WARNING]: Site: https://stackoverflow.com/contact/?utm_source=blog&utm_medium=referral&utm_campaign=footer returned HTTP 403, crawler: 4
+2026-08-05 19:22:11,494 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/contact/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 4
+2026-08-05 19:22:11,494 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/contact/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 4
+2026-08-05 19:22:11,603 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:11,603 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:11,617 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 4
+2026-08-05 19:22:11,617 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 4
+2026-08-05 19:22:11,766 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:11,766 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:11,826 [WARNING]: Site: https://stackoverflow.com/tags/go returned HTTP 403, crawler: 4
+2026-08-05 19:22:11,826 [WARNING]: Site: https://stackoverflow.com/tags/go returned HTTP 403, crawler: 4
+2026-08-05 19:22:11,826 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/tags/go provided an empty response, , crawler: 4
+2026-08-05 19:22:11,826 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/tags/go provided an empty response, , crawler: 4
+2026-08-05 19:22:12,175 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:12,175 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:12,368 [WARNING]: No usable robots.txt for https://e360.yale.edu (HTTP 404), crawler: 1
+2026-08-05 19:22:12,368 [WARNING]: No usable robots.txt for https://e360.yale.edu (HTTP 404), crawler: 1
+2026-08-05 19:22:12,435 [WARNING]: No usable robots.txt for https://academia.stackexchange.com (HTTP 403), crawler: 3
+2026-08-05 19:22:12,435 [WARNING]: No usable robots.txt for https://academia.stackexchange.com (HTTP 403), crawler: 3
+2026-08-05 19:22:12,489 [WARNING]: EmptyResponse: Site: https://github.blog/author/ria-gopu/ provided an empty response, , crawler: 0
+2026-08-05 19:22:12,489 [WARNING]: EmptyResponse: Site: https://github.blog/author/ria-gopu/ provided an empty response, , crawler: 0
+2026-08-05 19:22:12,610 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:12,610 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:12,626 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:12,626 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:12,629 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:12,629 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:12,665 [WARNING]: EmptyResponse: Site: https://stackoverflow.com provided an empty response, , crawler: 3
+2026-08-05 19:22:12,665 [WARNING]: EmptyResponse: Site: https://stackoverflow.com provided an empty response, , crawler: 3
+2026-08-05 19:22:12,678 [WARNING]: Site: https://openai.com/index/apple-is-getting-this-wrong/ returned HTTP 403, crawler: 2
+2026-08-05 19:22:12,678 [WARNING]: Site: https://openai.com/index/apple-is-getting-this-wrong/ returned HTTP 403, crawler: 2
+2026-08-05 19:22:12,678 [WARNING]: EmptyResponse: Site: https://openai.com/index/apple-is-getting-this-wrong/ provided an empty response, , crawler: 2
+2026-08-05 19:22:12,678 [WARNING]: EmptyResponse: Site: https://openai.com/index/apple-is-getting-this-wrong/ provided an empty response, , crawler: 2
+2026-08-05 19:22:12,753 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:12,753 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:13,049 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/legal/cookie-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 3
+2026-08-05 19:22:13,049 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/legal/cookie-policy/?utm_source=blog&utm_medium=referral&utm_campaign=footer provided an empty response, , crawler: 3
+2026-08-05 19:22:13,099 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:13,099 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:13,118 [WARNING]: Site: https://hackernoon.com/tagged/varonis-atlas-agent returned HTTP 403, crawler: 4
+2026-08-05 19:22:13,118 [WARNING]: Site: https://hackernoon.com/tagged/varonis-atlas-agent returned HTTP 403, crawler: 4
+2026-08-05 19:22:13,119 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/varonis-atlas-agent provided an empty response, , crawler: 4
+2026-08-05 19:22:13,119 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/varonis-atlas-agent provided an empty response, , crawler: 4
+2026-08-05 19:22:13,209 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 19:22:13,209 [WARNING]: No usable robots.txt for http://wiki.python.org (HTTP 404), crawler: 3
+2026-08-05 19:22:13,279 [WARNING]: No usable robots.txt for https://serverfault.com (HTTP 403), crawler: 4
+2026-08-05 19:22:13,279 [WARNING]: No usable robots.txt for https://serverfault.com (HTTP 403), crawler: 4
+2026-08-05 19:22:13,318 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:13,318 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:13,588 [WARNING]: No usable robots.txt for https://about.hackernoon.com (HTTP 403), crawler: 4
+2026-08-05 19:22:13,588 [WARNING]: No usable robots.txt for https://about.hackernoon.com (HTTP 403), crawler: 4
+2026-08-05 19:22:13,705 [WARNING]: Site: https://hackernoon.com/u/varonis returned HTTP 403, crawler: 3
+2026-08-05 19:22:13,705 [WARNING]: Site: https://hackernoon.com/u/varonis returned HTTP 403, crawler: 3
+2026-08-05 19:22:13,705 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/varonis provided an empty response, , crawler: 3
+2026-08-05 19:22:13,705 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/varonis provided an empty response, , crawler: 3
+2026-08-05 19:22:13,798 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 3
+2026-08-05 19:22:13,798 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 3
+2026-08-05 19:22:13,927 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:13,927 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:13,930 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:13,930 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:13,934 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:13,934 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 4
+2026-08-05 19:22:14,134 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:14,134 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:14,148 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 0
+2026-08-05 19:22:14,148 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 0
+2026-08-05 19:22:14,163 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/02/14/cloud-controller-manager-chicken-egg-problem/ provided an empty response, , crawler: 1
+2026-08-05 19:22:14,163 [WARNING]: EmptyResponse: Site: https://kubernetes.io/blog/2025/02/14/cloud-controller-manager-chicken-egg-problem/ provided an empty response, , crawler: 1
+2026-08-05 19:22:14,182 [WARNING]: Site: https://stackoverflow.com/questions/tagged/kubernetes returned HTTP 403, crawler: 1
+2026-08-05 19:22:14,182 [WARNING]: Site: https://stackoverflow.com/questions/tagged/kubernetes returned HTTP 403, crawler: 1
+2026-08-05 19:22:14,183 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/questions/tagged/kubernetes provided an empty response, , crawler: 1
+2026-08-05 19:22:14,183 [WARNING]: EmptyResponse: Site: https://stackoverflow.com/questions/tagged/kubernetes provided an empty response, , crawler: 1
+2026-08-05 19:22:14,520 [WARNING]: EmptyResponse: Site: https://blog.cloudflare.com/author/will-papper/ provided an empty response, , crawler: 1
+2026-08-05 19:22:14,520 [WARNING]: EmptyResponse: Site: https://blog.cloudflare.com/author/will-papper/ provided an empty response, , crawler: 1
+2026-08-05 19:22:14,560 [WARNING]: EmptyResponse: Site: https://www.cloudflare.com/case-studies/ provided an empty response, , crawler: 3
+2026-08-05 19:22:14,560 [WARNING]: EmptyResponse: Site: https://www.cloudflare.com/case-studies/ provided an empty response, , crawler: 3
+2026-08-05 19:22:14,579 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:14,579 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:14,693 [WARNING]: No usable robots.txt for https://git.k8s.io (HTTP 404), crawler: 2
+2026-08-05 19:22:14,693 [WARNING]: No usable robots.txt for https://git.k8s.io (HTTP 404), crawler: 2
+2026-08-05 19:22:14,704 [WARNING]: EmptyResponse: Site: https://cloudflare.net/ provided an empty response, , crawler: 2
+2026-08-05 19:22:14,704 [WARNING]: EmptyResponse: Site: https://cloudflare.net/ provided an empty response, , crawler: 2
+2026-08-05 19:22:14,706 [WARNING]: No usable robots.txt for https://workplace.stackexchange.com (HTTP 403), crawler: 2
+2026-08-05 19:22:14,706 [WARNING]: No usable robots.txt for https://workplace.stackexchange.com (HTTP 403), crawler: 2
+2026-08-05 19:22:14,708 [WARNING]: Site: https://hackernoon.com/tagged/futurism returned HTTP 403, crawler: 2
+2026-08-05 19:22:14,708 [WARNING]: Site: https://hackernoon.com/tagged/futurism returned HTTP 403, crawler: 2
+2026-08-05 19:22:14,708 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/futurism provided an empty response, , crawler: 2
+2026-08-05 19:22:14,708 [WARNING]: EmptyResponse: Site: https://hackernoon.com/tagged/futurism provided an empty response, , crawler: 2
+2026-08-05 19:22:14,716 [WARNING]: EmptyResponse: Site: https://workplace.stackexchange.com/questions/203552/i-was-asked-to-come-in-1hr-earlier-than-my-shift-starts-but-i-cant-since-i-have provided an empty response, , crawler: 2
+2026-08-05 19:22:14,716 [WARNING]: EmptyResponse: Site: https://workplace.stackexchange.com/questions/203552/i-was-asked-to-come-in-1hr-earlier-than-my-shift-starts-but-i-cant-since-i-have provided an empty response, , crawler: 2
+2026-08-05 19:22:14,848 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:14,848 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 1
+2026-08-05 19:22:14,861 [WARNING]: EmptyResponse: Site: https://reddit.com/r/golang provided an empty response, , crawler: 1
+2026-08-05 19:22:14,861 [WARNING]: EmptyResponse: Site: https://reddit.com/r/golang provided an empty response, , crawler: 1
+2026-08-05 19:22:14,877 [WARNING]: EmptyResponse: Site: https://support.cloudflare.com/ provided an empty response, , crawler: 2
+2026-08-05 19:22:14,877 [WARNING]: EmptyResponse: Site: https://support.cloudflare.com/ provided an empty response, , crawler: 2
+2026-08-05 19:22:14,881 [WARNING]: EmptyResponse: Site: https://github.com/alokdangre provided an empty response, , crawler: 2
+2026-08-05 19:22:14,881 [WARNING]: EmptyResponse: Site: https://github.com/alokdangre provided an empty response, , crawler: 2
+2026-08-05 19:22:14,995 [WARNING]: Site: https://hackernoon.com/u/katul1512 returned HTTP 403, crawler: 2
+2026-08-05 19:22:14,995 [WARNING]: Site: https://hackernoon.com/u/katul1512 returned HTTP 403, crawler: 2
+2026-08-05 19:22:14,995 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/katul1512 provided an empty response, , crawler: 2
+2026-08-05 19:22:14,995 [WARNING]: EmptyResponse: Site: https://hackernoon.com/u/katul1512 provided an empty response, , crawler: 2
+2026-08-05 19:22:15,009 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:15,009 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:15,017 [WARNING]: EmptyResponse: Site: https://cloudflare.com/plans/ provided an empty response, , crawler: 1
+2026-08-05 19:22:15,017 [WARNING]: EmptyResponse: Site: https://cloudflare.com/plans/ provided an empty response, , crawler: 1
+2026-08-05 19:22:15,060 [WARNING]: No usable robots.txt for https://movies.stackexchange.com (HTTP 403), crawler: 2
+2026-08-05 19:22:15,060 [WARNING]: No usable robots.txt for https://movies.stackexchange.com (HTTP 403), crawler: 2
+2026-08-05 19:22:15,064 [WARNING]: EmptyResponse: Site: https://movies.stackexchange.com/questions/132174/how-does-the-old-servant-know-it-is-odysseus-when-she-washes-his-feet provided an empty response, , crawler: 2
+2026-08-05 19:22:15,064 [WARNING]: EmptyResponse: Site: https://movies.stackexchange.com/questions/132174/how-does-the-old-servant-know-it-is-odysseus-when-she-washes-his-feet provided an empty response, , crawler: 2
+2026-08-05 19:22:15,066 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:15,066 [WARNING]: No usable robots.txt for https://help.gnome.org (HTTP 404), crawler: 2
+2026-08-05 19:22:15,077 [WARNING]: EmptyResponse: Site: http://www.python.org/psf/donations/ provided an empty response, , crawler: 2
+2026-08-05 19:22:15,077 [WARNING]: EmptyResponse: Site: http://www.python.org/psf/donations/ provided an empty response, , crawler: 2
+2026-08-05 19:22:15,171 [WARNING]: EmptyResponse: Site: https://google.com provided an empty response, , crawler: 2
+2026-08-05 19:22:15,171 [WARNING]: EmptyResponse: Site: https://google.com provided an empty response, , crawler: 2
+2026-08-05 19:22:15,230 [WARNING]: No usable robots.txt for https://www.pigeonsandplanes.com (HTTP 404), crawler: 2
+2026-08-05 19:22:15,230 [WARNING]: No usable robots.txt for https://www.pigeonsandplanes.com (HTTP 404), crawler: 2

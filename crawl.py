@@ -1,5 +1,6 @@
 import sqlite3
 from bs4 import BeautifulSoup as bs
+from bs4 import XMLParsedAsHTMLWarning
 from urllib.parse import urlparse, urljoin
 import logging
 from datetime import datetime, timezone
@@ -9,6 +10,8 @@ from threading import Thread, Event
 from multiprocessing import Queue
 from time import monotonic, sleep
 from queue import Empty, Full
+import warnings
+
 
 # Change the architecture
 
@@ -20,6 +23,7 @@ from queue import Empty, Full
 # The workers instead put the urls in the db queue, along with the crawled url, with status READY.
 # When urls are crawled, they are put into the db with the status FINISHED
 
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 requests: int = 0
 notFound: int = 0
@@ -81,14 +85,14 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 # info +warning log
 
-infoLog = logging.FileHandler('logs/crawler.log')
+infoLog = logging.FileHandler('logs/crawler.log', encoding='utf-8')
 infoLog.setLevel(logging.INFO)
 infoLog.addFilter(lambda r: r.levelno < logging.ERROR)
 infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
 logger.addHandler(infoLog)
 
 # error log
-errorLog = logging.FileHandler('logs/error.log')
+errorLog = logging.FileHandler('logs/error.log', encoding='utf-8')
 errorLog.setLevel(logging.ERROR)
 infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
 logger.addHandler(errorLog)

@@ -84,7 +84,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 # info +warning log
 
-infoLog = logging.FileHandler('logs/crawler.log')
+infoLog = logging.FileHandler('logs/crawler.log', encoding='utf-8')
 infoLog.setLevel(logging.INFO)
 infoLog.addFilter(lambda r: r.levelno < logging.ERROR)
 infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
@@ -95,7 +95,6 @@ class SeedException(Exception):
     def __init__(self, message) -> None:
         super().__init__(message)
 
-args = parser.parse_args()
 
 
 STATS_KEYS = (
@@ -441,7 +440,7 @@ def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int, siz
 if __name__ == "__main__":
 
     freeze_support()
-
+    args = parser.parse_args()
     launch(
         args.procs,
         args.crawlers,

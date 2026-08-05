@@ -1,4 +1,4 @@
 httpx
 bs4
-sqlite3
 rich
+windows-curses
