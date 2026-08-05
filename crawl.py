@@ -116,11 +116,11 @@ class RobotsNotFound(Exception): # The site doesnt have robots.txt
         super().__init__(message)
         logging.warning(f'RobotsNotFound: {message}, code: {status}')
 
-def getNewUrls(visitable: Queue, proc, finishedEvent: Event, fetch=200):
-    # queries the db, so needs the visitable queue
+def getNewUrls(visitable: asyncio.Queue, proc: int, finishedEvent: Event, loop: asyncio.AbstractEventLoop, fetch: int=200):
+    # queries the db, so needs the visitable queue 
     nullPulls = 0
     while True:
-        if visitable.qsize() > 20:
+        if visitable.qsize() > 20: # if the queue is less than 20, it needs refilling
             sleep(0.05)
             continue
         conn = sqlite3.connect("crawler.db", timeout=30)
@@ -136,7 +136,7 @@ def getNewUrls(visitable: Queue, proc, finishedEvent: Event, fetch=200):
             """, ("READY", proc, fetch)).fetchall()
 
             urls = [row[0] for row in rows] # type: ignore
-            if len(urls) == 0 and visitable.qsize() == 0:
+            if len(urls) == 0:
                 nullPulls += 1
                 sleep(0.05)
                 if nullPulls >= 100:
@@ -154,7 +154,7 @@ def getNewUrls(visitable: Queue, proc, finishedEvent: Event, fetch=200):
             conn.commit()
 
             for url in urls:
-                visitable.put_nowait(url)
+                loop.call_soon_threadsafe(visitable.put_nowait, url)
             
         except:
             conn.rollback()
@@ -162,18 +162,6 @@ def getNewUrls(visitable: Queue, proc, finishedEvent: Event, fetch=200):
         finally:
             conn.close()
 
-
-def saveUrl(url: str, title: str | None = None) -> None:
-    conn = sqlite3.connect('crawler.db')
-    conn.execute('''
-        INSERT INTO urls (url, timestamp, title)
-        VALUES (?, ?, ?)
-        ON CONFLICT(url) DO UPDATE SET
-            timestamp = excluded.timestamp,
-            title = excluded.title
-    ''', (url, datetime.now(timezone.utc).isoformat(), title))
-    conn.commit()
-    conn.close()
 
 
 def getDbVisitedUrls() -> set[str]:
@@ -183,7 +171,7 @@ def getDbVisitedUrls() -> set[str]:
     conn.close()
     return urls
 
-async def findRobots(domain: str, crawlerID, session) -> str | None:
+async def findRobots(domain: str, crawlerID: int, session) -> str | None:
     if not domain:
         return None
 
@@ -310,32 +298,36 @@ async def visitSite(site: str, crawlerID, session) -> tuple[str | None, int | No
         return None, None
 
 
-def getAllLinks(html: str, disallowed: set[str], site: str, visitable) -> tuple[bool, str] | None:
+def getAllLinks(html: str, disallowed: set[str], site: str, dbQueue: Queue, proc) -> tuple[bool, str] | None:
     global visitableSet
     parsedHtml = bs(html, 'lxml')
     aTags = parsedHtml.find_all('a')
-
-    for tag in aTags:
-        href = tag.get('href')
-        if not href:
-            continue
-        resolved = urljoin(site, str(href))
-        parsed = urlparse(resolved)
-        if not isDisallowed(disallowed, resolved):
-            if parsed.scheme in ('http', 'https') and not parsed.fragment:
-                if resolved not in visitableSet:
-                    visitable.put_nowait(resolved)
-                    visitableSet.add(resolved)
     title_tag = parsedHtml.title
+
+    title = None
 
     if title_tag and title_tag.string:
         title = title_tag.string.strip()
 
-    if title: #type: ignore
-        return (True, title)
+    if not title:
+        title = site
     
-    else:
-        return (True, site)
+    for tag in aTags:
+        href = tag.get('href')
+
+        if not href:
+            continue
+
+        resolved = urljoin(site, str(href))
+        parsed = urlparse(resolved)
+
+        if not isDisallowed(disallowed, resolved):
+            if parsed.scheme in ('http', 'https') and not parsed.fragment:
+                if resolved not in visitableSet:
+                    visitableSet.add(resolved)
+                    dbQueue.put((resolved, proc, 'READY', title))
+    return (True, title)
+
 
 def isInDb(site: str) -> bool:
     conn = sqlite3.connect('crawler.db')
@@ -369,8 +361,7 @@ def isDisallowed(disallowed: set[str], link: str) -> bool:
 
 
 
-async def worker(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Queue, visitable, session, finishedEvent: Event):
-    global success
+async def worker(crawlerID: int, dbQueue: Queue, statsQueue: Queue, logQueue: Queue, visitable: asyncio.Queue, session, finishedEvent: Event, proc: int):
     last_emit = {}
     while True:
         try:
@@ -382,7 +373,7 @@ async def worker(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Qu
             timeout=0.5
             )
         except asyncio.TimeoutError:
-            if finishedEvent.is_set:
+            if finishedEvent.is_set():
                 break
             continue
         try:
@@ -390,18 +381,18 @@ async def worker(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Qu
                 continue
             if isInDb(site):
                 continue
-            if log_queue is not None:
-                log_queue.put(f'{crawlerID}: {site}')
+            if logQueue is not None:
+                logQueue.put(f'{crawlerID}: {site}')
             else:
                 print(site, crawlerID)
 
-            robots = await findRobots(site, crawlerID, session)
-            disallowed = getDisallowed(robots, site)
+            robots: str | None = await findRobots(site, crawlerID, session)
+            disallowed: set[str] = getDisallowed(robots, site)
             text, status = await visitSite(site, crawlerID, session)
             if text is not None:
                 if status is None:
                     raise RequestException(f'There was a request error with site: {site}')
-                pageData = getAllLinks(text, disallowed, site, visitable)
+                pageData = getAllLinks(text, disallowed, site, dbQueue, proc)
 
                 if pageData is None:
                     result = False
@@ -411,40 +402,44 @@ async def worker(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Qu
                     title = pageData[1]
 
                 if not result:
-                    success = False
+                    
                     raise EmptyResponse(f'Could not get all links for site: {site}, crawler: {crawlerID}')
 
-                queue.put((site, title))
+                dbQueue.put((site, proc, 'FINISHED', title))
                 markCrawled(site)
             else:
                 title = None
-                queue.put((site, title))
+                dbQueue.put((site, proc, 'FINISHED', title))
                 markCrawled(site)
-                success = True
 
                 raise EmptyResponse(f'Site: {site} provided an empty response, , crawler: {crawlerID}')
 
         except EmptyResponse:
             pass
         except Exception as e:
-            logging.error(f'When accessing site: {site}, the following exception occured: {e}, , crawler: {crawlerID}')
-            queue.put((site, None))
+            logging.error(f'When accessing site: {site}, the following exception occured: {e}, proc: {proc}, crawler: {crawlerID}')
+            dbQueue.put((site, proc, 'FINISHED', None))
             markCrawled(site)
 
         finally:
-            if stats_queue is not None:
-                maybeEmitStats(stats_queue, crawlerID, last_emit)
+            if statsQueue is not None:
+                maybeEmitStats(statsQueue, crawlerID, last_emit)
             visitable.task_done()
 
 
-async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Queue, asyncs: int, seeds: list[str], finishedEvent):
+async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Queue, asyncs: int, seeds: list[str], finishedEvent, proc, fetch):
 
     global visitableSet
     visitableSet = set(seeds)
-    visitable = asyncio.Queue(maxsize=50000)
-    for seed in seeds:
-        visitable.put_nowait(seed)
+    visitable: asyncio.Queue[str] = asyncio.Queue(maxsize=50000)
 
+    loop = asyncio.get_running_loop()
+    urlGrabber = Thread(
+        target=getNewUrls,
+        args=(visitable, proc, finishedEvent, loop, fetch,)
+    )
+
+    urlGrabber.start()
     async with httpx.AsyncClient(
         limits=httpx.Limits(
             max_connections=100,
@@ -454,17 +449,18 @@ async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Que
         follow_redirects=True
     ) as session:
         tasks = [
-            asyncio.create_task(worker(crawlerID, queue, stats_queue, log_queue, visitable, session, finishedEvent,))
+            asyncio.create_task(worker(crawlerID, queue, stats_queue, log_queue, visitable, session, finishedEvent, proc,))
             for _ in range(asyncs)
         ]
-        await visitable.join()
+
+        await asyncio.to_thread(urlGrabber.join)
 
         for task in tasks:
             task.cancel()
         await asyncio.gather(*tasks, return_exceptions=True)
 
 
-def startThreads(threadsNum: int, queue: Queue, stats_queue: Queue, log_queue: Queue, process: int, seeds: list[str], asyncs: int, finishedEvent):
+def startThreads(threadsNum: int, dbQueue: Queue, stats_queue: Queue, log_queue: Queue, process: int, seeds: list[str], asyncs: int, fetch: int):
 
     threads = []
 
@@ -478,7 +474,7 @@ def startThreads(threadsNum: int, queue: Queue, stats_queue: Queue, log_queue: Q
 
         thread = Thread(
             target=asyncio.run,
-            args=(crawl(t, queue, stats_queue, log_queue, asyncs, seeds, finishedEvent,),),
+            args=(crawl(t, dbQueue, stats_queue, log_queue, asyncs, seeds, finishedEvent, process, fetch),),
             name=f"CrawlerThread-{t}"
         )
 
