@@ -8,6 +8,7 @@ import httpx
 from threading import Thread, Event
 from multiprocessing import Queue
 from time import monotonic, sleep
+from queue import Empty, Full
 
 # Change the architecture
 
@@ -116,10 +117,14 @@ class RobotsNotFound(Exception): # The site doesnt have robots.txt
         super().__init__(message)
         logging.warning(f'RobotsNotFound: {message}, code: {status}')
 
-def getNewUrls(visitable: asyncio.Queue, proc: int, finishedEvent: Event, loop: asyncio.AbstractEventLoop, fetch: int=200):
+def getNewUrls(visitable: Queue, proc: int, finishedEvent: Event, fetch: int=200):
     # queries the db, so needs the visitable queue 
+    logging.info(f'GRABBER STARTED: PROC: {proc}')      
     nullPulls = 0
     while True:
+        if finishedEvent.is_set():
+            break
+
         if visitable.qsize() > 20: # if the queue is less than 20, it needs refilling
             sleep(0.05)
             continue
@@ -134,7 +139,6 @@ def getNewUrls(visitable: asyncio.Queue, proc: int, finishedEvent: Event, loop: 
                     AND proc = ?
                 LIMIT ?
             """, ("READY", proc, fetch)).fetchall()
-
             urls = [row[0] for row in rows] # type: ignore
             if len(urls) == 0:
                 nullPulls += 1
@@ -154,7 +158,14 @@ def getNewUrls(visitable: asyncio.Queue, proc: int, finishedEvent: Event, loop: 
             conn.commit()
 
             for url in urls:
-                loop.call_soon_threadsafe(visitable.put_nowait, url)
+                while True:
+                    if finishedEvent.is_set():
+                        return
+                    try:
+                        visitable.put(url, timeout=0.25)
+                        break
+                    except Full:
+                        sleep(0.05)
             
         except:
             conn.rollback()
@@ -209,7 +220,7 @@ async def findRobots(domain: str, crawlerID: int, session) -> str | None:
         raise
 
     except Exception:
-        logging.exception(
+        logging.critical(
             f'Error getting robots.txt for {domain}, '
             f'crawler: {crawlerID}'
         )
@@ -292,7 +303,7 @@ async def visitSite(site: str, crawlerID, session) -> tuple[str | None, int | No
         raise
 
     except Exception:
-        logging.exception(
+        logging.critical(
             f'Error requesting {site}, crawler: {crawlerID}'
         )
         return None, None
@@ -329,11 +340,11 @@ def getAllLinks(html: str, disallowed: set[str], site: str, dbQueue: Queue, proc
     return (True, title)
 
 
-def isInDb(site: str) -> bool:
+def isFinished(site: str) -> bool:
     conn = sqlite3.connect('crawler.db')
     cursor = conn.execute(
-        'SELECT 1 FROM urls WHERE url = ? LIMIT 1',
-        (site,)
+        'SELECT 1 FROM urls WHERE url = ? AND state = ? LIMIT 1',
+        (site, 'FINISHED')
     )
     result = cursor.fetchone()
     conn.close()
@@ -354,32 +365,30 @@ def isDisallowed(disallowed: set[str], link: str) -> bool:
         return False
 
     except Exception as e:
-        logging.error(f'Something went wrong with identifyDisallowed: {e}')
+        logging.critical(f'Something went wrong with identifyDisallowed: {e}')
         return False
 
 
 
 
 
-async def worker(crawlerID: int, dbQueue: Queue, statsQueue: Queue, logQueue: Queue, visitable: asyncio.Queue, session, finishedEvent: Event, proc: int):
+async def worker(crawlerID: int, dbQueue: Queue, statsQueue: Queue, logQueue: Queue, visitable: Queue, session, finishedEvent: Event, proc: int):
     last_emit = {}
     while True:
         try:
             if finishedEvent.is_set():
                 break
 
-            site: str = await asyncio.wait_for(
-            visitable.get(),
-            timeout=0.5
-            )
-        except asyncio.TimeoutError:
+            site: str = await asyncio.to_thread(visitable.get, True, 1)
+        except Empty:
+            logging.error('There was nothing in the queue')
             if finishedEvent.is_set():
                 break
             continue
         try:
             if site in visited:
                 continue
-            if isInDb(site):
+            if isFinished(site):
                 continue
             if logQueue is not None:
                 logQueue.put(f'{crawlerID}: {site}')
@@ -417,29 +426,20 @@ async def worker(crawlerID: int, dbQueue: Queue, statsQueue: Queue, logQueue: Qu
         except EmptyResponse:
             pass
         except Exception as e:
-            logging.error(f'When accessing site: {site}, the following exception occured: {e}, proc: {proc}, crawler: {crawlerID}')
+            logging.critical(f'When accessing site: {site}, the following exception occured: {e}, proc: {proc}, crawler: {crawlerID}')
             dbQueue.put((site, proc, 'FINISHED', None))
             markCrawled(site)
 
         finally:
             if statsQueue is not None:
                 maybeEmitStats(statsQueue, crawlerID, last_emit)
-            visitable.task_done()
 
 
-async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Queue, asyncs: int, seeds: list[str], finishedEvent, proc, fetch):
+async def crawl(visitable: Queue, crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Queue, asyncs: int, seeds: list[str], finishedEvent: Event, proc, fetch):
 
     global visitableSet
     visitableSet = set(seeds)
-    visitable: asyncio.Queue[str] = asyncio.Queue(maxsize=50000)
 
-    loop = asyncio.get_running_loop()
-    urlGrabber = Thread(
-        target=getNewUrls,
-        args=(visitable, proc, finishedEvent, loop, fetch,)
-    )
-
-    urlGrabber.start()
     async with httpx.AsyncClient(
         limits=httpx.Limits(
             max_connections=100,
@@ -449,47 +449,61 @@ async def crawl(crawlerID: int, queue: Queue, stats_queue: Queue, log_queue: Que
         follow_redirects=True
     ) as session:
         tasks = [
-            asyncio.create_task(worker(crawlerID, queue, stats_queue, log_queue, visitable, session, finishedEvent, proc,))
+            asyncio.create_task(
+                worker(
+                    crawlerID, 
+                    queue, 
+                    stats_queue, 
+                    log_queue, 
+                    visitable, session, 
+                    finishedEvent, 
+                    proc,
+                )
+            )
             for _ in range(asyncs)
         ]
 
-        await asyncio.to_thread(urlGrabber.join)
-
-        for task in tasks:
-            task.cancel()
         await asyncio.gather(*tasks, return_exceptions=True)
 
+def runCrawler(*args) -> None:
+    logging.info('in run crawler')
+    asyncio.run(crawl(*args))
 
-def startThreads(threadsNum: int, dbQueue: Queue, stats_queue: Queue, log_queue: Queue, process: int, seeds: list[str], asyncs: int, fetch: int):
+def startThreads(threadsNum: int, size: int, dbQueue: Queue, stats_queue: Queue, log_queue: Queue, process: int, visitable: Queue, seeds: list[str], asyncs: int, fetch: int):
 
     threads = []
-
     finishedEvent = Event()
 
+    urlGrabber = Thread(
+        target=getNewUrls,
+        args=(visitable, process, finishedEvent, fetch,)
+    )
+
+    print(f'GRABBER STARTING: proc {process}')
+    urlGrabber.start()
+    print(f'GRABBER STARTING: proc {process}')
     for t in range(threadsNum):
         if log_queue is not None:
-            log_queue.put(f'STARTING THREAD {t}')
+            log_queue.put(f'STARTING THREAD {t}, PROC: {process}')
         else:
-            print(f"STARTING THREAD {t}")
-
+            print(f"STARTING THREAD {t}, PROC: {process}")
         thread = Thread(
-            target=asyncio.run,
-            args=(crawl(t, dbQueue, stats_queue, log_queue, asyncs, seeds, finishedEvent, process, fetch),),
+            target=runCrawler,
+            args=(visitable, t, dbQueue, stats_queue, log_queue, asyncs, seeds, finishedEvent, process, fetch,),
             name=f"CrawlerThread-{t}"
         )
-
         thread.start()
         if log_queue is not None:
-            log_queue.put(f'STARTED THREAD {t}')
+            log_queue.put(f'STARTED THREAD {t}, PROC: {process}')
         else:
-            print(f"STARTED THREAD {t}")
+            print(f"STARTED THREAD {t}, PROC: {process}")
 
         threads.append(thread)
 
+    urlGrabber.join()
     for thread in threads:
         thread.join()
 
-    logging.info(f'Crawlers in process: {process} finished at {datetime.now(timezone.utc)}')
     
   
 
