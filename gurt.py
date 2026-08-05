@@ -1,12 +1,19 @@
-from multiprocessing import Process, Queue, freeze_support
+from multiprocessing import Process, Queue, freeze_support, Event
 from crawl import startThreads
 import sqlite3
 from datetime import datetime, timezone
 import argparse
-import curses
 from collections import deque
 from os import listdir, path
 import logging
+from time import sleep, monotonic
+
+from rich.console import Console, Group
+from rich.live import Live
+from rich.panel import Panel
+from rich.rule import Rule
+from rich.table import Table
+from rich.text import Text
 
 parser = argparse.ArgumentParser()
 
@@ -32,13 +39,14 @@ parser.add_argument(
 
 )
 
+
 parser.add_argument(
     "-f",
     "--fetch",
     type=int,
     metavar='NUM',
     default=200,
-    help='Number of urls to fetch from the db. Defaults to 100'
+    help='Number of urls to fetch from the db. Defaults to 200'
 )
 
 parser.add_argument(
@@ -53,15 +61,23 @@ parser.add_argument(
 parser.add_argument(
     "crawlers",
     type=int,
-    metavar='NUM',
     help='Number of crawlers.'
 )
 
 parser.add_argument(
-    "--balance-delta",
+    "-m",
+    "--monitor",
+    action='store_true',
+    help='Shows the monitor. Do not set when running as a service.'
+)
+
+parser.add_argument(
+    "-d",
+    "--delta",
     type=int,
     metavar='NUM',
-    help='Delta that the load balancer should keep to the mean.'
+    default=5000,
+    help='Delta that the load balancer should keep to the mean. Defaults to 5000'
 )
 
 logger = logging.getLogger()
@@ -93,31 +109,70 @@ STATS_KEYS = (
 )
 
 
-def renderMonitor(stdscr, log_lines, totals):
-    stdscr.erase()
-    height, width = stdscr.getmaxyx()
-    log_area = max(1, height - 2)
+def styleLogLine(line: str) -> Text:
+    text = Text(line)
+    lowered = line.lower()
 
-    for idx, line in enumerate(list(log_lines)[-log_area:]):
-        try:
-            stdscr.addnstr(idx, 0, line, max(0, width - 1))
-        except curses.error:
-            pass
+    if 'start' in lowered or 'started' in lowered or 'starting' in lowered:
+        text.stylize('bold #d9b3ff')
 
-    footer = ' | '.join(f'{key}={totals.get(key, 0)}' for key in STATS_KEYS)
-    stdscr.addnstr(height - 1, 0, footer, max(0, width - 1))
-    stdscr.refresh()
+    if 'http://' in lowered or 'https://' in lowered:
+        text.stylize('bold green')
+
+    return text
+
+
+def renderStats(totals, urlCount):
+    stats_table = Table(show_header=False, box=None, expand=True)
+    stats_table.add_column('Metric', style='bold cyan')
+    stats_table.add_column('Value', justify='right')
+
+    for key in STATS_KEYS:
+        stats_table.add_row(key, str(totals.get(key, 0)))
+
+    requests = totals.get('requests', 0)
+    success = totals.get('success', 0)
+    successRate = (success / requests * 100) if requests else 0.0
+    stats_table.add_row('% success', f'{successRate:.1f}%')
+
+    stats_table.add_row('urls in db', str(urlCount) if urlCount is not None else '...')
+
+    return Panel(
+        stats_table,
+        title='[bold white]Crawler Stats[/bold white]',
+        border_style='bright_blue',
+    )
+
+
+def renderLog(log_lines):
+    log_table = Table.grid(expand=True)
+
+    for line in list(log_lines)[-12:]:
+        log_table.add_row(styleLogLine(line))
+
+    return Panel(
+        log_table,
+        title='[bold white]Recent Activity[/bold white]',
+        border_style='bright_green',
+    )
 
 
 def statsMonitor(statsQueue: Queue, logQueue: Queue):
     totals = {key: 0 for key in STATS_KEYS}
     lastSeen = {}
     log_lines = deque(maxlen=500)
+    console = Console()
 
-    def run(stdscr):
-        stdscr.nodelay(True)
-        stdscr.keypad(True)
+    URL_COUNT_INTERVAL = 2.0
+    urlCount = None
+    lastUrlCountAt = 0.0
 
+    try:
+        countConn = sqlite3.connect('file:crawler.db?mode=ro', uri=True, timeout=1)
+    except sqlite3.Error:
+        countConn = None
+
+    with Live(console=console, refresh_per_second=4, transient=False) as live:
         while True:
             try:
                 msg = statsQueue.get(timeout=0.1)
@@ -146,9 +201,25 @@ def statsMonitor(statsQueue: Queue, logQueue: Queue):
             except Exception:
                 pass
 
-            renderMonitor(stdscr, log_lines, totals)
+            now = monotonic()
+            if countConn is not None and now - lastUrlCountAt >= URL_COUNT_INTERVAL:
+                try:
+                    row = countConn.execute("SELECT COUNT(*) FROM urls").fetchone()
+                    urlCount = row[0] if row else urlCount
+                except sqlite3.Error as e:
+                    logging.warning(f'MONITOR: url count query failed: {e}')
+                lastUrlCountAt = now
 
-    curses.wrapper(run)
+            live.update(
+                Panel(
+                    Group(renderStats(totals, urlCount), renderLog(log_lines)),
+                    title='[bold #d9b3ff]Crawler Monitor[/bold #d9b3ff]',
+                    border_style='magenta',
+                )
+            )
+
+    if countConn is not None:
+        countConn.close()
 
 
 def initDb() -> None:
@@ -195,7 +266,63 @@ def seedInsert(seedPacks: list, seedloc: str, procs) -> None:
     conn.commit()
     conn.close()
 
+def loadBalancer(procs: int, stop, delta: int):
+    while True:
+        try:
+            sleep(60)
+            if stop.is_set():
+                break
+            with sqlite3.connect('crawler.db', timeout=30) as conn:
+                conn.execute('BEGIN IMMEDIATE')
+                rows = conn.execute("""
+                    SELECT proc, COUNT(*) AS ready_count
+                    FROM urls
+                    WHERE state = 'READY'
+                    GROUP BY proc
+                    """).fetchall()
+
+                urlCount: dict[int, int] = {i: 0 for i in range(procs)}
+
+                urlCount.update(dict(rows))
+
+                mean = sum(urlCount.values()) // procs
+
+                for p in range(procs):
+                    if urlCount[p] > mean + delta:
+                        smallest = min(urlCount.values())
+                        move = (urlCount[p] - smallest) // 2
+
+                        moveFrom = p
+
+                        for q in range(procs):
+                            if urlCount[q] == smallest:
+                                moveTo = q
+                                break
+
+                        break
+                else:
+                    continue
+                conn.execute("""
+                    UPDATE urls
+                    SET proc = ?
+                    WHERE rowid IN (
+                        SELECT rowid
+                        FROM urls
+                        WHERE proc = ?
+                        AND state = 'READY'
+                        LIMIT ?
+                    )
+                """, (moveTo, moveFrom, move)) # type: ignore
+
+                conn.commit()
+            logging.info(f'BALANCER moved {move} urls from proc: {moveFrom} to proc: {moveTo}') # type: ignore
+        except sqlite3.Error as e:
+            logging.critical(f"Balancer had an error: {e}")
+
+            
     
+            
+
 
 def dbWriter(queue: Queue):
     conn = sqlite3.connect('crawler.db', timeout=30)
@@ -220,7 +347,6 @@ def dbWriter(queue: Queue):
         ))
 
         if len(batch) >= BATCH_SIZE:
-            print("DB WRITER: starting transaction", flush=True)
 
             cur.executemany('''
                 INSERT INTO urls (url, proc, state, timestamp, title)
@@ -231,10 +357,8 @@ def dbWriter(queue: Queue):
                     timestamp = excluded.timestamp,
                     title = excluded.title
             ''', batch)
-            print("DB WRITER: committing", flush=True)
 
             conn.commit()
-            print("DB WRITER: committed", flush=True)
 
             batch.clear()
 
@@ -253,7 +377,7 @@ def dbWriter(queue: Queue):
         conn.commit()
 
     conn.close()
-def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int, size: int):
+def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int, size: int, delta: int, showMonitor: bool):
     initDb()
 
     # get seeds
@@ -279,13 +403,18 @@ def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int, siz
             seed = [line.strip() for line in p]
             seeds.append(seed)
 
+    stopEvent = Event()
     statsQueue = Queue()
     logQueue = Queue()
     dbQueue = Queue(maxsize=10000)
     visitableQueue = Queue(maxsize=size)
 
-    monitor = Process(target=statsMonitor, args=(statsQueue, logQueue,))
-    monitor.start()
+    if showMonitor:
+        monitor = Process(target=statsMonitor, args=(statsQueue, logQueue,))
+        monitor.start()
+
+    balancer = Process(target=loadBalancer, args=(procs, stopEvent, delta,))
+    balancer.start()
 
     writer = Process(target=dbWriter, args=(dbQueue,))
     writer.start()
@@ -299,12 +428,14 @@ def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int, siz
 
     for proc in processes:
         proc.join()
-
+    stopEvent.set()
+    balancer.join()
     dbQueue.put('STOP')
     statsQueue.put('STOP')
     logQueue.put('STOP')
     writer.join()
-    monitor.join()
+    if showMonitor:
+        monitor.join() # type: ignore
     print(f'All processes finished')
 
 if __name__ == "__main__":
@@ -315,8 +446,9 @@ if __name__ == "__main__":
         args.procs,
         args.crawlers,
         args.seeds,
-        args.worker,
+        args.workers,
         args.fetch,
-        args.queue
+        args.queue,
+        args.delta,
+        args.monitor
     )
-

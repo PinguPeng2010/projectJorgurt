@@ -93,7 +93,8 @@ errorLog.setLevel(logging.ERROR)
 infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
 logger.addHandler(errorLog)
 
-
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("httpcore").setLevel(logging.WARNING)
 # custom exceptions
 
 class RequestException(Exception): # Site returned an error code
@@ -144,7 +145,7 @@ def getNewUrls(visitable: Queue, proc: int, finishedEvent: Event, fetch: int=200
                 nullPulls += 1
                 sleep(0.05)
                 if nullPulls >= 100:
-                    print('Proc:', proc, "finished.")
+                    logging.info(f'Proc: {proc} finished.')
                     finishedEvent.set()
                     break
             else:
@@ -393,7 +394,7 @@ async def worker(crawlerID: int, dbQueue: Queue, statsQueue: Queue, logQueue: Qu
             if logQueue is not None:
                 logQueue.put(f'{crawlerID}: {site}')
             else:
-                print(site, crawlerID)
+                logging.info(f'{crawlerID}: {site}')
 
             robots: str | None = await findRobots(site, crawlerID, session)
             disallowed: set[str] = getDisallowed(robots, site)
@@ -479,14 +480,16 @@ def startThreads(threadsNum: int, size: int, dbQueue: Queue, stats_queue: Queue,
         args=(visitable, process, finishedEvent, fetch,)
     )
 
-    print(f'GRABBER STARTING: proc {process}')
+    if log_queue is not None:
+        log_queue.put(f'GRABBER STARTING: proc {process}')
+    else:
+        logging.info(f'GRABBER STARTING: proc {process}')
     urlGrabber.start()
-    print(f'GRABBER STARTING: proc {process}')
     for t in range(threadsNum):
         if log_queue is not None:
             log_queue.put(f'STARTING THREAD {t}, PROC: {process}')
         else:
-            print(f"STARTING THREAD {t}, PROC: {process}")
+            logging.info(f'STARTING THREAD {t}, PROC: {process}')
         thread = Thread(
             target=runCrawler,
             args=(visitable, t, dbQueue, stats_queue, log_queue, asyncs, seeds, finishedEvent, process, fetch,),
@@ -496,14 +499,10 @@ def startThreads(threadsNum: int, size: int, dbQueue: Queue, stats_queue: Queue,
         if log_queue is not None:
             log_queue.put(f'STARTED THREAD {t}, PROC: {process}')
         else:
-            print(f"STARTED THREAD {t}, PROC: {process}")
+            logging.info(f'STARTED THREAD {t}, PROC: {process}')
 
         threads.append(thread)
 
     urlGrabber.join()
     for thread in threads:
         thread.join()
-
-    
-  
-
