@@ -117,11 +117,10 @@ def styleLogLine(line: str) -> Text:
 
     if 'http://' in lowered or 'https://' in lowered:
         text.stylize('bold green')
-
     return text
 
 
-def renderStats(totals, urlCount):
+def renderStats(totals, urlCount, reqPerSec):
     stats_table = Table(show_header=False, box=None, expand=True)
     stats_table.add_column('Metric', style='bold cyan')
     stats_table.add_column('Value', justify='right')
@@ -134,6 +133,8 @@ def renderStats(totals, urlCount):
     successRate = (success / requests * 100) if requests else 0.0
     stats_table.add_row('% success', f'{successRate:.1f}%')
 
+    stats_table.add_row('req/sec', f'{reqPerSec:.1f}')
+
     stats_table.add_row('urls in db', str(urlCount) if urlCount is not None else '...')
 
     return Panel(
@@ -141,6 +142,9 @@ def renderStats(totals, urlCount):
         title='[bold white]Crawler Stats[/bold white]',
         border_style='bright_blue',
     )
+
+
+
 
 
 def renderLog(log_lines):
@@ -165,6 +169,11 @@ def statsMonitor(statsQueue: Queue, logQueue: Queue):
     URL_COUNT_INTERVAL = 2.0
     urlCount = None
     lastUrlCountAt = 0.0
+
+    RATE_INTERVAL = 1.0
+    reqPerSec = 0.0
+    lastRateAt = monotonic()
+    lastRateRequests = 0
 
     try:
         countConn = sqlite3.connect('file:crawler.db?mode=ro', uri=True, timeout=1)
@@ -208,17 +217,21 @@ def statsMonitor(statsQueue: Queue, logQueue: Queue):
                 except sqlite3.Error as e:
                     logging.warning(f'MONITOR: url count query failed: {e}')
                 lastUrlCountAt = now
-
+            if now - lastRateAt >= RATE_INTERVAL:
+                currentRequests = totals.get('requests', 0)
+                elapsed = max(now - lastRateAt, 1e-9)
+                reqPerSec = (currentRequests - lastRateRequests) / elapsed
+                lastRateAt = now
+                lastRateRequests = currentRequests
             live.update(
                 Panel(
-                    Group(renderStats(totals, urlCount), renderLog(log_lines)),
+                    Group(renderStats(totals, urlCount, reqPerSec), renderLog(log_lines)),
                     title='[bold #d9b3ff]Crawler Monitor[/bold #d9b3ff]',
                     border_style='magenta',
                 )
             )
 
-    if countConn is not None:
-        countConn.close()
+
 
 
 def initDb() -> None:
