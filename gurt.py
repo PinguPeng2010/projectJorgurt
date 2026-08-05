@@ -6,6 +6,7 @@ import argparse
 import curses
 from collections import deque
 from os import listdir, path
+import logging
 
 parser = argparse.ArgumentParser()
 
@@ -16,9 +17,9 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    "asyncs",
+    "workers",
     type=int,
-    help="Number of async operations"
+    help="Number of workers operations"
 )
 
 parser.add_argument(
@@ -41,14 +42,37 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    "-c",
-    "--crawlers",
+    "-q",
+    "--queue",
     type=int,
     metavar='NUM',
-    default=2,
-    help='Number of crawlers. Defaults to 2'
+    default=50000,
+    help='Size of url queue. Defaults to 50000'
 )
 
+parser.add_argument(
+    "crawlers",
+    type=int,
+    metavar='NUM',
+    help='Number of crawlers.'
+)
+
+parser.add_argument(
+    "--balance-delta",
+    type=int,
+    metavar='NUM',
+    help='Delta that the load balancer should keep to the mean.'
+)
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+# info +warning log
+
+infoLog = logging.FileHandler('logs/crawler.log')
+infoLog.setLevel(logging.INFO)
+infoLog.addFilter(lambda r: r.levelno < logging.ERROR)
+infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
+logger.addHandler(infoLog)
 
 
 class SeedException(Exception):
@@ -171,6 +195,8 @@ def seedInsert(seedPacks: list, seedloc: str, procs) -> None:
     conn.commit()
     conn.close()
 
+    
+
 def dbWriter(queue: Queue):
     conn = sqlite3.connect('crawler.db', timeout=30)
     conn.execute("PRAGMA journal_mode=WAL;")
@@ -194,6 +220,8 @@ def dbWriter(queue: Queue):
         ))
 
         if len(batch) >= BATCH_SIZE:
+            print("DB WRITER: starting transaction", flush=True)
+
             cur.executemany('''
                 INSERT INTO urls (url, proc, state, timestamp, title)
                 VALUES (?, ?, ?, ?, ?)
@@ -203,8 +231,11 @@ def dbWriter(queue: Queue):
                     timestamp = excluded.timestamp,
                     title = excluded.title
             ''', batch)
+            print("DB WRITER: committing", flush=True)
 
             conn.commit()
+            print("DB WRITER: committed", flush=True)
+
             batch.clear()
 
     # Write anything left over
@@ -222,7 +253,7 @@ def dbWriter(queue: Queue):
         conn.commit()
 
     conn.close()
-def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int):
+def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int, size: int):
     initDb()
 
     # get seeds
@@ -251,6 +282,7 @@ def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int):
     statsQueue = Queue()
     logQueue = Queue()
     dbQueue = Queue(maxsize=10000)
+    visitableQueue = Queue(maxsize=size)
 
     monitor = Process(target=statsMonitor, args=(statsQueue, logQueue,))
     monitor.start()
@@ -260,7 +292,7 @@ def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int):
 
     processes = []
     for i in range(procs):
-        proc = Process(target=startThreads, args=(crawlers, dbQueue, statsQueue, logQueue, i, seeds[i], asyncs, fetch,))
+        proc = Process(target=startThreads, args=(crawlers, size, dbQueue, statsQueue, logQueue, i, visitableQueue, seeds[i], asyncs, fetch,))
 
         proc.start()
         processes.append(proc)
@@ -283,7 +315,8 @@ if __name__ == "__main__":
         args.procs,
         args.crawlers,
         args.seeds,
-        args.asyncs,
-        args.fetch
+        args.worker,
+        args.fetch,
+        args.queue
     )
 
