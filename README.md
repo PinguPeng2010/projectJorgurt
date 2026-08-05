@@ -4,13 +4,13 @@
 - It uses a depth first approach to crawling, and uses multiprocessing, and threading.
 - Each process has 2 threaded crawlers, with one seed set.
 
-- At a rate of 1 crawler, ***`gurt`*** can access upwards of 30k urls in 9 hours.
+
 
 ## Features
  - Stores urls in a database `crawler.db`
  - Lots of logging for each crawler set
  - Kind of fast.
- - Has a script `watchCrawler.sh` to see urls added every 10 seconds and the rate of crawling
+ - Has a script `watchCrawler.sh` or `watchCrawler.bat` to see urls added every 2 seconds and the rate of crawling
 
  > ***`gurt`*** is designed to take a long time. This should ideally be done on a server with minimm 2GB of RAM. This is ideal for a headless Pi 4, or a VPS
 
@@ -25,6 +25,11 @@
 - `datetime`
 - `asyncio`
 - `threading`
+- `multiproccessing`
+- `queue`
+- `time`
+- `rich`
+- `argparse`
 
 - To install dependencies, `requirements.txt` is provided:
 
@@ -32,21 +37,26 @@
 python -m pip install -r requirements.txt
 ```
 
+## Executing
 
-## Testing
+- ***`gurt`*** has two ways to run, an executable, or native python.
 
-- For testing, run:
+- Usage:
+
 ``` bash
-python3 webCrawler.py
+gurt [-h] [-s FOLDER] [-f NUM] [-q NUM] [-m] [-d NUM] procs workers crawlers
 ```
 
-> When changing the crawler code, note that `visitables` is a ***`deque`*** type, and can have duplicates, unlike the ***`set`*** type.
+### Positional arguments:
+-  `procs`                   Number of processes to run
+-  `workers`                 Number of workers operations
+-  `crawlers`                Number of crawlers.
 
-- This code has custom exceptions. If you need to make them, put them in the format:
-``` python
-class Exception(Exception):
-    def __init__(self, message: str):
-        super().__init__(message)
-        logging.error(f'Exception: {message}')
-```
+### Options:
+-  `-h`, `--help`            show help message
+-  `-s`, `--seeds` `FOLDER`  Folder where seeds are stored. Defaults to seeds/
+-  `-f`, `--fetch` `NUM`     Number of urls to fetch from the db. Defaults to 200
+-  `-q`, `--queue` `NUM`     Size of url queue. Defaults to 50000
+-  `-m`, `--monitor`         Shows the monitor. Do not set when running as a service.
+-  `-d`, `--delta` `NUM`     Delta that the load balancer should keep to the mean. Defaults to 5000
 
