@@ -32,6 +32,15 @@ parser.add_argument(
 )
 
 parser.add_argument(
+    "-f",
+    "--fetch",
+    type=int,
+    metavar='NUM',
+    default=200,
+    help='Number of urls to fetch from the db. Defaults to 100'
+)
+
+parser.add_argument(
     "-c",
     "--crawlers",
     type=int,
@@ -124,7 +133,7 @@ def initDb() -> None:
         CREATE TABLE IF NOT EXISTS urls (
             url TEXT PRIMARY KEY,
             proc INTEGER NOT NULL,
-            status TEXT,
+            state TEXT,
             timestamp TEXT NOT NULL,
             title TEXT
         )
@@ -133,31 +142,34 @@ def initDb() -> None:
     conn.commit()
     conn.close()    
 
-def seedInsert(seedPacks: list, seedloc: str) -> None:
+def seedInsert(seedPacks: list, seedloc: str, procs) -> None:
     conn = sqlite3.connect('crawler.db', timeout=30)
     conn.execute("PRAGMA journal_mode=WAL;")
     cur = conn.cursor()
 
     batch = []
-    proc = 0
-    for pack in seedPacks:
-        with open(f'{seedloc}/{pack}' ,'r') as p:
+    
+    for i in range(procs):
+        with open(f'{seedloc}/{seedPacks[i]}' ,'r') as p:
             seeds = [line.strip() for line in p]
 
         for seed in seeds:
             batch.append((
                 seed,
-                proc,
+                i,
                 "READY",
                 datetime.now(timezone.utc).isoformat(),
                 'seed'
             ))
 
     cur.executemany("""
-        INSERT INTO urls (url, proc, status, timestamp, title)
+        INSERT INTO urls (url, proc, state, timestamp, title)
         VALUES (?, ?, ?, ?, ?)
         ON CONFLICT(url) DO NOTHING
     """, batch)
+
+    conn.commit()
+    conn.close()
 
 def dbWriter(queue: Queue):
     conn = sqlite3.connect('crawler.db', timeout=30)
@@ -183,11 +195,11 @@ def dbWriter(queue: Queue):
 
         if len(batch) >= BATCH_SIZE:
             cur.executemany('''
-                INSERT INTO urls (url, proc, status, timestamp, title)
+                INSERT INTO urls (url, proc, state, timestamp, title)
                 VALUES (?, ?, ?, ?, ?)
                 ON CONFLICT(url) DO UPDATE SET
                     proc = excluded.proc,
-                    status = excluded.status
+                    state = excluded.state,
                     timestamp = excluded.timestamp,
                     title = excluded.title
             ''', batch)
@@ -198,11 +210,11 @@ def dbWriter(queue: Queue):
     # Write anything left over
     if batch:
         cur.executemany('''
-            INSERT INTO urls (url, proc, status, timestamp, title)
+            INSERT INTO urls (url, proc, state, timestamp, title)
             VALUES (?, ?, ?, ?, ?)
             ON CONFLICT(url) DO UPDATE SET
                 proc = excluded.proc,
-                status = excluded.status
+                state = excluded.state,
                 timestamp = excluded.timestamp,
                 title = excluded.title
         ''', batch)
@@ -210,7 +222,7 @@ def dbWriter(queue: Queue):
         conn.commit()
 
     conn.close()
-def launch(procs, crawlers, seedloc, asyncs):
+def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int):
     initDb()
 
     # get seeds
@@ -221,14 +233,14 @@ def launch(procs, crawlers, seedloc, asyncs):
 
             else:
                 seedPacks: list[str] = listdir(seedloc)
-                if not len(seedPacks) == procs:
-                    raise SeedException(f'The number of seed packs is different to the number of processes: packs: {len(seedPacks)}, procs: {procs}')
+                if len(seedPacks) < procs:
+                    raise SeedException(f'The number of seed packs is less than the number of processes: packs: {len(seedPacks)}, procs: {procs}')
 
 
     except OSError:
         raise OSError(f'The seed location: {seedloc}, wasnt found')
 
-    seedInsert(seedPacks, seedloc) # type: ignore
+    seedInsert(seedPacks, seedloc, procs) # type: ignore
 
     seeds = []
     for pack in seedPacks: # type: ignore
@@ -248,7 +260,7 @@ def launch(procs, crawlers, seedloc, asyncs):
 
     processes = []
     for i in range(procs):
-        proc = Process(target=startThreads, args=(crawlers, dbQueue, statsQueue, logQueue, i, asyncs,))
+        proc = Process(target=startThreads, args=(crawlers, dbQueue, statsQueue, logQueue, i, seeds[i], asyncs, fetch,))
 
         proc.start()
         processes.append(proc)
@@ -271,6 +283,7 @@ if __name__ == "__main__":
         args.procs,
         args.crawlers,
         args.seeds,
-        args.asyncs
+        args.asyncs,
+        args.fetch
     )
 
