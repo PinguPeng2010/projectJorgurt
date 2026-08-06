@@ -5,7 +5,6 @@ on:
     branches: [ main ]
     tags:
       - "stable_v*"
-      - "prerelease_v*"
   workflow_dispatch:
 
 permissions:
@@ -17,16 +16,8 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
+            arch: x86_64
             name: gurt-linux-x64
-            icon: ""
-
-          - os: windows-latest
-            name: gurt-windows-x64
-            icon: "--windows-icon-from-ico=gurt.ico"
-
-          - os: ubuntu-24.04-arm
-            name: gurt-linux-arm64
-            icon: ""
 
     runs-on: ${{ matrix.os }}
 
@@ -48,7 +39,7 @@ jobs:
 
       - name: Compile Gurt
         run: |
-          python -m nuitka --standalone ${{ matrix.icon }} --include-package=httpx --include-package=httpcore --include-package=sqlite3 --include-package=bs4 --include-package=lxml --include-package=rich --enable-plugin=multiprocessing --include-data-dir=seeds=seeds --include-data-dir=logs=logs --include-data-dir=shell=shell gurt.py
+          python -m nuitka --standalone --include-package=httpx --include-package=httpcore --include-package=sqlite3 --include-package=bs4 --include-package=lxml --include-package=rich --enable-plugin=multiprocessing --include-data-dir=seeds=seeds --include-data-dir=logs=logs --include-data-dir=shell=shell gurt.py
 
       - name: Archive build
         shell: bash
@@ -67,21 +58,21 @@ jobs:
             *.zip
             *.tar.gz
 
-  release:
-    if: startsWith(github.ref_name, 'stable_v') || startsWith(github.ref_name, 'prerelease_v')
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Download builds
-        uses: actions/download-artifact@v5
-        with:
-          path: releases
-          merge-multiple: true
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          name: Release ${{ github.ref_name }}
-          files: releases/*
-          generate_release_notes: true
-          prerelease: ${{ startsWith(github.ref_name, 'prerelease_') }}
+#  release:
+#    if: startsWith(github.ref_name, 'stable_v') || startsWith(github.ref_name, 'prerelease_v')
+#    needs: build
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Download builds
+#        uses: actions/download-artifact@v5
+#        with:
+#          path: releases
+#          merge-multiple: true
+#      - name: Create GitHub Release
+#        uses: softprops/action-gh-release@v2
+#        with:
+#          name: Release ${{ github.ref_name }}
+#          files: releases/*
+#          generate_release_notes: true
+#          prerelease: ${{ startsWith(github.ref_name, 'prerelease_') }}
