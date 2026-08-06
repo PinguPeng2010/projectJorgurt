@@ -1,4 +1,4 @@
 httpx
 bs4
 rich
-windows-curses # Only for Windows installs
+windows-curses
