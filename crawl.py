@@ -11,7 +11,7 @@ from multiprocessing import Queue
 from time import monotonic, sleep
 from queue import Empty, Full
 import warnings
-
+from pathlib import Path
 
 # Change the architecture
 
@@ -81,20 +81,26 @@ visitableSet: set[str] = set()
 
 # log time
 
+BASE_DIR = Path(__file__).resolve().parent
+LOG_DIR = BASE_DIR / "logs"
+DB_PATH = BASE_DIR / "crawler.db"
+
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 # info +warning log
 
-infoLog = logging.FileHandler('logs/crawler.log', encoding='utf-8')
+infoLog = logging.FileHandler(LOG_DIR / "crawler.log", encoding='utf-8')
 infoLog.setLevel(logging.INFO)
 infoLog.addFilter(lambda r: r.levelno < logging.ERROR)
 infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
 logger.addHandler(infoLog)
 
 # error log
-errorLog = logging.FileHandler('logs/error.log', encoding='utf-8')
+errorLog = logging.FileHandler(LOG_DIR / "error.log", encoding='utf-8')
 errorLog.setLevel(logging.ERROR)
-infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
+errorLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
 logger.addHandler(errorLog)
 
 logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -133,7 +139,7 @@ def getNewUrls(visitable: Queue, proc: int, finishedEvent: Event, fetch: int=200
         if visitable.qsize() > 20: # if the queue is less than 20, it needs refilling
             sleep(0.05)
             continue
-        conn = sqlite3.connect("crawler.db", timeout=30)
+        conn = sqlite3.connect(DB_PATH, timeout=30)
 
         try:
             conn.execute('BEGIN IMMEDIATE')
@@ -181,7 +187,7 @@ def getNewUrls(visitable: Queue, proc: int, finishedEvent: Event, fetch: int=200
 
 
 def getDbVisitedUrls() -> set[str]:
-    conn = sqlite3.connect('crawler.db')
+    conn = sqlite3.connect(DB_PATH)
     cursor = conn.execute('SELECT url FROM urls')
     urls = {row[0] for row in cursor.fetchall()}
     conn.close()
@@ -346,7 +352,7 @@ def getAllLinks(html: str, disallowed: set[str], site: str, dbQueue: Queue, proc
 
 
 def isFinished(site: str) -> bool:
-    conn = sqlite3.connect('crawler.db')
+    conn = sqlite3.connect(DB_PATH)
     cursor = conn.execute(
         'SELECT 1 FROM urls WHERE url = ? AND state = ? LIMIT 1',
         (site, 'FINISHED')

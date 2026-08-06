@@ -1,0 +1,87 @@
+name: Build Gurt
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - "stable_v*"
+      - "prerelease_v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            name: gurt-linux-x64
+            icon: ""
+
+          - os: windows-latest
+            name: gurt-windows-x64
+            icon: "--windows-icon-from-ico=gurt.ico"
+
+          - os: ubuntu-24.04-arm
+            name: gurt-linux-arm64
+            icon: ""
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install nuitka
+
+      - name: Compile Gurt
+        run: |
+          python -m nuitka --standalone ${{ matrix.icon }} --include-package=httpx --include-package=httpcore --include-package=sqlite3 --include-package=bs4 --include-package=lxml --include-package=rich --enable-plugin=multiprocessing --include-data-dir=seeds=seeds --include-data-dir=logs=logs --include-data-dir=shell=shell gurt.py
+
+      - name: Archive build
+        shell: bash
+        run: |
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            7z a "${{ matrix.name }}.zip" gurt.dist/*
+          else
+            tar -czf "${{ matrix.name }}.tar.gz" gurt.dist/
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.name }}
+          path: |
+            *.zip
+            *.tar.gz
+
+  release:
+    if: startsWith(github.ref_name, 'stable_v') || startsWith(github.ref_name, 'prerelease_v')
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download builds
+        uses: actions/download-artifact@v5
+        with:
+          path: releases
+          merge-multiple: true
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ github.ref_name }}
+          files: releases/*
+          generate_release_notes: true
+          prerelease: ${{ startsWith(github.ref_name, 'prerelease_') }}
