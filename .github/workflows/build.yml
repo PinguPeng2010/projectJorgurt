@@ -17,7 +17,15 @@ jobs:
         include:
           - os: ubuntu-latest
             arch: x86_64
-            name: gurt-linux-x64
+            name: gurt-linux-x86_64
+
+          - os: windows-latest
+            arch: x86_64
+            name: gurt-windows-x86
+
+          - os: ubuntu-24.04-arm
+            arch: arm64
+            name: gurt-linux-arm64
 
     runs-on: ${{ matrix.os }}
 
@@ -34,8 +42,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt || true
-          pip install nuitka
+          python -m pip install -r requirements.txt
+          python -m pip install nuitka
 
       - name: Compile Gurt
         run: |
@@ -58,21 +66,29 @@ jobs:
             *.zip
             *.tar.gz
 
-#  release:
-#    if: startsWith(github.ref_name, 'stable_v') || startsWith(github.ref_name, 'prerelease_v')
-#    needs: build
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Download builds
-#        uses: actions/download-artifact@v5
-#        with:
-#          path: releases
-#          merge-multiple: true
-#      - name: Create GitHub Release
-#        uses: softprops/action-gh-release@v2
-#        with:
-#          name: Release ${{ github.ref_name }}
-#          files: releases/*
-#          generate_release_notes: true
-#          prerelease: ${{ startsWith(github.ref_name, 'prerelease_') }}
+       
+  release:
+    if: startsWith(github.ref_name, 'stable_v') || startsWith(github.ref_name, 'prerelease_v')
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download builds
+        uses: actions/download-artifact@v5
+        with:
+          path: releases
+          merge-multiple: true
+      - name: Get Release version
+        id: version
+        shell: bash
+        run: |
+            VERSION="${GITHUB_REF_NAME#stable_}"
+            VERSION="${VERSION#prerelease_}"
+            echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ steps.version.outputs.version }}
+          files: releases/*
+          generate_release_notes: true
+          prerelease: ${{ startsWith(github.ref_name, 'prerelease_') }}
