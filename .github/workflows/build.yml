@@ -2,7 +2,6 @@ name: Build Gurt
 
 on:
   push:
-    branches: [ main ]
     tags:
       - "stable_v*"
   workflow_dispatch:
@@ -47,7 +46,7 @@ jobs:
 
       - name: Compile Gurt
         run: |
-          python -m nuitka --standalone --include-package=httpx --include-package=httpcore --include-package=sqlite3 --include-package=bs4 --include-package=lxml --include-package=rich --enable-plugin=multiprocessing --include-data-dir=seeds=seeds --include-data-dir=logs=logs --include-data-dir=shell=shell gurt.py
+          python -m nuitka --standalone --include-package=httpx --assume-yes-for-downloads --include-package=httpcore --include-package=sqlite3 --include-package=bs4 --include-package=lxml --include-package=rich --enable-plugin=multiprocessing --include-data-dir=seeds=seeds --include-data-dir=logs=logs --include-data-dir=shell=shell gurt.py
 
       - name: Archive build
         shell: bash
