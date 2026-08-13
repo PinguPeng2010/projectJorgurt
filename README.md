@@ -59,19 +59,18 @@ projectGurt/
 The main script is:
 
 ```bash
-python gurt.py [options] procs workers crawlers
+python gurt.py [options] procs workers
 ```
 
 ### Positional arguments
 
 - `procs`: number of processes to run
 - `workers`: number of worker operations per process
-- `crawlers`: number of crawler threads/processes to create
 
 ### Options
 
 ```bash
-gurt.py [-h] [-s FOLDER] [-f NUM] [-q NUM] [-m] [-d NUM] procs workers crawlers
+gurt.py [-h] [-s FOLDER] [-f NUM] [-q NUM] [-m] [-d NUM] procs workers
 ```
 
 - `-h`, `--help`: show help
