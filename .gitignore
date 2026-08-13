@@ -3,6 +3,9 @@
 /gurt/
 /gurt.build/
 /gurt.dist/
+<<<<<<< HEAD
 gurt.ico
 crawler.*
 /logs/
+=======
+>>>>>>> a00183543d9d9d15c8f8253a63c56af4bfaf1f84
