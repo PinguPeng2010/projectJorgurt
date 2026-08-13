@@ -7,13 +7,19 @@ from collections import deque
 from os import listdir, path
 import logging
 from time import sleep, monotonic
-
+from pathlib import Path
 from rich.console import Console, Group
 from rich.live import Live
 from rich.panel import Panel
 from rich.rule import Rule
 from rich.table import Table
 from rich.text import Text
+
+BASE_DIR = Path(__file__).resolve().parent
+LOG_DIR = BASE_DIR / "logs"
+DB_PATH = BASE_DIR / "crawler.db"
+
+LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 parser = argparse.ArgumentParser()
 
@@ -84,7 +90,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 # info +warning log
 
-infoLog = logging.FileHandler('logs/crawler.log', encoding='utf-8')
+infoLog = logging.FileHandler(LOG_DIR / "crawler.log", encoding='utf-8')
 infoLog.setLevel(logging.INFO)
 infoLog.addFilter(lambda r: r.levelno < logging.ERROR)
 infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
@@ -176,7 +182,7 @@ def statsMonitor(statsQueue: Queue, logQueue: Queue):
     lastRateRequests = 0
 
     try:
-        countConn = sqlite3.connect('file:crawler.db?mode=ro', uri=True, timeout=1)
+        countConn = sqlite3.connect(f'file:{DB_PATH.as_posix()}?mode=ro', uri=True, timeout=1)
     except sqlite3.Error:
         countConn = None
 
@@ -235,7 +241,7 @@ def statsMonitor(statsQueue: Queue, logQueue: Queue):
 
 
 def initDb() -> None:
-    conn = sqlite3.connect('crawler.db')
+    conn = sqlite3.connect(DB_PATH)
     conn.execute('''
         CREATE TABLE IF NOT EXISTS urls (
             url TEXT PRIMARY KEY,
@@ -250,14 +256,14 @@ def initDb() -> None:
     conn.close()    
 
 def seedInsert(seedPacks: list, seedloc: str, procs) -> None:
-    conn = sqlite3.connect('crawler.db', timeout=30)
+    conn = sqlite3.connect(DB_PATH, timeout=30)
     conn.execute("PRAGMA journal_mode=WAL;")
     cur = conn.cursor()
 
     batch = []
     
     for i in range(procs):
-        with open(f'{seedloc}/{seedPacks[i]}' ,'r') as p:
+        with open((BASE_DIR / seedloc / seedPacks[i]).resolve(), 'r') as p:
             seeds = [line.strip() for line in p]
 
         for seed in seeds:
@@ -284,7 +290,7 @@ def loadBalancer(procs: int, stop, delta: int):
             sleep(60)
             if stop.is_set():
                 break
-            with sqlite3.connect('crawler.db', timeout=30) as conn:
+            with sqlite3.connect(DB_PATH, timeout=30) as conn:
                 conn.execute('BEGIN IMMEDIATE')
                 rows = conn.execute("""
                     SELECT proc, COUNT(*) AS ready_count
@@ -337,7 +343,7 @@ def loadBalancer(procs: int, stop, delta: int):
 
 
 def dbWriter(queue: Queue):
-    conn = sqlite3.connect('crawler.db', timeout=30)
+    conn = sqlite3.connect(DB_PATH, timeout=30)
     conn.execute("PRAGMA journal_mode=WAL;")
     cur = conn.cursor()
 
@@ -392,26 +398,34 @@ def dbWriter(queue: Queue):
 def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int, size: int, delta: int, showMonitor: bool):
     initDb()
 
+    seed_dir = None
+
     # get seeds
     try:
         if seedloc is not None:
-            if not path.exists(seedloc):
-                raise SeedException(f'The folder: {seedloc} was not found')
+            seed_dir = Path(seedloc)
+            if not seed_dir.is_absolute():
+                seed_dir = BASE_DIR / seed_dir
+            seed_dir = seed_dir.resolve()
 
-            else:
-                seedPacks: list[str] = listdir(seedloc)
-                if len(seedPacks) < procs:
-                    raise SeedException(f'The number of seed packs is less than the number of processes: packs: {len(seedPacks)}, procs: {procs}')
+            if not seed_dir.exists():
+                raise SeedException(f'The folder: {seed_dir} was not found')
 
+            if not seed_dir.is_dir():
+                raise SeedException(f'The path: {seed_dir} is not a directory')
+
+            seedPacks: list[str] = listdir(seed_dir)
+            if len(seedPacks) < procs:
+                raise SeedException(f'The number of seed packs is less than the number of processes: packs: {len(seedPacks)}, procs: {procs}')
 
     except OSError:
-        raise OSError(f'The seed location: {seedloc}, wasnt found')
+        raise OSError(f'The seed location: {seed_dir}, wasnt found')
 
     seedInsert(seedPacks, seedloc, procs) # type: ignore
 
     seeds = []
     for pack in seedPacks: # type: ignore
-        with open(f'{seedloc}/{pack}' ,'r') as p:
+        with open(seed_dir / pack, 'r') as p:
             seed = [line.strip() for line in p]
             seeds.append(seed)
 
