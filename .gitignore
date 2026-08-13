@@ -1,8 +1,9 @@
 /__pycache__
 /venv
-/gurt/
 /gurt.build/
 /gurt.dist/
 gurt.ico
 crawler.*
+logs/crawler.log
+logs/error.log
 # Note, the logs have been omitted, don't worry
