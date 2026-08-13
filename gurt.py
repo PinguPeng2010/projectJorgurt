@@ -1,17 +1,16 @@
 from multiprocessing import Process, Queue, freeze_support, Event
-from crawl import startThreads
+from crawl import runProcess
 import sqlite3
 from datetime import datetime, timezone
 import argparse
 from collections import deque
-from os import listdir, path
+from os import listdir
 import logging
 from time import sleep, monotonic
 from pathlib import Path
 from rich.console import Console, Group
 from rich.live import Live
 from rich.panel import Panel
-from rich.rule import Rule
 from rich.table import Table
 from rich.text import Text
 
@@ -32,7 +31,9 @@ parser.add_argument(
 parser.add_argument(
     "workers",
     type=int,
-    help="Number of workers operations"
+    help=(
+        'Number of concurrent async workers per process.'
+    )
 )
 
 parser.add_argument(
@@ -42,9 +43,7 @@ parser.add_argument(
     metavar='FOLDER',
     default='seeds',
     help='Folder where seeds are stored. Defaults to seeds/'
-
 )
-
 
 parser.add_argument(
     "-f",
@@ -52,7 +51,7 @@ parser.add_argument(
     type=int,
     metavar='NUM',
     default=200,
-    help='Number of urls to fetch from the db. Defaults to 200'
+    help='Number of urls to fetch from the db per grab. Defaults to 200'
 )
 
 parser.add_argument(
@@ -61,13 +60,7 @@ parser.add_argument(
     type=int,
     metavar='NUM',
     default=50000,
-    help='Size of url queue. Defaults to 50000'
-)
-
-parser.add_argument(
-    "crawlers",
-    type=int,
-    help='Number of crawlers.'
+    help='Size of each process\'s internal url queue. Defaults to 50000'
 )
 
 parser.add_argument(
@@ -88,7 +81,6 @@ parser.add_argument(
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
-# info +warning log
 
 infoLog = logging.FileHandler(LOG_DIR / "crawler.log", encoding='utf-8')
 infoLog.setLevel(logging.INFO)
@@ -100,7 +92,6 @@ logger.addHandler(infoLog)
 class SeedException(Exception):
     def __init__(self, message) -> None:
         super().__init__(message)
-
 
 
 STATS_KEYS = (
@@ -138,9 +129,7 @@ def renderStats(totals, urlCount, reqPerSec):
     success = totals.get('success', 0)
     successRate = (success / requests * 100) if requests else 0.0
     stats_table.add_row('% success', f'{successRate:.1f}%')
-
     stats_table.add_row('req/sec', f'{reqPerSec:.1f}')
-
     stats_table.add_row('urls in db', str(urlCount) if urlCount is not None else '...')
 
     return Panel(
@@ -150,12 +139,8 @@ def renderStats(totals, urlCount, reqPerSec):
     )
 
 
-
-
-
 def renderLog(log_lines):
     log_table = Table.grid(expand=True)
-
     for line in list(log_lines)[-12:]:
         log_table.add_row(styleLogLine(line))
 
@@ -238,8 +223,6 @@ def statsMonitor(statsQueue: Queue, logQueue: Queue):
             )
 
 
-
-
 def initDb() -> None:
     conn = sqlite3.connect(DB_PATH)
     conn.execute('''
@@ -251,9 +234,9 @@ def initDb() -> None:
             title TEXT
         )
     ''')
-
     conn.commit()
-    conn.close()    
+    conn.close()
+
 
 def seedInsert(seedPacks: list, seedloc: str, procs) -> None:
     conn = sqlite3.connect(DB_PATH, timeout=30)
@@ -261,19 +244,11 @@ def seedInsert(seedPacks: list, seedloc: str, procs) -> None:
     cur = conn.cursor()
 
     batch = []
-    
     for i in range(procs):
         with open((BASE_DIR / seedloc / seedPacks[i]).resolve(), 'r') as p:
             seeds = [line.strip() for line in p]
-
         for seed in seeds:
-            batch.append((
-                seed,
-                i,
-                "READY",
-                datetime.now(timezone.utc).isoformat(),
-                'seed'
-            ))
+            batch.append((seed, i, "READY", datetime.now(timezone.utc).isoformat(), 'seed'))
 
     cur.executemany("""
         INSERT INTO urls (url, proc, state, timestamp, title)
@@ -283,6 +258,7 @@ def seedInsert(seedPacks: list, seedloc: str, procs) -> None:
 
     conn.commit()
     conn.close()
+
 
 def loadBalancer(procs: int, stop, delta: int):
     while True:
@@ -300,7 +276,6 @@ def loadBalancer(procs: int, stop, delta: int):
                     """).fetchall()
 
                 urlCount: dict[int, int] = {i: 0 for i in range(procs)}
-
                 urlCount.update(dict(rows))
 
                 mean = sum(urlCount.values()) // procs
@@ -309,37 +284,29 @@ def loadBalancer(procs: int, stop, delta: int):
                     if urlCount[p] > mean + delta:
                         smallest = min(urlCount.values())
                         move = (urlCount[p] - smallest) // 2
-
                         moveFrom = p
-
                         for q in range(procs):
                             if urlCount[q] == smallest:
                                 moveTo = q
                                 break
-
                         break
                 else:
                     continue
+
                 conn.execute("""
                     UPDATE urls
                     SET proc = ?
                     WHERE rowid IN (
-                        SELECT rowid
-                        FROM urls
-                        WHERE proc = ?
-                        AND state = 'READY'
+                        SELECT rowid FROM urls
+                        WHERE proc = ? AND state = 'READY'
                         LIMIT ?
                     )
-                """, (moveTo, moveFrom, move)) # type: ignore
+                """, (moveTo, moveFrom, move))  # type: ignore
 
                 conn.commit()
-            logging.info(f'BALANCER moved {move} urls from proc: {moveFrom} to proc: {moveTo}') # type: ignore
+            logging.info(f'BALANCER moved {move} urls from proc: {moveFrom} to proc: {moveTo}')  # type: ignore
         except sqlite3.Error as e:
             logging.critical(f"Balancer had an error: {e}")
-
-            
-    
-            
 
 
 def dbWriter(queue: Queue):
@@ -352,20 +319,12 @@ def dbWriter(queue: Queue):
 
     while True:
         msg = queue.get()
-
         if msg == "STOP":
             break
 
-        batch.append((
-            msg[0],
-            msg[1],
-            msg[2],
-            datetime.now(timezone.utc).isoformat(),
-            msg[3]
-        ))
+        batch.append((msg[0], msg[1], msg[2], datetime.now(timezone.utc).isoformat(), msg[3]))
 
         if len(batch) >= BATCH_SIZE:
-
             cur.executemany('''
                 INSERT INTO urls (url, proc, state, timestamp, title)
                 VALUES (?, ?, ?, ?, ?)
@@ -375,12 +334,9 @@ def dbWriter(queue: Queue):
                     timestamp = excluded.timestamp,
                     title = excluded.title
             ''', batch)
-
             conn.commit()
-
             batch.clear()
 
-    # Write anything left over
     if batch:
         cur.executemany('''
             INSERT INTO urls (url, proc, state, timestamp, title)
@@ -391,16 +347,15 @@ def dbWriter(queue: Queue):
                 timestamp = excluded.timestamp,
                 title = excluded.title
         ''', batch)
-
         conn.commit()
 
     conn.close()
-def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int, size: int, delta: int, showMonitor: bool):
+
+
+def launch(procs: int, seedloc: str, workers: int, fetch: int, size: int, delta: int, showMonitor: bool):
     initDb()
 
     seed_dir = None
-
-    # get seeds
     try:
         if seedloc is not None:
             seed_dir = Path(seedloc)
@@ -410,30 +365,29 @@ def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int, siz
 
             if not seed_dir.exists():
                 raise SeedException(f'The folder: {seed_dir} was not found')
-
             if not seed_dir.is_dir():
                 raise SeedException(f'The path: {seed_dir} is not a directory')
 
             seedPacks: list[str] = listdir(seed_dir)
             if len(seedPacks) < procs:
-                raise SeedException(f'The number of seed packs is less than the number of processes: packs: {len(seedPacks)}, procs: {procs}')
-
+                raise SeedException(
+                    f'The number of seed packs is less than the number of processes: '
+                    f'packs: {len(seedPacks)}, procs: {procs}'
+                )
     except OSError:
         raise OSError(f'The seed location: {seed_dir}, wasnt found')
 
-    seedInsert(seedPacks, seedloc, procs) # type: ignore
+    seedInsert(seedPacks, seedloc, procs)  # type: ignore
 
     seeds = []
-    for pack in seedPacks: # type: ignore
+    for pack in seedPacks:  # type: ignore
         with open(seed_dir / pack, 'r') as p:
-            seed = [line.strip() for line in p]
-            seeds.append(seed)
+            seeds.append([line.strip() for line in p])
 
     stopEvent = Event()
     statsQueue = Queue()
     logQueue = Queue()
     dbQueue = Queue(maxsize=10000)
-    visitableQueue = Queue(maxsize=size)
 
     if showMonitor:
         monitor = Process(target=statsMonitor, args=(statsQueue, logQueue,))
@@ -445,15 +399,25 @@ def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int, siz
     writer = Process(target=dbWriter, args=(dbQueue,))
     writer.start()
 
+    # Each process now owns its own in-process asyncio.Queue (created
+    # inside runProcess/crawl.py) instead of all processes sharing one
+    # multiprocessing.Queue. The old shared queue meant every process
+    # could pull URLs off any other process's queue while still
+    # writing results back under its own proc id — quietly breaking
+    # the proc partitioning the load balancer relies on. Each process
+    # now only ever handles URLs it grabbed for its own partition.
     processes = []
     for i in range(procs):
-        proc = Process(target=startThreads, args=(crawlers, size, dbQueue, statsQueue, logQueue, i, visitableQueue, seeds[i], asyncs, fetch,))
-
+        proc = Process(
+            target=runProcess,
+            args=(workers, size, dbQueue, statsQueue, logQueue, i, seeds[i], fetch,)
+        )
         proc.start()
         processes.append(proc)
 
     for proc in processes:
         proc.join()
+
     stopEvent.set()
     balancer.join()
     dbQueue.put('STOP')
@@ -461,16 +425,15 @@ def launch(procs: int, crawlers: int, seedloc: str, asyncs: int, fetch: int, siz
     logQueue.put('STOP')
     writer.join()
     if showMonitor:
-        monitor.join() # type: ignore
-    print(f'All processes finished')
+        monitor.join()  # type: ignore
+    print('All processes finished')
+
 
 if __name__ == "__main__":
-
     freeze_support()
     args = parser.parse_args()
     launch(
         args.procs,
-        args.crawlers,
         args.seeds,
         args.workers,
         args.fetch,

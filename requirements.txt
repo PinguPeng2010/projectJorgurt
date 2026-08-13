@@ -1,5 +1,4 @@
 httpx
-bs4
-lxml
+selectolax
 rich
 windows-curses; sys_platform == "win32"
