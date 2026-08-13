@@ -1,0 +1,93 @@
+name: Build Gurt
+
+on:
+  push:
+    tags:
+      - "stable_v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            arch: x86_64
+            name: gurt-linux-x86_64
+
+          - os: windows-latest
+            arch: x86_64
+            name: gurt-windows-x86
+
+          - os: ubuntu-24.04-arm
+            arch: arm64
+            name: gurt-linux-arm64
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install nuitka
+
+      - name: Compile Gurt
+        run: |
+          python -m nuitka --standalone --include-package=httpx --assume-yes-for-downloads --include-package=httpcore --include-package=sqlite3 --include-package=bs4 --include-package=lxml --include-package=rich --enable-plugin=multiprocessing --include-data-dir=seeds=seeds --include-data-dir=logs=logs --include-data-dir=shell=shell gurt.py
+
+      - name: Archive build
+        shell: bash
+        run: |
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            7z a "${{ matrix.name }}.zip" gurt.dist/*
+          else
+            tar -czf "${{ matrix.name }}.tar.gz" gurt.dist/
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.name }}
+          path: |
+            *.zip
+            *.tar.gz
+
+       
+  release:
+    if: startsWith(github.ref_name, 'stable_v') || startsWith(github.ref_name, 'prerelease_v')
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download builds
+        uses: actions/download-artifact@v5
+        with:
+          path: releases
+          merge-multiple: true
+      - name: Get Release version
+        id: version
+        shell: bash
+        run: |
+            VERSION="${GITHUB_REF_NAME#stable_}"
+            VERSION="${VERSION#prerelease_}"
+            echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ steps.version.outputs.version }}
+          files: releases/*
+          generate_release_notes: true
+          prerelease: ${{ startsWith(github.ref_name, 'prerelease_') }}
