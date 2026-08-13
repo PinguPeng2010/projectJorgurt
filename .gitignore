@@ -4,3 +4,5 @@
 /gurt.build/
 /gurt.dist/
 gurt.ico
+crawler.*
+/logs/
