@@ -398,14 +398,6 @@ def launch(procs: int, seedloc: str, workers: int, fetch: int, size: int, delta:
 
     writer = Process(target=dbWriter, args=(dbQueue,))
     writer.start()
-
-    # Each process now owns its own in-process asyncio.Queue (created
-    # inside runProcess/crawl.py) instead of all processes sharing one
-    # multiprocessing.Queue. The old shared queue meant every process
-    # could pull URLs off any other process's queue while still
-    # writing results back under its own proc id — quietly breaking
-    # the proc partitioning the load balancer relies on. Each process
-    # now only ever handles URLs it grabbed for its own partition.
     processes = []
     for i in range(procs):
         proc = Process(
