@@ -240,6 +240,7 @@ def initDb() -> None:
             content BLOB,
             title TEXT,
             timestamp TEXT NOT NULL,
+            state TEXT,
         )
     ''')
     conn.commit()
@@ -331,7 +332,7 @@ def dbWriter(queue: Queue):
         if msg == "STOP":
             break
         if msg[0] == 'pages':
-            page_batch.append((msg[1], msg[2], msg[3], datetime.now(timezone.utc).isoformat()))
+            page_batch.append((msg[1], msg[2], msg[3], datetime.now(timezone.utc).isoformat(), "READY"))
         elif msg[0] == 'urls':
             url_batch.append((msg[1], msg[2], msg[3], datetime.now(timezone.utc).isoformat(), msg[4]))
 
@@ -351,8 +352,8 @@ def dbWriter(queue: Queue):
 
         if len(page_batch) >= BATCH_SIZE:
             cur.executemany('''
-                INSERT INTO pages (url, content, title, timestamp)
-                VALUES (?, ?, ?, ?)
+                INSERT INTO pages (url, content, title, timestamp, state)
+                VALUES (?, ?, ?, ?, ?)
             ''', page_batch)
             conn.commit()
             page_batch.clear()
@@ -370,8 +371,8 @@ def dbWriter(queue: Queue):
         conn.commit() 
     if page_batch: # Any leftover ones on stop
         cur.executemany('''
-            INSERT INTO pages (url, content, title, timestamp)
-            VALUES (?, ?, ?, ?)
+            INSERT INTO pages (url, content, title, timestamp, state)
+            VALUES (?, ?, ?, ?, ?)
         ''', page_batch)
         conn.commit()
         page_batch.clear()
