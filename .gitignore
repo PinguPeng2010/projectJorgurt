@@ -5,4 +5,4 @@
 /gurt.dist/
 /logs/
 gurt.ico
-crawler.*
+data/*.db
