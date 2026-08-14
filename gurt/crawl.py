@@ -12,7 +12,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 LOG_DIR = BASE_DIR / "logs"
-DB_PATH = BASE_DIR / "gurt.db"
+DB_PATH = BASE_DIR / "../data/gurt.db"
 
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
