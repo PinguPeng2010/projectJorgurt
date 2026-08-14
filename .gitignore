@@ -6,4 +6,3 @@
 gurt.ico
 data/*.db
 logs/*.log
-# Note, the logs have been omitted, don't worry
