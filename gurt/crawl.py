@@ -7,8 +7,9 @@ import httpx
 from multiprocessing import Queue
 from time import monotonic
 from pathlib import Path
+from zstandard import ZstdCompressor
 
-
+compressor =ZstdCompressor(level=3)
 
 BASE_DIR = Path(__file__).resolve().parent
 LOG_DIR = BASE_DIR / "logs"
@@ -92,6 +93,11 @@ def log(logQueue: Queue, message: str) -> None:
         logQueue.put(message)
     else:
         logging.info(message)
+
+
+def compressText(text: str) -> bytes:
+    compressed: bytes = compressor.compress(text.encode("utf-8"))
+    return compressed
 
 
 async def getNewUrls(visitable: asyncio.Queue, proc: int, fetch: int, done: asyncio.Event, logQueue: Queue) -> None:
@@ -269,21 +275,20 @@ async def worker(workerID: int, visitable: asyncio.Queue, dbQueue: Queue, statsQ
 
             robots = await findRobots(site, session, state.robots_cache)
             disallowed = getDisallowed(robots, site)
-            text, status = await visitSite(site, session, state)
-
+            text, _status = await visitSite(site, session, state)
             if text is not None:
                 title, links = await asyncio.to_thread(parseLinks, text, site, disallowed)
-
+                await asyncio.to_thread(dbQueue.put, ('pages', site, compressText(text), title))
                 for link in links:
                     if link not in state.visitable_set:
                         state.visitable_set.add(link)
-                        await asyncio.to_thread(dbQueue.put, (link, proc, 'READY', title))
+                        await asyncio.to_thread(dbQueue.put, ('urls', link, proc, 'READY', title))
 
-                await asyncio.to_thread(dbQueue.put, (site, proc, 'FINISHED', title))
+                await asyncio.to_thread(dbQueue.put, ('urls', site, proc, 'FINISHED', title))
             else:
                 # visitSite already logged + counted the specific HTTP error;
                 # just mark it done and move on
-                await asyncio.to_thread(dbQueue.put, (site, proc, 'FINISHED', None))
+                await asyncio.to_thread(dbQueue.put, ('urls', site, proc, 'FINISHED', None))
 
             state.visited.add(site)
 
@@ -293,7 +298,7 @@ async def worker(workerID: int, visitable: asyncio.Queue, dbQueue: Queue, statsQ
             # Genuine unexpected error — log, count, and move on
             state.errors += 1
             logging.critical(f'Error handling {site}: {e}, proc: {proc}, worker: {workerID}')
-            await asyncio.to_thread(dbQueue.put, (site, proc, 'FINISHED', None))
+            await asyncio.to_thread(dbQueue.put, ('urls', site, proc, 'FINISHED', None))
             state.visited.add(site)
         finally:
             emitStats(statsQueue, state)

@@ -234,6 +234,14 @@ def initDb() -> None:
             title TEXT
         )
     ''')
+    conn.execute('''
+        CREATE TABLE IF NOT EXISTS pages (
+            url TEXT PRIMARY KEY,
+            content BLOB,
+            title TEXT,
+            timestamp TEXT NOT NULL,
+        )
+    ''')
     conn.commit()
     conn.close()
 
@@ -314,17 +322,21 @@ def dbWriter(queue: Queue):
     conn.execute("PRAGMA journal_mode=WAL;")
     cur = conn.cursor()
 
-    batch = []
+    url_batch = []
+    page_batch = []
     BATCH_SIZE = 100
 
     while True:
         msg = queue.get()
         if msg == "STOP":
             break
+        if msg[0] == 'pages':
+            page_batch.append((msg[1], msg[2], msg[3], datetime.now(timezone.utc).isoformat()))
+        elif msg[0] == 'urls':
+            url_batch.append((msg[1], msg[2], msg[3], datetime.now(timezone.utc).isoformat(), msg[4]))
 
-        batch.append((msg[0], msg[1], msg[2], datetime.now(timezone.utc).isoformat(), msg[3]))
-
-        if len(batch) >= BATCH_SIZE:
+        if len(url_batch) >= BATCH_SIZE:
+            
             cur.executemany('''
                 INSERT INTO urls (url, proc, state, timestamp, title)
                 VALUES (?, ?, ?, ?, ?)
@@ -333,11 +345,19 @@ def dbWriter(queue: Queue):
                     state = excluded.state,
                     timestamp = excluded.timestamp,
                     title = excluded.title
-            ''', batch)
+            ''', url_batch)
             conn.commit()
-            batch.clear()
+            url_batch.clear()
 
-    if batch:
+        if len(page_batch) >= BATCH_SIZE:
+            cur.executemany('''
+                INSERT INTO pages (url, content, title, timestamp)
+                VALUES (?, ?, ?, ?)
+            ''', page_batch)
+            conn.commit()
+            page_batch.clear()
+
+    if url_batch: # Any leftover ones on stop
         cur.executemany('''
             INSERT INTO urls (url, proc, state, timestamp, title)
             VALUES (?, ?, ?, ?, ?)
@@ -346,8 +366,15 @@ def dbWriter(queue: Queue):
                 state = excluded.state,
                 timestamp = excluded.timestamp,
                 title = excluded.title
-        ''', batch)
+        ''', url_batch)
+        conn.commit() 
+    if page_batch: # Any leftover ones on stop
+        cur.executemany('''
+            INSERT INTO pages (url, content, title, timestamp)
+            VALUES (?, ?, ?, ?)
+        ''', page_batch)
         conn.commit()
+        page_batch.clear()
 
     conn.close()
 
