@@ -12,7 +12,7 @@ from zstandard import ZstdCompressor
 compressor =ZstdCompressor(level=3)
 
 BASE_DIR = Path(__file__).resolve().parent
-LOG_DIR = BASE_DIR / "logs"
+LOG_DIR = BASE_DIR / "../logs"
 DB_PATH = BASE_DIR / "../data/gurt.db"
 
 LOG_DIR.mkdir(parents=True, exist_ok=True)
