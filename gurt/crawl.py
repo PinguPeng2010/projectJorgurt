@@ -12,20 +12,20 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 LOG_DIR = BASE_DIR / "logs"
-DB_PATH = BASE_DIR / "crawler.db"
+DB_PATH = BASE_DIR / "gurt.db"
 
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-infoLog = logging.FileHandler(LOG_DIR / "crawler.log", encoding='utf-8')
+infoLog = logging.FileHandler(LOG_DIR / "gurt-crawler.log", encoding='utf-8')
 infoLog.setLevel(logging.INFO)
 infoLog.addFilter(lambda r: r.levelno < logging.ERROR)
 infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
 logger.addHandler(infoLog)
 
-errorLog = logging.FileHandler(LOG_DIR / "error.log", encoding='utf-8')
+errorLog = logging.FileHandler(LOG_DIR / "gurt-error.log", encoding='utf-8')
 errorLog.setLevel(logging.ERROR)
 errorLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
 logger.addHandler(errorLog)

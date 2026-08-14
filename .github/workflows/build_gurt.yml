@@ -46,7 +46,7 @@ jobs:
 
       - name: Compile Gurt
         run: |
-          python -m nuitka --standalone --include-package=httpx --assume-yes-for-downloads --include-package=httpcore --include-package=sqlite3 --include-package=selectolax --include-package=rich --enable-plugin=multiprocessing --include-data-dir=seeds=seeds --include-data-dir=logs=logs --include-data-dir=shell=shell gurt.py
+          python -m nuitka --standalone --include-package=httpx --assume-yes-for-downloads --include-package=httpcore --include-package=sqlite3 --include-package=selectolax --include-package=rich --enable-plugin=multiprocessing --include-data-dir=gurt/seeds=seeds --include-data-dir=gurt/logs=logs --include-data-dir=gurt/shell=shell gurt/gurt.py
 
       - name: Archive build
         shell: bash
