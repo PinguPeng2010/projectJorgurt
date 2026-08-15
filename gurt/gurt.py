@@ -225,22 +225,51 @@ def statsMonitor(statsQueue: Queue, logQueue: Queue):
 
 def initDb() -> None:
     conn = sqlite3.connect(DB_PATH)
-    conn.execute('''
-        CREATE TABLE IF NOT EXISTS urls (
-            url TEXT PRIMARY KEY,
-            proc INTEGER NOT NULL,
-            state TEXT,
-            timestamp TEXT NOT NULL,
-            title TEXT
-        )
-    ''')
+
+    table_sql = conn.execute(
+        "SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'urls'"
+    ).fetchone()
+    if table_sql is not None:
+        sql = (table_sql[0] or '').upper()
+        if 'AUTOINCREMENT' not in sql:
+            legacy_name = 'urls_legacy_migration'
+            conn.execute(f"ALTER TABLE urls RENAME TO {legacy_name}")
+            conn.execute('''
+                CREATE TABLE urls (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    url TEXT UNIQUE,
+                    proc INTEGER NOT NULL,
+                    state TEXT,
+                    timestamp TEXT NOT NULL,
+                    title TEXT
+                )
+            ''')
+            conn.execute('''
+                INSERT INTO urls (url, proc, state, timestamp, title)
+                SELECT url, proc, state, timestamp, title
+                FROM urls_legacy_migration
+            ''')
+            conn.execute(f"DROP TABLE {legacy_name}")
+    else:
+        conn.execute('''
+            CREATE TABLE IF NOT EXISTS urls (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                url TEXT UNIQUE,
+                proc INTEGER NOT NULL,
+                state TEXT,
+                timestamp TEXT NOT NULL,
+                title TEXT
+            )
+        ''')
+
     conn.execute('''
         CREATE TABLE IF NOT EXISTS pages (
-            url TEXT PRIMARY KEY,
+            id INTEGER PRIMARY KEY,
+            url TEXT UNIQUE,
             content BLOB,
             title TEXT,
             timestamp TEXT NOT NULL,
-            state TEXT,
+            state TEXT
         )
     ''')
     conn.commit()
@@ -305,9 +334,10 @@ def loadBalancer(procs: int, stop, delta: int):
                 conn.execute("""
                     UPDATE urls
                     SET proc = ?
-                    WHERE rowid IN (
-                        SELECT rowid FROM urls
+                    WHERE id IN (
+                        SELECT id FROM urls
                         WHERE proc = ? AND state = 'READY'
+                        ORDER BY id ASC
                         LIMIT ?
                     )
                 """, (moveTo, moveFrom, move))  # type: ignore

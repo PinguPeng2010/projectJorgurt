@@ -117,6 +117,7 @@ async def getNewUrls(visitable: asyncio.Queue, proc: int, fetch: int, done: asyn
                 rows = conn.execute("""
                     SELECT url FROM urls
                     WHERE state = ? AND proc = ?
+                    ORDER BY id ASC
                     LIMIT ?
                 """, ("READY", proc, fetch)).fetchall()
                 urls = [row[0] for row in rows]
