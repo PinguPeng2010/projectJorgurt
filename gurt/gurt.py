@@ -15,8 +15,8 @@ from rich.table import Table
 from rich.text import Text
 
 BASE_DIR = Path(__file__).resolve().parent
-LOG_DIR = BASE_DIR / "logs"
-DB_PATH = BASE_DIR / "crawler.db"
+LOG_DIR = BASE_DIR / "../logs"
+DB_PATH = BASE_DIR / "../data/jorgurt.db"
 
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -82,7 +82,7 @@ parser.add_argument(
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-infoLog = logging.FileHandler(LOG_DIR / "crawler.log", encoding='utf-8')
+infoLog = logging.FileHandler(LOG_DIR / "gurt-crawler.log", encoding='utf-8')
 infoLog.setLevel(logging.INFO)
 infoLog.addFilter(lambda r: r.levelno < logging.ERROR)
 infoLog.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s]: %(message)s'))
@@ -225,13 +225,51 @@ def statsMonitor(statsQueue: Queue, logQueue: Queue):
 
 def initDb() -> None:
     conn = sqlite3.connect(DB_PATH)
+
+    table_sql = conn.execute(
+        "SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'urls'"
+    ).fetchone()
+    if table_sql is not None:
+        sql = (table_sql[0] or '').upper()
+        if 'AUTOINCREMENT' not in sql:
+            legacy_name = 'urls_legacy_migration'
+            conn.execute(f"ALTER TABLE urls RENAME TO {legacy_name}")
+            conn.execute('''
+                CREATE TABLE urls (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    url TEXT UNIQUE,
+                    proc INTEGER NOT NULL,
+                    state TEXT,
+                    timestamp TEXT NOT NULL,
+                    title TEXT
+                )
+            ''')
+            conn.execute('''
+                INSERT INTO urls (url, proc, state, timestamp, title)
+                SELECT url, proc, state, timestamp, title
+                FROM urls_legacy_migration
+            ''')
+            conn.execute(f"DROP TABLE {legacy_name}")
+    else:
+        conn.execute('''
+            CREATE TABLE IF NOT EXISTS urls (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                url TEXT UNIQUE,
+                proc INTEGER NOT NULL,
+                state TEXT,
+                timestamp TEXT NOT NULL,
+                title TEXT
+            )
+        ''')
+
     conn.execute('''
-        CREATE TABLE IF NOT EXISTS urls (
-            url TEXT PRIMARY KEY,
-            proc INTEGER NOT NULL,
-            state TEXT,
+        CREATE TABLE IF NOT EXISTS pages (
+            id INTEGER PRIMARY KEY,
+            url TEXT UNIQUE,
+            content BLOB,
+            title TEXT,
             timestamp TEXT NOT NULL,
-            title TEXT
+            state TEXT
         )
     ''')
     conn.commit()
@@ -296,9 +334,10 @@ def loadBalancer(procs: int, stop, delta: int):
                 conn.execute("""
                     UPDATE urls
                     SET proc = ?
-                    WHERE rowid IN (
-                        SELECT rowid FROM urls
+                    WHERE id IN (
+                        SELECT id FROM urls
                         WHERE proc = ? AND state = 'READY'
+                        ORDER BY id ASC
                         LIMIT ?
                     )
                 """, (moveTo, moveFrom, move))  # type: ignore
@@ -314,17 +353,21 @@ def dbWriter(queue: Queue):
     conn.execute("PRAGMA journal_mode=WAL;")
     cur = conn.cursor()
 
-    batch = []
+    url_batch = []
+    page_batch = []
     BATCH_SIZE = 100
 
     while True:
         msg = queue.get()
         if msg == "STOP":
             break
+        if msg[0] == 'pages':
+            page_batch.append((msg[1], msg[2], msg[3], datetime.now(timezone.utc).isoformat(), "READY"))
+        elif msg[0] == 'urls':
+            url_batch.append((msg[1], msg[2], msg[3], datetime.now(timezone.utc).isoformat(), msg[4]))
 
-        batch.append((msg[0], msg[1], msg[2], datetime.now(timezone.utc).isoformat(), msg[3]))
-
-        if len(batch) >= BATCH_SIZE:
+        if len(url_batch) >= BATCH_SIZE:
+            
             cur.executemany('''
                 INSERT INTO urls (url, proc, state, timestamp, title)
                 VALUES (?, ?, ?, ?, ?)
@@ -333,11 +376,19 @@ def dbWriter(queue: Queue):
                     state = excluded.state,
                     timestamp = excluded.timestamp,
                     title = excluded.title
-            ''', batch)
+            ''', url_batch)
             conn.commit()
-            batch.clear()
+            url_batch.clear()
 
-    if batch:
+        if len(page_batch) >= BATCH_SIZE:
+            cur.executemany('''
+                INSERT INTO pages (url, content, title, timestamp, state)
+                VALUES (?, ?, ?, ?, ?)
+            ''', page_batch)
+            conn.commit()
+            page_batch.clear()
+
+    if url_batch: # Any leftover ones on stop
         cur.executemany('''
             INSERT INTO urls (url, proc, state, timestamp, title)
             VALUES (?, ?, ?, ?, ?)
@@ -346,8 +397,15 @@ def dbWriter(queue: Queue):
                 state = excluded.state,
                 timestamp = excluded.timestamp,
                 title = excluded.title
-        ''', batch)
+        ''', url_batch)
+        conn.commit() 
+    if page_batch: # Any leftover ones on stop
+        cur.executemany('''
+            INSERT INTO pages (url, content, title, timestamp, state)
+            VALUES (?, ?, ?, ?, ?)
+        ''', page_batch)
         conn.commit()
+        page_batch.clear()
 
     conn.close()
 
@@ -398,14 +456,6 @@ def launch(procs: int, seedloc: str, workers: int, fetch: int, size: int, delta:
 
     writer = Process(target=dbWriter, args=(dbQueue,))
     writer.start()
-
-    # Each process now owns its own in-process asyncio.Queue (created
-    # inside runProcess/crawl.py) instead of all processes sharing one
-    # multiprocessing.Queue. The old shared queue meant every process
-    # could pull URLs off any other process's queue while still
-    # writing results back under its own proc id — quietly breaking
-    # the proc partitioning the load balancer relies on. Each process
-    # now only ever handles URLs it grabbed for its own partition.
     processes = []
     for i in range(procs):
         proc = Process(

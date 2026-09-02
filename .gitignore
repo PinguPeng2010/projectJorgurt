@@ -1,8 +1,8 @@
+*/__pycache__
 /__pycache__
 /venv
-/gurt/
 /gurt.build/
 /gurt.dist/
-/logs/
 gurt.ico
-crawler.*
+data/*.db
+logs/*.log
